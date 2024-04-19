@@ -1,27 +1,10 @@
-<script setup>
-import { onMounted, ref } from 'vue';
-import { loadState, saveState } from '../utils/Store.js';
-import Login from './Login.vue';
-
-const theme = ref(loadState('theme') || 'light')
-
-onMounted(() => {
-  document.documentElement.setAttribute('data-bs-theme', theme.value)
-})
-
-function toggleTheme() {
-  theme.value = theme.value == 'light' ? 'dark' : 'light'
-  document.documentElement.setAttribute('data-bs-theme', theme.value)
-  saveState('theme', theme.value)
-}
-
-</script>
 
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-sm custom-navbar px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
-        <img alt="logo" src="../assets/img/cw-logo.png" height="45" />
+      <div class="d-flex align-items-center">
+        <img alt="logo" src="../assets/img/my-logo.png" class="my-logo" height="45" />
+        <span class="my-name">AJ Vancattenburch</span>
       </div>
     </router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -36,17 +19,38 @@ function toggleTheme() {
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <div>
-        <button class="btn text-light" @click="toggleTheme"
-          :title="`Enable ${theme == 'light' ? 'dark' : 'light'} theme.`">
-          <i class="mdi" :class="theme == 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"></i>
-        </button>
+        
       </div>
-      <Login />
     </div>
   </nav>
 </template>
 
 <style scoped>
+* {
+  color: var(--text-off-white);
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-inner {
+  background: transparent;
+}
+
+.custom-navbar {
+  background: var(--purple-blue-gradient);
+}
+
+.my-logo {
+  border-radius: 50%;
+}
+
+.my-name {
+  font-weight: bold;
+  margin-left: 1rem;
+  text-shadow: 0 1px 2px var(--blue);
+}
+
 a:hover {
   text-decoration: none;
 }

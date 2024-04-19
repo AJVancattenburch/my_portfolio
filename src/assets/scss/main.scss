@@ -1,3 +1,4 @@
+@import "./_root.scss";
 @import "./_variables.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
@@ -10,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--bs-page);
+  background-color: var((--bs-dark));
 }
 
 main {
