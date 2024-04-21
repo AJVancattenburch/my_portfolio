@@ -1,9 +1,9 @@
 
 <template>
-  <nav class="navbar navbar-expand-sm custom-navbar px-3">
+  <nav class="navbar navbar-expand-sm custom-navbar black-gradient px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex align-items-center">
-        <img alt="logo" src="../assets/img/my-logo.png" class="my-logo" height="45" />
+        <img alt="logo" src="../assets/img/icons/logo.svg" class="my-logo" height="45" />
         <span class="my-name">AJ Vancattenburch</span>
       </div>
     </router-link>
@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
         <li>
-  
+          
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
@@ -26,6 +26,8 @@
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   color: var(--text-off-white);
   font-family: 'Poppins', sans-serif;
@@ -33,23 +35,38 @@
   margin: 0;
 }
 
-.navbar-inner {
-  background: transparent;
-}
-
 .custom-navbar {
-  background: var(--purple-blue-gradient);
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-shadow: 0 2px 0 var(--purple), 0 0px 20px var(--blue);
+  width: 100%;
+  z-index: 1;
+  filter: brightness(0.9);
+  .my-logo {
+    border-radius: 50%;
+  }
+  .my-name {
+    font-weight: 550;
+    margin-left: 1rem;
+    text-shadow: 0 1px 2px var(--blue);
+  }
+}
+.navbar-toggler {
+  padding: 0.5rem;
+  z-index: 2;
+  &:focus {
+    border: 2px solid var(--dark-purple);
+  }
+  .navbar-toggler-icon {
+    background-image: url(../assets/img/icons/hamburger-menu.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.my-logo {
-  border-radius: 50%;
-}
 
-.my-name {
-  font-weight: bold;
-  margin-left: 1rem;
-  text-shadow: 0 1px 2px var(--blue);
-}
 
 a:hover {
   text-decoration: none;

@@ -12,8 +12,8 @@ import Navbar from './components/Navbar.vue'
   <main>
     <router-view />
   </main>
-  <footer class="bg-dark text-light">
-    Made with 💖 by CodeWorks
+  <footer class="black-gradient text-light px-3">
+    Designed By: Anthony Vancattenburch
   </footer>
 </template>
 
@@ -26,8 +26,10 @@ import Navbar from './components/Navbar.vue'
 
 
 footer {
+  position: fixed;
+  bottom: 0;
   display: grid;
-  place-content: center;
   height: 32px;
+  width: 100%;
 }
 </style>

@@ -1,17 +1,21 @@
 <template>
-  <SVGBackgroundWrapper>
-    <div class="col-12 test-block"></div>
-  </SVGBackgroundWrapper>
+  <div class="">
+    <Hero />
+    <About />
+    <Education />
+  </div>
 </template>
 
 <script>
-import SVGBackgroundWrapper from '../components/SVGBackgroundWrapper.vue'
+import Hero from '../components/Hero.vue'
+import About from '../components/About.vue'
+import Education from '../components/Education.vue'
 
 export default {
   setup() {
 
   },
-  components: { SVGBackgroundWrapper }
+  components: { Hero, About, Education }
 }
 </script>
 

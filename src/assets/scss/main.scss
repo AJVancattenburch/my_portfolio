@@ -1,7 +1,7 @@
-@import "./_root.scss";
 @import "./_variables.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
+@import "./_styles.scss";
 
 body {
   overscroll-behavior: none;
@@ -11,7 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var((--bs-dark));
+  background: none;
+  background-blend-mode: overlay;
 }
 
 main {

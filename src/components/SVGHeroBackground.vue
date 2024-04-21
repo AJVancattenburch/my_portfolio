@@ -16,13 +16,13 @@
     top: -1rem;
     left: 0;
     width: 100%;
-    height: 100vw;
-    background: url(../assets/img/svg-background.svg) no-repeat center center / cover;
-    background-color: var(--purple);
-    transform: rotate(90deg);
+    height: 100%;
+    background: url(../assets/img/backgrounds/hero.svg) no-repeat center center / cover;
+    background-color: var(--dark-purple);
     padding: 0;
     margin: 0;
     z-index: 0;
+    filter: brightness(1);
   }
 }
 </style>
