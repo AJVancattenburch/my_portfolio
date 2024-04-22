@@ -31,7 +31,6 @@ export default {
 
 <style scoped lang="scss">
 .projects-wrapper {
-  width: 50%;
   background-color: var(--color-primary);
   padding: 2rem 0;
 }

@@ -1,4 +1,5 @@
 import { cwChallenges, threaditAI, gamePursuit } from "../../assets/img/projects/_index.js";
+import { github } from "../../assets/img/icons/_index.js";
 
 const projects = [
   {
@@ -31,7 +32,8 @@ const projects = [
         }
     ],
     image: cwChallenges,
-    source_code_link: "https://github.com/codeworksacademy/challenges.codeworksacademy.com"
+    source_code_link: "https://github.com/codeworksacademy/challenges.codeworksacademy.com",
+    source_code_icon: github
   },
   {
     name: "ThreadIt AI",
@@ -66,6 +68,7 @@ const projects = [
     image: threaditAI,
     hyper_link: "https://threaditai.web.app",
     source_code_link: "https://github.com/AJVancattenburch/ThreadItAI",
+    source_code_icon: github
   },
   {
     name: "Game Pursuit",
@@ -99,6 +102,7 @@ const projects = [
     ],
     image: gamePursuit,
     source_code_link: "https://github.com/ChanthaKammer/capstone",
+    source_code_icon: github
   }
 ];
 
