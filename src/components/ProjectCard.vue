@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4 project-item purple-gradient">
+  <div class="project-item purple-gradient">
     <div class="project-item-content d-flex flex-column">
       <img
         :src="project.image"
@@ -42,7 +42,7 @@ export default {
 .project-item {
   position: relative;
   width: 95%;
-  color: var(--text-off-white);
+  color: var(--text-primary);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -61,10 +61,10 @@ export default {
   }
   &-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     object-position: left center;
-    border: 1.5px var(--text-off-white) inset;
+    border: 1.5px var(--text-primary) inset;
     border-radius: 0.5rem;
   }
   &-title {

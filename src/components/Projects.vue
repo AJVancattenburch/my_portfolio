@@ -1,12 +1,13 @@
 <template>
   <section class="projects-wrapper">
     <div class="projects-content p-4">
-      <h1 class="projects-title">Projects.</h1>
-      <div class="col-12 projects-container d-flex justify-content-center">
+      <h5 class="projects-subtitle text-uppercase text-secondary">Work || Art || Passion</h5>
+      <h1 class="projects-title text-primary">Projects.</h1>
+      <div class="col-12 projects-container d-flex flex-wrap justify-content-center">
         <div
           v-for="project in projects"
           :key="project.name"
-          class="project-item"
+          class="col-12 col-md-4 d-flex flex-wrap project-item"
         >
           <ProjectCard :project="project" />
         </div>
@@ -30,8 +31,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.projects-wrapper {
-  background-color: var(--color-primary);
-  padding: 2rem 0;
+.projects {
+  &-wrapper {
+    padding: 2rem 0;
+  }
+  &-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    margin-bottom: 1rem;
+  }
 }
 </style>

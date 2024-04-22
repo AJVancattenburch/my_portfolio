@@ -1,5 +1,7 @@
 :root {
-  --text-off-white: #E7E7E7;
+  --text-primary: #E7E7E7;
+  --text-secondary: #aaa6c3;
+
   --purple: #804dee;
   --blue: #56ccf2;
   --green: #00cea8;
@@ -20,6 +22,14 @@
   --dark-pink: #7d003c;
 
   --black-gradient: linear-gradient(to right, #232323, #000000);
+}
+
+.text-primary {
+  color: #E7E7E7 !important;
+}
+
+.text-secondary {
+  color: #aaa6c3 !important;
 }
 
 .black-gradient {

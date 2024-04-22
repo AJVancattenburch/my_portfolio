@@ -1,8 +1,9 @@
 <template>
   <section class="about-wrapper">
     <div class="about-content p-4">
-      <h1 class="about-title">Overview.</h1>
-      <p class="about-text">
+      <h5 class="about-subtitle text-uppercase text-secondary">Introduction</h5>
+      <h1 class="about-title text-primary">Overview.</h1>
+      <p class="about-text text-primary">
         Driven by my personal journey and guided by a deep sense of purpose as a developer, I am always excited to contribute with a dynamic and forward-thinking team. I bring <span class="highlight">perseverance</span>, <span class="highlight">integrity</span>, and a <span class="highlight">rapid learning ability</span> to every project, striving to create impactful software solutions that push boundaries and drive positive change.
       </p>
     </div>
@@ -12,6 +13,27 @@
 <script></script>
 
 <style scoped lang="scss">
+.about {
+  &-wrapper {
+    padding: 2rem 0;
+  }
+  &-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+  &-text {
+    width: 75%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
 .highlight {
   color: #00D8FF;
   font-weight: 600;

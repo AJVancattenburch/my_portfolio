@@ -45,7 +45,7 @@ export default {
   align-items: center;
   .hero-content {
     text-align: center;
-    color: var(--text-off-white);
+    color: var(--text-primary);
     z-index: 1;
     .hero-title {
       font-size: 3rem;
@@ -60,7 +60,7 @@ export default {
     .hero-button {
       padding: 0.5rem 1rem;
       background-color: var(--purple);
-      color: var(--text-off-white);
+      color: var(--text-primary);
       border: none;
       border-radius: 5px;
       font-size: 1rem;
