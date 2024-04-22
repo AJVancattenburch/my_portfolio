@@ -2,7 +2,7 @@
   <section class="experience-wrapper">
     <div class="experience-content p-4">
       <h5 class="experience-subtitle text-uppercase text-secondary">What I have done so far</h5>
-      <h1 class="experience-title text-primary">Work Experience</h1>
+      <h1 class="experience-title text-primary">Work Experience.</h1>
       <div class="experience-container">
         <div
           v-for="experience in experiences"
