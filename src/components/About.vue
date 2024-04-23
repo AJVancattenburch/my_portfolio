@@ -1,21 +1,42 @@
 <template>
   <section class="about-wrapper">
     <div class="about-content p-4">
-      <h5 class="about-subtitle text-uppercase text-secondary">Introduction</h5>
-      <h1 class="about-title text-primary">Overview.</h1>
+      <h5 class="about-subtitle text-uppercase text-secondary">{{ about.subtitle }}</h5>
+      <h1 class="about-title text-primary">{{ about.title }}.</h1>
       <p class="about-text text-primary">
         Driven by my personal journey and guided by a deep sense of purpose as a developer, I am always excited to contribute with a dynamic and forward-thinking team. I bring <span class="highlight">perseverance</span>, <span class="highlight">integrity</span>, and a <span class="highlight">rapid learning ability</span> to every project, striving to create impactful software solutions that push boundaries and drive positive change.
       </p>
     </div>
+    <div class="about-card-container d-flex align-items-center">
+      <div
+        v-for="card in about.cards"
+        :key="card.title"
+        class="about-card-item p-3"
+      >
+        <AboutCard :card="card" />
+      </div>
+    </div>
   </section>
 </template>
 
-<script></script>
+<script>
+import about from '../constants/context/About.js';
+import AboutCard from './AboutCard.vue';
+
+export default {
+  setup() {
+    return {
+      about,
+    };
+  },
+};
+</script>
 
 <style scoped lang="scss">
 .about {
   &-wrapper {
     padding: 2rem 0;
+    width: 100%;
   }
   &-subtitle {
     font-size: 1.1rem;
