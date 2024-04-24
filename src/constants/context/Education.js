@@ -41,7 +41,7 @@ const education = [
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
-      "JAVASCRIPT - Fundamentals", "Fundamentals II", "Array Methods", "Animations I", "Animations II"
+      "JS Fundamentals", "JS Fundamentals II", "JS Array Methods", "JS Animations I", "JS Animations II"
     ],
   },
 ];

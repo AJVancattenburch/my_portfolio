@@ -13,7 +13,7 @@
     <ul v-if="school.school_name === 'CodeWorks'" class="pt-3">
       <li v-for="(point, index) in school.points" :key="index" class="fw-semibold">{{ point }}</li>
     </ul>
-    <div v-else class="d-flex justify-content-between pt-3 pe-5">
+    <div v-else class="d-flex flex-wrap justify-content-between pt-3 pe-5">
       <p v-for="(point, index) in school.points" :key="index" class="fw-semibold ps-5">{{ point }}</p>
     </div>
   </div>
