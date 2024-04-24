@@ -1,25 +1,26 @@
 <template>
-  <div class="project-item purple-gradient">
+  <div class="project-item purple-gradient me-5 pb-4">
     <div class="project-item-content d-flex flex-column">
       <img
         :src="project.image"
         :alt="project.name"
-        class="project-item-image img-fluid"
+        :class="`${project.cssSelector}-image project-item-image img-fluid`"
       />
-      <h2 class="project-item-title">{{ project.name }}</h2>
-      <div class="scroll-box">
-        <p class="project-item-description">{{ project.description }}</p>
-      </div>
-      <div class="project-item-links">
+      <div class="project-item-link">
         <a
           :href="project.source_code_link"
           target="_blank"
           rel="noopener noreferrer"
           class="project-item-link"
         >
-          <img :src="project.source_code_icon" alt="GitHub" />
+          <img :src="project.source_code_icon" alt="GitHub" class="project-item-icon bg-dark rounded-circle" :title="`Source code link for '${project.name}'`" />
         </a>
       </div>
+      <h2 class="project-item-title">{{ project.name }}</h2>
+      <div class="scroll-box">
+        <p class="project-item-description">{{ project.description }}</p>
+      </div>
+      
       <div class="d-flex flex-wrap">
         <span v-for="tag in project.tags" :key="tag.name" :class="tag.color" class="pe-1">#{{ tag.name }}</span>
       </div>
@@ -42,6 +43,7 @@ export default {
 .project-item {
   position: relative;
   width: 95%;
+  height: 40rem;
   color: var(--text-primary);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -77,23 +79,34 @@ export default {
     height: 250px;
     overflow-y: auto;
   }
-  &-links {
+  &-link {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: var(--dark-purple);
   }
-  &-link {
-    border-radius: 0.5rem;
-    display: inline-block;
-    margin: 0 0.5rem;
-    padding: 0.5rem;
-    img {
-      display: block;
-      height: 1.5rem;
-      width: 1.5rem;
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+    border: 2px double var(--text-primary);
+    transition: 0.3s;
+    &:hover {
+      filter: brightness(1.4);
+      rotate: 10deg;
+      transition: 0.3s;
     }
   }
 }
 ::-webkit-scrollbar {
   width: 0.5rem;
+}
+.grant-ready-image {
+  object-position: center !important;
 }
 </style>

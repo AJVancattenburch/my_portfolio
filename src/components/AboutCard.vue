@@ -1,11 +1,13 @@
 <template>
-  <section class="about-card purple-gradient">
-    <div class="about-card-image">
-      <img :src="card.imgSrc" :alt="card.imgAlt" :title="card.imgAlt" class="img-fluid" />
-    </div>
-    <div class="about-card-content">
-      <h3 class="d-flex align-items-baseline about-card-title text-primary">{{ card.title }}</h3>
-    </div>
+  <section class="green-pink-gradient">
+    <section class="about-card purple-gradient">
+      <div class="about-card-img-container">
+        <img :src="card.imgSrc" :alt="card.imgAlt" :title="card.imgAlt" class="img-fluid about-card-img" />
+      </div>
+      <div class="about-card-content">
+        <h3 class="d-flex align-items-baseline about-card-title text-primary">{{ card.title }}</h3>
+      </div>
+    </section>
   </section>
 </template>
 
@@ -21,9 +23,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.green-pink-gradient {
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
 .about-card {
   position: relative;
-  width: 300px;
+  width: 20rem;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -35,29 +44,20 @@ export default {
   transition: all 0.3s ease-in-out;
   z-index: 1;
   cursor: pointer;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--green-pink-gradient);
-    clip-path: polygon(100% 97%, 3% 97%, 0% 2%, 0% 100%);
-    border-radius: 1rem;
-    box-shadow: 1rem 1rem 1rem #00000080 inset;
-    filter: blur(6px) brightness(0.9);
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
   &:hover {
     transform: scale(1.05);
   }
-  &-image {
+  &-img-container {
     width: 90%;
+    height: 50%;
     display: flex;
     position: absolute;
-    top: 2rem;
+    top: 1rem;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
   }
   &-content {
     position: absolute;

@@ -1,9 +1,9 @@
 <template>
   <section class="experience-wrapper">
-    <div class="experience-content p-4">
+    <div class="experience-content p-5">
       <h5 class="experience-subtitle text-uppercase text-secondary">What I have done so far</h5>
       <h1 class="experience-title text-primary">Work Experience.</h1>
-      <div class="experience-container">
+      <div class="experience-container pt-5">
         <div
           v-for="experience in experiences"
           :key="experience.company_name"

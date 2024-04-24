@@ -1,13 +1,14 @@
 <template>
   <section class="projects-wrapper">
     <div class="projects-content p-4">
-      <h5 class="projects-subtitle text-uppercase text-secondary">Work || Art || Passion</h5>
-      <h1 class="projects-title text-primary">Projects.</h1>
+      <h5 class="projects-subtitle text-uppercase text-secondary">{{ projectData.subtitle }}</h5>
+      <h1 class="projects-title text-primary">{{ projectData.title }}.</h1>
+      <p class="projects-text text-primary">{{ projectData.text }}</p>
       <div class="col-12 projects-container d-flex flex-wrap justify-content-center">
         <div
-          v-for="project in projects"
+          v-for="project in projectData.projects"
           :key="project.name"
-          class="col-12 col-md-4 d-flex flex-wrap project-item"
+          class="col-12 col-md-6 col-lg-3 d-flex flex-wrap project-item pt-5"
         >
           <ProjectCard :project="project" />
         </div>
@@ -17,12 +18,12 @@
 </template>
 
 <script>
-import projects from "../constants/context/Projects.js";
+import projectData from "../constants/context/Projects.js";
 import ProjectCard from "./ProjectCard.vue";
 
 export default {
   setup() {
-    return { projects };
+    return { projectData };
   },
   components: {
     ProjectCard,
@@ -44,6 +45,18 @@ export default {
     font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 2rem;
+  }
+  &-text {
+    width: 75%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  &-container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

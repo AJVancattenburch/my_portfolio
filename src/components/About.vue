@@ -1,13 +1,13 @@
 <template>
   <section class="about-wrapper">
-    <div class="about-content p-4">
+    <div class="about-content p-5">
       <h5 class="about-subtitle text-uppercase text-secondary">{{ about.subtitle }}</h5>
       <h1 class="about-title text-primary">{{ about.title }}.</h1>
       <p class="about-text text-primary">
         Driven by my personal journey and guided by a deep sense of purpose as a developer, I am always excited to contribute with a dynamic and forward-thinking team. I bring <span class="highlight">perseverance</span>, <span class="highlight">integrity</span>, and a <span class="highlight">rapid learning ability</span> to every project, striving to create impactful software solutions that push boundaries and drive positive change.
       </p>
     </div>
-    <div class="about-card-container d-flex align-items-center">
+    <div class="about-card-container d-flex flex-wrap align-items-center">
       <div
         v-for="card in about.cards"
         :key="card.title"
@@ -35,8 +35,10 @@ export default {
 <style scoped lang="scss">
 .about {
   &-wrapper {
-    padding: 2rem 0;
     width: 100%;
+  }
+  &-card-container {
+    padding: 2rem;
   }
   &-subtitle {
     font-size: 1.1rem;
