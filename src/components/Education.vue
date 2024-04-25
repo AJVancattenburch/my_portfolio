@@ -1,7 +1,7 @@
 <template>
   <section class="education-wrapper">
     <div class="education-content p-5">
-      <h5 class="education-subtitle text-uppercase text-secondary">Where I have learned so far</h5>
+      <h5 class="education-subtitle text-uppercase text-secondary">What I have learned so far</h5>
       <h1 class="education-title text-primary">Education.</h1>
       <div class="education-container pt-5">
         <div
