@@ -1,11 +1,11 @@
 <template>
   <section class="experience-wrapper">
     <div class="experience-content p-5">
-      <h5 class="experience-subtitle text-uppercase text-secondary">What I have done so far</h5>
-      <h1 class="experience-title text-primary">Work Experience.</h1>
+      <h5 class="experience-subtitle text-uppercase text-secondary">{{ experienceData.subtitle }}</h5>
+      <h1 class="experience-title text-primary">{{ experienceData.title }}.</h1>
       <div class="experience-container pt-5">
         <div
-          v-for="experience in experiences"
+          v-for="experience in experienceData.experiences"
           :key="experience.company_name"
           class="experience-item"
         >
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import experiences from "../constants/Experience.js";
+import experienceData from "../constants/Experience.js";
 
 export default {
   setup() {
     return {
-      experiences,
+      experienceData,
     };
   },
 }

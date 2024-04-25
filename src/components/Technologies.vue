@@ -1,11 +1,11 @@
 <template>
   <section class="technologies-wrapper">
     <div class="technologies-content p-5">
-      <h5 class="technologies-subtitle text-uppercase text-secondary">Technologies I have worked with</h5>
-      <h1 class="technologies-title text-primary">Technologies.</h1>
+      <h5 class="technologies-subtitle text-uppercase text-secondary">{{ technologyData.subtitle }}</h5>
+      <h1 class="technologies-title text-primary">{{ technologyData.title }}.</h1>
       <div class="col-12 technologies-container d-flex flex-wrap justify-content-center pt-5">
         <div
-          v-for="technology in technologies"
+          v-for="technology in technologyData.technologies"
           :key="technology.name"
           class="col-1 technology-item"
         >
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import technologies from "../constants/Technologies.js";
+import technologyData from "../constants/Technologies.js";
 
 export default {
   setup() {
     return {
-      technologies,
+      technologyData,
     };
   },
 }

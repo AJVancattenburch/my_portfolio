@@ -1,11 +1,11 @@
 <template>
   <section class="education-wrapper">
     <div class="education-content p-5">
-      <h5 class="education-subtitle text-uppercase text-secondary">What I have learned so far</h5>
-      <h1 class="education-title text-primary">Education.</h1>
+      <h5 class="education-subtitle text-uppercase text-secondary">{{ educationData.subtitle }}</h5>
+      <h1 class="education-title text-primary">{{ educationData.title }}.</h1>
       <div class="education-container pt-5">
         <div
-          v-for="school in education"
+          v-for="school in educationData.schools"
           :key="school.school_name"
           class="education-item"
         >
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import education from "../constants/Education.js";
+import educationData from "../constants/Education.js";
 import EducationCard from "./EducationCard.vue";
 
 export default {
   setup() {
     return {
-      education,
+      educationData,
     };
   },
   components: { EducationCard },
