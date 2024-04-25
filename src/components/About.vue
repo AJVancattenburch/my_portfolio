@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import about from '../constants/context/About.js';
+import about from '../constants/About.js';
 import AboutCard from './AboutCard.vue';
 
 export default {

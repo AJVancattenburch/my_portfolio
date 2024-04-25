@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import feedbacks from "../constants/context/Feedbacks.js";
+import feedbacks from "../constants/Feedbacks.js";
 
 export default {
   setup() {

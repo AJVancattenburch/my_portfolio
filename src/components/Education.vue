@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import education from "../constants/context/Education.js";
+import education from "../constants/Education.js";
 import EducationCard from "./EducationCard.vue";
 
 export default {

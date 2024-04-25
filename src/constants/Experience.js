@@ -1,4 +1,4 @@
-import { qlLogo, usmgLogo, imagLogo } from "../../assets/img/company/_index.js";
+import { qlLogo, usmgLogo, imagLogo } from "../assets/img/company/_index.js";
 
 const experiences = [
   {

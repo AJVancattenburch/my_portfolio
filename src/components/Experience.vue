@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import experiences from "../constants/context/Experience.js";
+import experiences from "../constants/Experience.js";
 
 export default {
   setup() {

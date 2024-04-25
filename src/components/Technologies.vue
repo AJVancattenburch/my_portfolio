@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import technologies from "../constants/context/Technologies.js";
+import technologies from "../constants/Technologies.js";
 
 export default {
   setup() {

@@ -1,6 +1,4 @@
-import codeworks from "../../assets/img/education/codeworks.png";
-import wildlearner from "../../assets/img/education/wildlearner.png";
-import grasshopper from "../../assets/img/education/grasshopper.png";
+import { codeworks, wildLearner, grasshopper } from "../assets/img/education/_index";
 
 const education = [
   {
@@ -21,7 +19,7 @@ const education = [
   {
     title: "Earned Certifications",
     school_name: "Wild Learner",
-    icon: wildlearner,
+    icon: wildLearner,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - June 2023",
     cssSelector: "wildlearner",
