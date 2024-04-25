@@ -7,7 +7,7 @@ I am also creating this portfolio as a template for others to use for their own 
 
 Each javascript file located in the `src/constants` folder represents the different sections of the portfolio page (see below image):
 
-
+> <p><img src="./src/assets/img/README_images/constants-img.png" class="img-fluid" width="200" /></p>
 
 By simply changing the values in each content file located in the `src/constants` folder, you can easily customize this portfolio to fit your own personal brand and style. I have also included a `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code.
 
