@@ -23,7 +23,9 @@
 
   --black-gradient: linear-gradient(to right, #232323, #000000);
   --white-gradient: radial-gradient(circle at center, #F7F7F7dd 0%, #E7E7E799 70%, transparent);
+  --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);
   --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
+  --purple-gradient-top: linear-gradient(0deg, var(--dark-purple) 0%, #231d2e99 100%);
   --green-pink-gradient: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
 }
 

@@ -41,7 +41,7 @@
   left: 0;
   text-shadow: 0 2px 0 var(--purple), 0 0px 20px var(--blue);
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
   filter: brightness(0.9);
   .my-logo {
     border-radius: 50%;

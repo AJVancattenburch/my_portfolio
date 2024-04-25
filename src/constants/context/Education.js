@@ -9,6 +9,7 @@ const education = [
     icon: codeworks,
     iconBg: "#383E56",
     date: "March 2023 - July 2023",
+    cssSelector: "codeworks",
     points: [
       "Completed rigorous Full-Stack course that utilizes the latest industry standards in Software Development.",
       "Exposure to 1000+ hours of additional hands-on coding experience.",
@@ -23,15 +24,16 @@ const education = [
     icon: wildlearner,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - June 2023",
+    cssSelector: "wildlearner",
     points: [
-      "Intro to HTML5",
-      "Intro to CSS3",
-      "Intro to JavaScript",
-      "Advanced JavaScript",
-      "Intro to React.js",
-      "Intro to Vue.js",
-      "Intro to Node.js",
-      "Intro to Express"
+      "Intro to HTML5 |",
+      "Intro to CSS3 |",
+      "Intro to JavaScript |",
+      "Advanced JavaScript |",
+      "Intro to React.js |",
+      "Intro to Vue.js |",
+      "Intro to Node.js |",
+      "Intro to Express.js"
     ]
   },
   {
@@ -40,8 +42,9 @@ const education = [
     icon: grasshopper,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
+    cssSelector: "grasshopper",
     points: [
-      "JS Fundamentals", "JS Fundamentals II", "JS Array Methods", "JS Animations I", "JS Animations II"
+      "JS Fundamentals |", "JS Fundamentals II |", "JS Array Methods |", "JS Animations I |", "JS Animations II"
     ],
   },
 ];

@@ -7,6 +7,7 @@ const experiences = [
     icon: qlLogo,
     iconBg: "#E6DEDD",
     date: "Feb 2023 - Present",
+    cssSelector: "ql",
     points: [
       "TESTING - I have experience in manual testing, automated testing, and performance testing.",
       "TEAM COLLABORATION - I have worked closely with developers, product managers, and other QA specialists to ensure that the product is of the highest quality.",
@@ -21,6 +22,7 @@ const experiences = [
     icon: usmgLogo,
     iconBg: "#383E56",
     date: "Apr 2021 - Jan 2023",
+    cssSelector: "usmg",
     points: [
       "PROBLEM-SOLVING - Constantly analyzed complex situations to find creative solutions.",
       "TEAM COLLABORATION - Experience working collaboratively with a team that delivers results. As well as with outside sources like Project Coordinators, Designers, and Clients in the glazing industry.",
@@ -33,6 +35,7 @@ const experiences = [
     icon: imagLogo,
     iconBg: "#E6DEDD",
     date: "June 2016 - Dec 2020",
+    cssSelector: "imag",
     points: [
       "TEAM LEADERSHIP - I was responsible for managing a team of 5-10 employees. I was in charge of scheduling and ensuring that all employees were performing at a high level.",
       "TEAM COLLABORATION - I worked closely with staff to ensure mental health and wellness.",

@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-dark">
-    <Hero />
+  <Hero />
+  <div class="bg-main">
     <About />
     <Education />
     <Experience />
@@ -26,8 +26,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.test-block {
-  height: 100vh;
+.bg-main {
+  position: relative;
+  background: var(--black-purple-radial-gradient);
+  height: 100%;
   width: 100%;
 }
 </style>

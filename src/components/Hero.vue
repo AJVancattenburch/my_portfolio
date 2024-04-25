@@ -20,7 +20,8 @@ export default {
 
 <style scoped lang="scss">
 .purple-gradient {
-  overflow: hidden;
+  position: relative;
+  //filter: drop-shadow(0 20px 20px #000000);
   &::before {
     content: '';
     position: absolute;
@@ -33,10 +34,9 @@ export default {
   }
 }
 .hero-wrapper {
-  position: relative;
   width: 100%;
   height: 100vh;
-  background: url(../assets/img/backgrounds/hero.svg);
+  background: url(../assets/img/backgrounds/hero.svg), #00000050;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

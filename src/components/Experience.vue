@@ -48,4 +48,12 @@ export default {
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .experience {
+    &-wrapper {
+      padding-block: 0;
+    }
+  }
+}
 </style>

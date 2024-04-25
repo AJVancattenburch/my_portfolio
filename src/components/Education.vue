@@ -50,4 +50,12 @@ export default {
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .education {
+    &-wrapper {
+      padding-bottom: 0;
+    }
+  }
+}
 </style>
