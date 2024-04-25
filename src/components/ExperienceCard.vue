@@ -4,9 +4,9 @@
       <img :src="experience.icon" :alt="`Image of ${experience.company_name} logo`" :class="`${experience.cssSelector}-icon`" class="col-1 experience-item-icon img-fluid rounded-circle" width="50" />
       <div class="col-11 flex-column ps-3">
         <div class="d-flex">
-        <div class="d-flex experience-item-details">
-          <h4 :class="`${experience.cssSelector}-title`" class="experience-item-title">@ {{ experience.company_name }}</h4>
-          <p class="experience-item-date ms-auto">{{ experience.date }}</p>
+        <div class="col-12 d-flex experience-item-details">
+          <h4 :class="`${experience.cssSelector}-title`" class="col-9 experience-item-title">@ {{ experience.company_name }}</h4>
+          <p class="col-2 experience-item-date ms-auto">{{ experience.date }}</p>
         </div>
         </div>
         <h2 class="experience-item-title">{{ experience.title }}</h2>

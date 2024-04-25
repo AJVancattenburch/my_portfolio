@@ -4,6 +4,7 @@ import cSharp from './csharp.png';
 import css from './css.png';
 import docker from './docker.png';
 import expressjs from './expressjs.png';
+import postman from './postman.png';
 import figma from './figma.png';
 import html from './html.png';
 import javascript from './javascript.png';
@@ -23,6 +24,7 @@ export {
   css,
   docker,
   expressjs,
+  postman,
   figma,
   html,
   javascript,

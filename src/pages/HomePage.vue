@@ -4,6 +4,7 @@
     <About />
     <Education />
     <Experience />
+    <Technologies />
     <Projects />
     <Feedback />
   </div>
@@ -15,13 +16,14 @@ import About from '../components/About.vue'
 import Education from '../components/Education.vue'
 import Experience from '../components/Experience.vue'
 import Projects from '../components/Projects.vue'
+import Technologies from '../components/Technologies.vue'
 import Feedback from '../components/Feedback.vue'
 
 export default {
   setup() {
 
   },
-  components: { Hero, About, Education, Experience, Projects, Feedback }
+  components: { Hero, About, Education, Experience, Projects, Technologies, Feedback }
 }
 </script>
 

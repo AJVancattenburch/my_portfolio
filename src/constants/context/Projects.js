@@ -16,11 +16,11 @@ const projectData = {
           },
           {
               name: "nodejs",
-              color: "green-text-gradient"
+              color: "purple-text-gradient"
           },
           {
               name: "expressjs",
-              color: "green-text-gradient"
+              color: "pink-text-gradient"
           },
           {
               name: "javascript",
@@ -63,10 +63,6 @@ const projectData = {
         {
           name: "javascript",
           color: "yellow-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "violet-text-gradient",
         }
       ],
       image: grantReady,

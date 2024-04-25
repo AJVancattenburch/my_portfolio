@@ -1,5 +1,5 @@
 <template>
-  <div class="project-item purple-gradient me-5 pb-4">
+  <div class="project-item purple-gradient me-4 pb-4">
     <div class="project-item-content d-flex flex-column">
       <img
         :src="project.image"
@@ -21,7 +21,10 @@
         <p class="project-item-description">{{ project.description }}</p>
       </div>
       
-      <div class="d-flex flex-wrap">
+      <div class="d-flex flex-wrap footer-box">
+        <span class="col-12 d-flex justify-content-center align-items-center">
+          <i class="mdi mdi-chevron-down text-secondary fs-5"></i>
+        </span>
         <span v-for="tag in project.tags" :key="tag.name" :class="tag.color" class="pe-1">#{{ tag.name }}</span>
       </div>
     </div>
@@ -42,8 +45,8 @@ export default {
 <style scoped lang="scss">
 .project-item {
   position: relative;
-  width: 95%;
-  height: 40rem;
+  width: 100%;
+  height: 37.5rem;
   color: var(--text-primary);
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
@@ -63,7 +66,7 @@ export default {
   }
   &-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     object-position: left center;
     border: 1.5px var(--text-primary) inset;
@@ -76,7 +79,7 @@ export default {
   &-description {
     font-size: 1rem;
     margin: 0 0 1rem;
-    height: 250px;
+    height: 215px;
     overflow-y: auto;
   }
   &-link {
@@ -102,9 +105,13 @@ export default {
       transition: 0.3s;
     }
   }
+  .mdi-chevron-down {
+    position: relative;
+    top: -0.6rem;
+  }
 }
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  display: none;
 }
 .grant-ready-image {
   object-position: center !important;
