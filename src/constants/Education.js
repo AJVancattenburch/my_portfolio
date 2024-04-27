@@ -1,4 +1,4 @@
-import { codeworks, wildLearner, grasshopper } from "../assets/img/education/_index";
+import { codeworks, wildLearner, grasshopper } from '../assets/img/education/_index';
 
 const educationData = {
   title: "Education",

@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import projectData from "../constants/Projects.js";
-import ProjectCard from "./ProjectCard.vue";
+import projectData from '../constants/Projects';
+import ProjectCard from './ProjectCard.vue';
 
 export default {
   setup() {

@@ -1,4 +1,4 @@
-import { ql, myLogo, codeworks, imag } from "../assets/img/company/_index.js";
+import { ql, myLogo, codeworks, imag } from '../assets/img/company/_index';
 
 const experienceData = {
   title: "Work Experience",

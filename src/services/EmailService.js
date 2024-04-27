@@ -1,9 +1,8 @@
 import emailjs from 'emailjs-com';
-import { ref } from "vue";
-import { logger } from "../utils/Logger.js";
+import { logger } from '../utils/Logger';
 import { serviceId, templateId, userId, myName, myEmail } from './../env';
 
-function _getEmailInfo(form) {
+function _getEmailContent(form) {
   return {
     from_name: form.name,
     to_name: myName,
@@ -19,7 +18,7 @@ class EmailService {
       await emailjs.send(
         serviceId,
         templateId,
-        _getEmailInfo(form),
+        _getEmailContent(form),
         userId
       );
       alert("Thank you for your message! I will get back to you as soon as possible.");

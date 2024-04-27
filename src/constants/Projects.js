@@ -1,5 +1,5 @@
-import { cwChallenges, grantReady, threaditAI, gamePursuit } from "../assets/img/projects/_index.js";
-import { github } from "../assets/img/icons/_index.js";
+import { cwChallenges, grantReady, threaditAI, gamePursuit } from '../assets/img/projects/_index';
+import { github } from '../assets/img/icons/_index';
 
 const projectData = {
   title: "Projects",

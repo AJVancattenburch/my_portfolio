@@ -1,4 +1,4 @@
-import Pop from "./Pop.js"
+import Pop from './Pop.js'
 
 const APP_NAME = "my_portfolio"
 

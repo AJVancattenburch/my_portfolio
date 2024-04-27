@@ -1,4 +1,4 @@
-import { aspNet, bootstrap, cSharp, css, docker, expressjs, postman, figma, html, javascript, mongodb, mysql, nextjs, nodejs, reactjs, tailwindcss, threejs, vuejs } from '../assets/img/tech/_index.js';
+import { aspNet, bootstrap, cSharp, css, docker, expressjs, postman, figma, html, javascript, mongodb, mysql, nextjs, nodejs, reactjs, tailwindcss, threejs, vuejs } from '../assets/img/tech/_index';
 
 const technologyData = {
   title: "Technologies",

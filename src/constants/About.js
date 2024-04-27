@@ -1,4 +1,4 @@
-import { fullStack, vuejsReactjs, nodejsAspnetCore, webArtist } from "../assets/img/cardImg/_index";
+import { fullStack, vuejsReactjs, nodejsAspnetCore, webArtist } from '../assets/img/cardImg/_index';
 
 const about = {
   title: 'Overview',
