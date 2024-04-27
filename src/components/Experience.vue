@@ -54,6 +54,12 @@ export default {
     &-wrapper {
       padding-block: 0;
     }
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
+    }
   }
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="card mb-2 p-3 pb-0 education-item purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
-      <img :src="school.icon" :alt="`Image of ${school.school_name} logo`" :class="`${school.cssSelector}-icon`" class="col-1 education-item-icon img-fluid" width="50" />
+      <div :class="`${school.cssSelector}-img-container`" class="img-container">
+        <img :src="school.icon" :alt="`Image of ${school.school_name} logo`" :class="`${school.cssSelector}-icon`" class="col-1 education-item-icon img-fluid rounded-circle" />
+      </div>
       <div class="col-11 flex-column ps-3">
         <div class="d-flex education-item-details">
           <h2 :class="`${school.cssSelector}-title`" class="education-item-title">{{ school.title }}</h2>
@@ -36,6 +38,25 @@ export default {
   width: 75%;
   border: 2px double var(--text-secondary);
 }
+.img-container {
+  width: 100%;
+  height: 100%;
+}
+.wildlearner-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--text-primary);
+  border-radius: 50%;
+  .wildlearner-icon {
+    position: relative;
+    top: 0.25rem;
+  }
+}
+.education-item-icon {
+  width: 100%;
+  height: 100%;
+}
 
 @media (max-width: 768px) {
   .card {
@@ -44,12 +65,13 @@ export default {
     margin-bottom: 4rem !important;
   }
   .education-item {
-    &-icon {
-    position: absolute;
-    top: -40px;
+    &-icon:not(.wildlearner-icon) {
+    position: absolute !important;
+    top: -40px !important;
     left: 50%;
     transform: translateX(-50%);
     width: 75px;
+    height: 75px;
     }
     &-details {
       flex-direction: column;
@@ -64,11 +86,19 @@ export default {
       padding-left: 1rem !important;
     }
   }
-  .wildlearner-icon {
-    width: 150px;
-  }
-  .grasshopper-icon {
-    width: 175px;
+  .wildlearner-img-container {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--text-primary) !important;
+    border-radius: 50%;
+    z-index: 1;
+    width: 75px;
+    height: 75px;
   }
   .wildlearner-title, .grasshopper-title {
     white-space: nowrap;

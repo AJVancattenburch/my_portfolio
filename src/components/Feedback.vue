@@ -31,6 +31,7 @@ export default {
 <style scoped lang="scss">
 .feedbacks {
   &-wrapper {
+    overflow: hidden;
     padding: 2rem 0;
   }
   &-subtitle {
@@ -56,6 +57,17 @@ export default {
     transition: all 0.3s;
     &:hover {
       filter: brightness(1.1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbacks {
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
     }
   }
 }

@@ -61,4 +61,15 @@ export default {
   color: #00D8FF;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .about {
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
+    }
+  }
+}
 </style>

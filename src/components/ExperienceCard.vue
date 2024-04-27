@@ -1,7 +1,9 @@
 <template>
   <div class="card mb-2 p-3 pb-0 education-item purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
-      <img :src="experience.icon" :alt="`Image of ${experience.company_name} logo`" :class="`${experience.cssSelector}-icon`" class="col-1 experience-item-icon img-fluid rounded-circle" width="50" />
+      <div :class="`${experience.cssSelector}-img-container`" class="img-container">
+        <img :src="experience.icon" :alt="`Image of ${experience.company_name} logo`" :class="`${experience.cssSelector}-icon`" class="col-1 experience-item-icon img-fluid rounded-circle" width="50" />
+      </div>
       <div class="col-11 flex-column ps-3">
         <div class="d-flex">
         <div class="col-12 d-flex experience-item-details">
@@ -33,6 +35,20 @@ export default {
 .card {
   width: 75%;
   border: 2px double var(--text-secondary);
+  .img-container {
+    width: 100%;
+    height: 100%;
+    .experience-item-icon {
+      width: 100%;
+    }
+  }
+  /* CHANGING THE BACKGROUND COLOR OF YOUR 'FREELANCE DEVELOPER' BRAND/LOGO (desktop view): Currently set to black. Change the #000 hex color to whatever you want your background to be for your logo. If you don't want a background color, simply delete the below `.myLogo-icon` styles below */
+  .myLogo-icon {
+    background: radial-gradient(circle, #000 46%, transparent 49%);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -40,11 +56,22 @@ export default {
     width: 100%;
     padding-top: 3rem !important;
     margin-bottom: 4rem !important;
+    .img-container {
+      width: 100%;
+      height: 100%;
+      .experience-item-icon {
+        width: 60px;
+      }
+      /* CHANGING THE BACKGROUND COLOR OF YOUR 'FREELANCE DEVELOPER' BRAND/LOGO (mobile view): Currently set to black. Change the #000 hex color to whatever you want your background to be for your logo. If you don't want a background color, simply delete the below `.myLogo-icon` styles below */
+      .myLogo-icon {
+        background: radial-gradient(circle, #000 58%, transparent 61%);
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+      }
+    }
   }
   .experience-item {
-    .usmg-icon {
-      width: 75px;
-    }
     &-icon {
     position: absolute;
     top: -30px;

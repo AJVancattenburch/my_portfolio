@@ -1,5 +1,5 @@
 <template>
-  <section class="tech-card purple-gradient rounded-3 m-1">
+  <section class="tech-card purple-gradient rounded-3 me-auto my-3">
     <div class="tech-card-content d-flex flex-column justify-content-center align-items-center p-3">
       <div class="tech-card-image">
         <img :src="technology.image" alt="technology.name" class="tech-card-image img-fluid" width="50" />
@@ -24,7 +24,11 @@ export default {
 
 <style scoped lang="scss">
 .tech-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 6rem;
+  width: 6rem;
   border: 2px double var(--text-secondary);
 }
 </style>

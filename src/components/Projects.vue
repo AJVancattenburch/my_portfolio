@@ -63,6 +63,12 @@ export default {
 @media (max-width: 768px) {
   .project-item {
     margin-bottom: 1rem;
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
+    }
   }
 }
 </style>

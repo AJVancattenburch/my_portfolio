@@ -15,6 +15,7 @@
     "@vitejs/plugin-vue": "^4.5.0",
     "axios": "1.6.2",
     "bootstrap": "5.3.2",
+    "emailjs-com": "^3.2.0",
     "socket.io-client": "4.7.2",
     "sweetalert2": "11.10.1",
     "vue": "3.3.9",
@@ -22,12 +23,12 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.6.0",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/eslint-config-standard": "^8.0.1",
     "eslint": "8.54.0",
     "eslint-plugin-vue": "^9.18.1",
     "sass": "1.69.5",
-    "vite": "5.0.2",
-    "@vitejs/plugin-vue": "^4.4.0",
-    "@vitejs/plugin-vue-jsx": "^3.0.2"
+    "vite": "5.0.2"
   }
 }
