@@ -14,12 +14,12 @@
 
 .form-box .input-box textarea {
   resize: none;
-  height: 125px;
+  height: 185px;
 }
 
 .form-box button {
   position: relative;
-  top: 2rem;
+  top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +57,7 @@
   position: absolute;
   display: block;
   background: transparent;
+  opacity: 0.5;
 }
 
 @keyframes fadeIn {
@@ -75,16 +76,7 @@
   height: 65px;
 }
 
-.form-box button>span {
-  opacity: 0.5;
-}
-
 form:invalid button[type="submit"] {
-  color: var(--bs-btn-disabled-color);
-  pointer-events: none;
-  background-color: var(--bs-btn-disabled-bg);
-  border-color: var(--bs-btn-disabled-border-color);
-  opacity: var(--bs-btn-disabled-opacity);
   span:nth-child(1),
   span:nth-child(2),
   span:nth-child(3),

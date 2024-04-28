@@ -29,6 +29,9 @@ export default {
       about,
     };
   },
+  components: {
+    AboutCard,
+  },
 };
 </script>
 

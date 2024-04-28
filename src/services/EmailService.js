@@ -1,41 +1,44 @@
 import emailjs from 'emailjs-com';
 import { logger } from '../utils/Logger';
-import { serviceId, templateId, userId, myName, myEmail } from './../env';
+import { emailConfig } from './../env';
+import Pop from '../utils/Pop';
 
-function _getEmailContent(form) {
+function _getEmailPayload(newEmail) {
   return {
-    from_name: form.name,
-    to_name: myName,
-    from_email: form.email,
-    to_email: myEmail,
-    message: form.message,
-  }
+    from_name: newEmail.name,
+    to_name: emailConfig.myName,
+    from_email: newEmail.email,
+    to_email: emailConfig.myEmail,
+    message: newEmail.message,
+  };
 }
 
 class EmailService {
-  async sendEmail(form) {
+  async sendEmail(newEmail) {
     try {
       await emailjs.send(
-        serviceId,
-        templateId,
-        _getEmailContent(form),
-        userId
+        emailConfig.serviceId,
+        emailConfig.templateId,
+        _getEmailPayload(newEmail),
+        emailConfig.userId
       );
-      alert("Thank you for your message! I will get back to you as soon as possible.");
-      this.logSentEmail(form);
+      Pop.success(`Thank you for your message! I will get back to you as soon as possible. - ${emailConfig.myName}`);
+      this.getDetailedEmailLog(newEmail);
     } catch (error) {
-      alert("Sorry, something went wrong. Please try again later.");
+      Pop.error("Sorry, something went wrong. Please try again later.");
       logger.error(error);
     }
   }
 
-  logSentEmail(form) {
+  getDetailedEmailLog(newEmail) {
+    const timeStamp = new Date().toLocaleString();
+    const recipient = emailConfig.myName;
     const email = {
-      name: form.name,
-      email: form.email,
-      message: form.message,
+      name: newEmail.name,
+      email: newEmail.email,
+      message: newEmail.message,
     };
-    logger.log(email);
+    logger.log(`Your email sent to ${recipient} with the following details:`, email, `Time Stamp: ${timeStamp}`);
   }
 }
 

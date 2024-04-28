@@ -3,21 +3,21 @@
     <div class="contact-content p-5">
       <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
       <h1 class="contact-title text-primary">Contact.</h1>
-      <form ref="formRef" @submit.prevent="handleSubmit" class="form-box d-flex flex-column mt-5">
+      <form ref="formRef" @submit.prevent="handleSubmit" class="form-box d-flex flex-column m7-5">
         <div class="col-12 input-box">
-          <input type="text" v-model="form.name" placeholder="What's your name?" class="p-2" minlength="2" required />
+          <input type="text" v-model="newEmail.name" placeholder="What's your name?" class="p-2" minlength="2" required />
           <label class="d-flex flex-column"></label>
         </div>
         <div class="col-12 input-box">
-          <input type="email" v-model="form.email" placeholder="What's your email?" class="bg-dark p-2" minlength="5" required />
+          <input type="email" v-model="newEmail.email" placeholder="What's your email?" class="bg-dark p-2" minlength="5" required />
           <label class="d-flex flex-column"></label>
         </div>
         <div class="col-12 input-box">
-          <textarea rows="7" v-model="form.message" placeholder="What do you want to say?" class="p-2" minlength="10" maxlength="1000" required />
+          <textarea rows="7" v-model="newEmail.message" placeholder="What do you want to say?" class="p-2" minlength="10" maxlength="1000" required />
           <label class="d-flex flex-column"></label>
         </div>
-        <div class="col-12">
-          <button type="submit" class="col-12 col-md-4 col-lg-3 col-xlg-2 outline-none rounded-xl my-5">
+        <div class="col-12 pt-5 mt-3">
+          <button type="submit" class="col-12 col-md-4 col-lg-3 col-xl-2 outline-none rounded-xl">
             <span></span>
             <span></span>
             <span></span>
@@ -38,7 +38,7 @@ import { emailService } from '../services/EmailService'
 export default {
   setup() {
     const formRef = ref(null);
-    const form = ref({
+    const newEmail = ref({
       name: "",
       email: "",
       message: "",
@@ -48,14 +48,14 @@ export default {
     function handleChange(e) {
       const { name, value } = e.target;
 
-      form.value = { ...form.value, [name]: value };
+      newEmail.value = { ...newEmail.value, [name]: value };
     }
 
     async function handleSubmit(e) {
       try {
         e.preventDefault();
         loading.value = true;
-        await emailService.sendEmail(form.value);
+        await emailService.sendEmail(newEmail.value);
         loading.value = false;
       } catch (error) {
         logger.error(error);
@@ -64,7 +64,7 @@ export default {
 
     return {
       formRef,
-      form,
+      newEmail,
       loading,
       handleChange,
       handleSubmit,
@@ -75,6 +75,11 @@ export default {
 
 <style scoped lang="scss">
 @import url('../assets/scss/_formStyles.scss');
+.contact {
+  &-wrapper {
+    height: 95vh;
+  }
+}
 
 @media (max-width: 768px) {
   .contact {
