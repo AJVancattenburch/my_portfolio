@@ -1,5 +1,5 @@
 <template>
-  <section class="feedbacks-wrapper">
+  <section :id="feedbacks.id" class="feedbacks-wrapper">
     <div class="feedbacks-content p-5">
       <h5 class="feedbacks-subtitle text-uppercase text-secondary">{{ feedbacks.subtitle }}</h5>
       <h1 class="feedbacks-title text-primary">{{ feedbacks.title }}.</h1>

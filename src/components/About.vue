@@ -1,5 +1,5 @@
 <template>
-  <section class="about-wrapper">
+  <section ref="about" :id="about.id" class="about-wrapper">
     <div class="about-content p-5">
       <h5 class="about-subtitle text-uppercase text-secondary">{{ about.subtitle }}</h5>
       <h1 class="about-title text-primary">{{ about.title }}.</h1>
@@ -72,6 +72,15 @@ export default {
     }
     &-subtitle {
       font-size: 0.95rem;
+    }
+    &-text {
+      width: 100%;
+    }
+    &-content {
+      padding-bottom: 1rem !important;
+    }
+    &-card-container {
+      padding-top: 0rem;
     }
   }
 }

@@ -10,8 +10,13 @@ const routes = [
     path: '/',
     name: 'Home',
     component: loadPage('HomePage')
+  },
+  {
+    path: '/resume',
+    name: 'Resume',
+    component: loadPage('ResumePage')
   }
-]
+];
 
 export const router = createRouter({
   linkActiveClass: 'router-link-active',

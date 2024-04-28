@@ -1,6 +1,14 @@
-const contactData = [
-  {
-    id: 1,
-    name: 'Anthony',
-    email: '
-]
+const contactData = {
+  id: "contact",
+  title: "Contact",
+  subtitle: "Get In Touch",
+  newEmail: {
+    name: "",
+    email: "",
+    message: ""
+  },
+  loading: false,
+  formRef: null,
+};
+
+export default contactData;

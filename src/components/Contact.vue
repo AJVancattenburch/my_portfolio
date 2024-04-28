@@ -1,5 +1,5 @@
 <template>
-  <section class=" pb-5">
+  <section id="contact" class=" pb-5">
     <div class="col-12 contact-content p-5">
       <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
       <h1 class="contact-title text-primary">Contact.</h1>

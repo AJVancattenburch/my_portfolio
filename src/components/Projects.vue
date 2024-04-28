@@ -1,5 +1,5 @@
 <template>
-  <section class="projects-wrapper">
+  <section ref="projects" :id="projectData.id" class="projects-wrapper">
     <div class="projects-content p-5">
       <h5 class="projects-subtitle text-uppercase text-secondary">{{ projectData.subtitle }}</h5>
       <h1 class="projects-title text-primary">{{ projectData.title }}.</h1>
@@ -19,6 +19,7 @@
 
 <script>
 import projectData from '../constants/Projects';
+import technologyData from "../constants/Technologies.js";
 import ProjectCard from './ProjectCard.vue';
 
 export default {
@@ -61,6 +62,17 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .projects {
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
+    }
+    &-text {
+      width: 100%;
+    }
+  }
   .project-item {
     margin-bottom: 1rem;
     &-title {

@@ -1,4 +1,5 @@
 const feedbacks = {
+  id: "feedbacks",
   title: "Testimonials",
   subtitle: "What Others Say...",
   testimonials: [

@@ -1,6 +1,7 @@
 import { codeworks, wildLearner, grasshopper } from '../assets/img/education/_index';
 
 const educationData = {
+  id: "education",
   title: "Education",
   subtitle: "What I have learned so far",
   schools: [

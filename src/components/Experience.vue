@@ -1,5 +1,5 @@
 <template>
-  <section class="experience-wrapper">
+  <section :id="experienceData.id" class="experience-wrapper">
     <div class="experience-content p-5">
       <h5 class="experience-subtitle text-uppercase text-secondary">{{ experienceData.subtitle }}</h5>
       <h1 class="experience-title text-primary">{{ experienceData.title }}.</h1>

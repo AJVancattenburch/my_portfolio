@@ -137,7 +137,7 @@ export default {
 
 @media (max-width: 576px) {
   .hero-wrapper {
-    height: 100vh !important;
+    height: 94vh !important;
   }
   .hero-header {
     font-size: 40px !important;
@@ -148,9 +148,9 @@ export default {
     line-height: 28px !important;
   }
   .image-container {
-    top: 2rem;
     .my-image {
-      width: 90% !important;
+      top: 33%;
+      width: 100% !important;
     }
   }
 }

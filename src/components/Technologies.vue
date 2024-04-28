@@ -1,5 +1,5 @@
 <template>
-  <section class="technologies-wrapper">
+  <section ref="technologies" :id="technologyData.id" class="technologies-wrapper">
     <div class="technologies-content p-5">
       <h5 class="technologies-subtitle text-uppercase text-secondary">{{ technologyData.subtitle }}</h5>
       <h1 class="technologies-title text-primary">{{ technologyData.title }}.</h1>
@@ -7,7 +7,7 @@
         <div
           v-for="technology in technologyData.technologies"
           :key="technology.name"
-          class="col-3 col-lg-2 col-xl-1 technology-item"
+          class="col-4 col-sm-3 col-lg-2 col-xl-1 technology-item"
         >
           <TechnologyCard :technology="technology" />
         </div>

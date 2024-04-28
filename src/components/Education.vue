@@ -1,5 +1,5 @@
 <template>
-  <section class="education-wrapper">
+  <section :id="educationData.id" class="education-wrapper">
     <div class="education-content p-5">
       <h5 class="education-subtitle text-uppercase text-secondary">{{ educationData.subtitle }}</h5>
       <h1 class="education-title text-primary">{{ educationData.title }}.</h1>

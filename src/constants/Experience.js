@@ -1,6 +1,7 @@
 import { ql, myLogo, codeworks, imag } from '../assets/img/company/_index';
 
 const experienceData = {
+  id: "experience",
   title: "Work Experience",
   subtitle: "What I have done so far...",
   experiences: [

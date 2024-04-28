@@ -1,6 +1,7 @@
 import { fullStack, vuejsReactjs, nodejsAspnetCore, webArtist } from '../assets/img/cardImg/_index';
 
 const about = {
+  id: 'about',
   title: 'Overview',
   subtitle: 'Introduction',
   imgBg: '#383E56',

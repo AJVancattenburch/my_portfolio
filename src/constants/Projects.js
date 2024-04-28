@@ -2,6 +2,7 @@ import { cwChallenges, grantReady, threaditAI, gamePursuit } from '../assets/img
 import { github } from '../assets/img/icons/_index';
 
 const projectData = {
+  id: "projects",
   title: "Projects",
   subtitle: "Work || Art || Passion",
   text: "As a dedicated Full Stack Software Developer, I bring a new flare to the table by blending my infinite ambition and creativity with technical prowess to craft seamless web applications. With a strong foundation in UX/UI design and a commitment to user-centric solutions, I passionately engineer immersive digital experiences that captivate through interactive enchantment. My pursuit of excellence extends to mastering 3D animations, frameworks, and libraries - ensuring to stay at the forefront of web development. From debugging stubborn errors and styling properties to leveraging animations to create engaging interfaces and experiences, I thrive on tackling challenges head-on. Join me in transforming ideas into remarkable digital manifestations.",
