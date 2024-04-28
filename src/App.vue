@@ -1,20 +1,15 @@
 <script setup>
 import { AppState } from './AppState'
-import Navbar from './components/Navbar.vue'
 
 
 </script>
 
 <template>
   <header>
-    <Navbar />
   </header>
   <main>
     <router-view />
   </main>
-  <footer class="black-gradient text-light px-3">
-    Designed By: Anthony Vancattenburch
-  </footer>
 </template>
 
 <style lang="scss">
@@ -22,14 +17,5 @@ import Navbar from './components/Navbar.vue'
 
 :root {
   --main-height: calc(100vh - 32px - 64px);
-}
-
-
-footer {
-  position: fixed;
-  bottom: 0;
-  display: grid;
-  height: 32px;
-  width: 100%;
 }
 </style>
