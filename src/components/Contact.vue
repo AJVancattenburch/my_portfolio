@@ -1,23 +1,27 @@
 <template>
-  <section class="contact-wrapper">
-    <div class="contact-content p-5">
+  <section class=" pb-5">
+    <div class="col-12 contact-content p-5">
       <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
       <h1 class="contact-title text-primary">Contact.</h1>
-      <form ref="formRef" @submit.prevent="handleSubmit" class="form-box d-flex flex-column m7-5">
-        <div class="col-12 input-box">
-          <input type="text" v-model="newEmail.name" placeholder="What's your name?" class="p-2" minlength="2" required />
+      <form ref="formRef" @submit.prevent="handleSubmit" class="col-12 col-md-8 col-lg-6 form d-flex flex-column mt-5 pt-0">
+        <div class="col-12 input-container name-input">
+          <input id="name" type="text" v-model="newEmail.name" placeholder=" " class="input" minlength="2" required />
+          <div class="cut"></div>
+          <label for="name" class="placeholder">Your Name</label>
           <label class="d-flex flex-column"></label>
         </div>
-        <div class="col-12 input-box">
-          <input type="email" v-model="newEmail.email" placeholder="What's your email?" class="bg-dark p-2" minlength="5" required />
-          <label class="d-flex flex-column"></label>
+        <div class="col-12 input-container email-input">
+          <input id="email" type="email" v-model="newEmail.email" placeholder=" " class="input" minlength="5" required />
+          <div class="cut"></div>
+          <label for="email" class="placeholder">Your Email</label>
         </div>
-        <div class="col-12 input-box">
-          <textarea rows="7" v-model="newEmail.message" placeholder="What do you want to say?" class="p-2" minlength="10" maxlength="1000" required />
-          <label class="d-flex flex-column"></label>
+        <div class="col-12 input-container message-input">
+          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " class="input textarea" minlength="10" maxlength="1000" required />
+          <div class="cut cut-long"></div>
+          <label for="message" class="placeholder">Your Message</label>
         </div>
-        <div class="col-12 pt-5 mt-3">
-          <button type="submit" class="col-12 col-md-4 col-lg-3 col-xl-2 outline-none rounded-xl">
+        <div class="col-12 pt-5 mt-5">
+          <button type="submit" class="col-12 outline-none rounded-3">
             <span></span>
             <span></span>
             <span></span>
@@ -57,6 +61,11 @@ export default {
         loading.value = true;
         await emailService.sendEmail(newEmail.value);
         loading.value = false;
+        newEmail.value = {
+          name: "",
+          email: "",
+          message: "",
+        };
       } catch (error) {
         logger.error(error);
       }
@@ -75,9 +84,20 @@ export default {
 
 <style scoped lang="scss">
 @import url('../assets/scss/_formStyles.scss');
+@import url('../assets/scss/_formButton.scss');
 .contact {
   &-wrapper {
     height: 95vh;
+  }
+  &-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
   }
 }
 

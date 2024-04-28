@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-2 p-3 pb-0 education-item purple-gradient text-primary mb-3">
+  <div class="card mb-4 p-3 pb-0 education-item purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
       <div :class="`${experience.cssSelector}-img-container`" class="img-container">
         <img :src="experience.icon" :alt="`Image of ${experience.company_name} logo`" :class="`${experience.cssSelector}-icon`" class="col-1 experience-item-icon img-fluid rounded-circle" width="50" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-2 p-3 pb-0 education-item purple-gradient text-primary mb-3">
+  <div class="card mb-4 p-3 pb-0 education-item purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
       <div :class="`${school.cssSelector}-img-container`" class="img-container">
         <img :src="school.icon" :alt="`Image of ${school.school_name} logo`" :class="`${school.cssSelector}-icon`" class="col-1 education-item-icon img-fluid rounded-circle" />
