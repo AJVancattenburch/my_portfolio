@@ -30,6 +30,7 @@
   /* Gradients */
   --black-gradient: linear-gradient(to right, #232323, #000000);
   --black-gradient-alt: linear-gradient(to bottom, #000000, #232323);
+  --black-transparent-gradient: linear-gradient(to right, #000000 0%, #110e19 30%, transparent 70%);
   --white-gradient: radial-gradient(circle at center, #F7F7F7dd 0%, #E7E7E799 70%, transparent);
   --purple-black-gradient: linear-gradient(to bottom, transparent 0, var(--dark-purple) 30%, transparent 65%);
   --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);

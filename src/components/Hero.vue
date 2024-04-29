@@ -85,10 +85,23 @@ export default {
       bottom: -7rem;
       right: -56px;
       width: 60%;
+      filter:
+        drop-shadow(3px -3px 15px #000000)
+        drop-shadow(75px 0px 2px var(--purple))
+        drop-shadow(75px 0px 2px var(--red))
+        drop-shadow(75px 25px 2px var(--green))
+        drop-shadow(75px 25px 2px var(--blue));
     }
   }
 }
 
+@media (min-width: 1400px) {
+  .image-container {
+    .my-image {
+      width: 50% !important;
+    }
+  }
+}
 
 @media (max-width: 900px) {
   .hero-wrapper {

@@ -1,7 +1,7 @@
 <template>
-<nav class="vertical-nav black-gradient d-flex justify-content-end pt-5">
-  <ul class="nav-list">
-    <li class="nav-item active" v-for="link in navLinks" :key="link.id">
+<nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-5">
+  <ul v-for="link in navLinks" :key="link.id" class="nav-list">
+    <li :class="link.isActive ? 'active' : !link.isActive" class="nav-item">
       <a class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -9,23 +9,24 @@
 </template>
 
 <script>
+import { watchEffect } from 'vue';
 import navLinks from '../constants/NavLinks';
 import { logger } from '../utils/Logger';
+import { accountService } from '../services/AccountService';
 
 export default {
   setup() {
     //Compensates for fixed headers so header does not cover the top of the scrolled element. Adjust padding (`yOffset` constant below) as needed. 1 increment = 1px.
-  function scrollTo(id) {
-    const yOffset = -65;
-    let scrollElem = document.getElementById(id);
-    logger.log(`Scrolling to ${id}. Found element: ${scrollElem}.`);
-    if (!scrollElem) {
-      logger.error(`Element with id ${id} not found in navLinks.`);
-      return;
+    async function scrollTo(id) {
+      try {
+        let scrollElem = document.getElementById(id);
+        const foundLink = navLinks.find(link => link.id === id);
+        
+        await accountService.setLinkAsScrollElem(foundLink, scrollElem);
+      } catch (error) {
+        logger.error(`Element with id ${id} not found in navLinks.`);
+      }
     }
-    let y = scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
     return {
       scrollTo,
       navLinks,
@@ -33,6 +34,7 @@ export default {
   },
 }
 </script>
+
 <style scoped lang="scss">
 
 * {
@@ -45,43 +47,58 @@ export default {
   background: var(--black-gradient);
 }
 
-ul.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  & li.nav-item {
+.vertical-nav {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  ul.nav-list {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 1rem 2rem;
-    background: var(--black-gradient);
-    &:active,
-    &:focus,
-    .active {
-      view-transition-name: nav;
-      display: block;
-      background-clip: padding-box;
-      border-radius: 100vw 0 0 100vw;
-      position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    & li.nav-item {
       width: 100%;
-      background: var(--black-purple-radial-gradient);  
-      filter: drop-shadow(0 0 0px #0e0c13);
-    }
-    & a.nav-link {
-      color: var(--text-primary);
-      display: block;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      transition: color 0.3s;
-      &:hover {
-        color: var(--purple);
-      }
+      padding: 0.25rem;
+      margin: 0.75rem 0 0.75rem 6rem;
+      border-radius: 1rem;
+      background: var(--black-purple-radial-gradient);
       &:active,
-      &:focus {
-        background: #000000;
-        box-shadow: inset 0 0 10px 10px #0e0c13;
-        transition: background box-shadow 0.3s;
+      &:focus,
+      .active {
+        position: absolute;
+        view-transition-name: nav;
+        display: block;
+        background-clip: padding-box;
+        border-radius: 50% 0 0 50%;
+        background: var(--black-purple-radial-gradient);  
+        box-shadow: inset 50px 0 30px 10px var(--shadow-red);
+        filter: drop-shadow(0 0 10px var(--pink));
+        transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+        user-select: none;
+        z-index: 1000;
+      }
+      & a.nav-link {
+        color: var(--text-primary);
+        width: 100%;
+        display: block;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        transition: color 0.3s;
+        &:hover {
+          color: var(--purple);
+        }
+        &:active,
+        &.active,
+        &:focus {
+          background: #000000;
+          box-shadow: inset 0 0 10px 10px #0e0c13;
+          transition: background box-shadow 0.3s;
+        }
       }
     }
   }

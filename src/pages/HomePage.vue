@@ -45,7 +45,7 @@ export default {
 <style scoped lang="scss">
 .page-wrapper {
   position: relative;
-  background: #000000;
+  background: var(--black-transparent-gradient);
   overflow: hidden;
 
   .page-container {
@@ -57,11 +57,11 @@ export default {
   .vertical-nav-container {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0rem;
     height: 100vh;
     width: min-content;
-    padding: 0;
-    margin: 0;
+    padding: 0 2rem 0 0;
+    margin: 0px -30px 0px -45px;
     background: var(--black-gradient);
     z-index: 100;
     overflow: hidden;
