@@ -1,5 +1,5 @@
 <template>
-  <section class="col-12 d-flex justify-content-center page-wrapper">
+  <section class="col-12 d-flex justify-content-end page-wrapper">
     <div class="col-2 vertical-nav-container d-none d-lg-flex">
       <NavbarVertical />
     </div>
@@ -45,14 +45,13 @@ export default {
 <style scoped lang="scss">
 .page-wrapper {
   position: relative;
-  background: var(--black-purple-radial-gradient);
+  background: #000000;
   overflow: hidden;
 
   .page-container {
     padding: 0;
     margin: 0;
     background: var(--black-purple-radial-gradient);
-    transform: translateX(120px);
   }
 
   .vertical-nav-container {
@@ -61,10 +60,9 @@ export default {
     left: 0;
     height: 100vh;
     width: min-content;
-    max-width: 120px;
     padding: 0;
     margin: 0;
-    background: var(--black-purple-radial-gradient);
+    background: var(--black-gradient);
     z-index: 100;
     overflow: hidden;
   }

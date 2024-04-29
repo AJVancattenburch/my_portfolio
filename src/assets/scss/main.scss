@@ -27,15 +27,23 @@ a {
   display: block;
   width: 15px;
   border-radius: 10px;
-  background: var(--purple-gradient);
-  box-shadow: inset 0 0 10px var(--purple);
+  background: #232323;
   &-thumb {
-    background: var(--white-gradient);
+    background: var(--purple-black-gradient);
     border-radius: 10px;
   }
   &-track {
-    background: var(--purple-gradient) #00000099;
+    background: var(--black-gradient-alt);
     border-radius: 0px;
+    z-index: -1;
+  }
+  &-corner {
+    display: none !important;
+    visibility: hidden !important;
+  }
+ &-button {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 

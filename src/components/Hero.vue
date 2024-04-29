@@ -43,7 +43,6 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
     z-index: -1;
   }
 }
@@ -58,6 +57,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
   .hero-header {
     color: var(--text-primary);
     font-weight: 900;
@@ -82,14 +82,9 @@ export default {
     height: 100%;
     .my-image {
       position: absolute;
-      right: 0;
-      width: 50%;
-      filter:
-        drop-shadow(3px -3px 15px #000000)
-        drop-shadow(75px 0px 2px var(--purple))
-        drop-shadow(75px 0px 2px var(--red))
-        drop-shadow(75px 25px 2px var(--green))
-        drop-shadow(75px 25px 2px var(--blue));
+      bottom: -7rem;
+      right: -56px;
+      width: 60%;
     }
   }
 }
