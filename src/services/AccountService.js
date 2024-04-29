@@ -26,7 +26,7 @@ class AccountService {
     const yOffset = -65;
     let y = await scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
-    logger.log(`Scrolled to HTMLElement: ${scrollElem} @ offset Y-axis by ${yOffset}px.`)
+    logger.log(`Scrolled to HTMLElement:`, scrollElem, `@ offset Y-axis by ${yOffset}px.`)
   }
 }
 

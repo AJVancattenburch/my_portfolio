@@ -23,6 +23,15 @@ export default {
         const foundLink = navLinks.find(link => link.id === id);
         
         await accountService.setLinkAsScrollElem(foundLink, scrollElem);
+        //update the active link.isactive property:
+        navLinks.forEach(link => {
+          if (link.id === id) {
+            link.isActive = true;
+          } else {
+            link.isActive = false;
+          }
+          logger.log('Link Status:', link)
+        });
       } catch (error) {
         logger.error(`Element with id ${id} not found in navLinks.`);
       }
@@ -68,7 +77,7 @@ export default {
       background: var(--black-purple-radial-gradient);
       &:active,
       &:focus,
-      .active {
+      &.active {
         position: absolute;
         view-transition-name: nav;
         display: block;
