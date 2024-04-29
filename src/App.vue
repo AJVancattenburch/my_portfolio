@@ -10,6 +10,9 @@ import { AppState } from './AppState'
   <main>
     <router-view />
   </main>
+  <section class="col-12 d-flex justify-content-end">
+    <footer class="col-lg-10 d-flex justify-content-center black-gradient text-light px-3">Designed By: Anthony Vancattenburch</footer>
+  </section>
 </template>
 
 <style lang="scss">
@@ -17,5 +20,15 @@ import { AppState } from './AppState'
 
 :root {
   --main-height: calc(100vh - 32px - 64px);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  height: 32px;
+  width: 100%;
+  z-index: 100;
 }
 </style>

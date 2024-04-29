@@ -1,14 +1,23 @@
 
 <template>
-    <nav class="">
-      <ul v-for="link in navLinks" :key="link.id" class="nav-list">
-        <li :disabled="!link.isActive" class="active">
-          <a class="nav-link" @click="scrollTo(link?.id)" aria-current="page">{{ link.name }}</a>
+      <!-- <nav>
+      <ul class="nav-list">
+        <li class="active">
+          <a href="index.html" aria-current="page">Home</a>
         </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="blog.html">Blog</a>
+        </li>
+        <li><a href="#">Another</a></li>
+        <li><a href="#">Page</a></li>
+        <li><a href="#">And another</a></li>
       </ul>
-    </nav>
-  <!-- <nav class="">
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
+    </nav> -->
+  <nav class="">
+    <router-link class="col-3 navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex align-items-center">
         <img alt="logo" src="../assets/img/icons/logo.svg" class="my-logo" height="45" />
         <span class="my-name">AJ Vancattenburch</span>
@@ -18,8 +27,8 @@
       aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="nav-list">
+    <div class="col-9 collapse navbar-collapse" id="navbarText">
+      <ul class="nav-list me-auto">
         <li class="active">
           <router-link class="nav-link" :to="{ name: 'Resume' }">My Resume</router-link>
         </li>
@@ -27,39 +36,31 @@
           <span v-if="link.primary" @click="scrollTo(link?.id)" :title="link.title" class="nav-link">{{ link.name }}</span>
         </li>
       </ul>
-      LOGIN COMPONENT HERE
+      <!-- LOGIN COMPONENT HERE -->
       <div>
         
       </div>
     </div>
-  </nav> -->
+  </nav>
 </template>
 
 <script>
-import { ref } from "vue";
 import navLinks from '../constants/NavLinks';
 import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
-
-    const isActive = ref()
-
+    //Scrolls to elements and compensates for fixed headers, so that the header does not cover the element's heading. Adjust padding (the `yOffset` constant below) as needed. 1 increment = 1px.
     function scrollTo(id) {
       const yOffset = -65;
       let scrollElem = document.getElementById(id);
       logger.log(`Scrolling to ${id}. Found element: ${scrollElem}.`);
-     
       if (!scrollElem) {
-        logger.error(`Element with id ${id} not found.`);
-        return;
-      }
-      adjustScrollYOffset(scrollElem, yOffset);
-    }
-
-    function adjustScrollYOffset(scrollElem, yOffset) {
-      let y = scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({top: y, behavior: 'smooth'})
+    logger.error(`Element with id ${id} not found in navLinks.`);
+    return;
+  }
+  let y = scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
+  window.scrollTo({top: y, behavior: 'smooth'})
     }
     return {
       scrollTo,
@@ -72,28 +73,30 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+  --body-bg: var(--black-gradient);
+  --nav-bg: var(--black-purple);
+}
+
 * {
+  margin: 0;
   color: var(--text-primary) !important;
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 1.25rem;
-  background: var(--black-purple-gradient);
+  background: var(--body-bg);
+  padding-inline-start: 20rem;
 }
 
 nav {
-  padding-inline-end: 20rem;
+  background: var(--nav-bg);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  background: var(--black-purple-radial-gradient);
   padding-block: 2rem;
-  width: 0;
-  max-width: 10rem;
-  height: 100vh;
-  z-index: 1000;
 }
 
 .nav-list {
@@ -105,7 +108,7 @@ nav {
   gap: 1rem;
 }
 
-.nav-list .nav-link {
+.nav-list a {
   color: white;
   display: block;
   text-decoration: none;
@@ -116,13 +119,13 @@ nav {
   padding-inline: 2rem;
   margin-inline: 1rem 0;
   /* prevent animation glitch on right side */
-  box-shadow: 2px 0 0 var(--black-purple-gradient);
+  box-shadow: 2px 0 0 var(--body-bg);
 }
 
 .nav-list li.active {
   view-transition-name: nav;
   display: block;
-  background: var(--black-purple-gradient);
+  background: var(--body-bg);
   position: relative;
   z-index: -1;
   border-radius: 100vw 0 0 100vw;
@@ -141,19 +144,19 @@ nav {
   width: var(--border-radius);
   height: var(--border-radius);
   right: 0rem;
-  background: var(--black-purple-radial-gradient);
+  background: var(--nav-bg);
 }
 
 .nav-list li.active::before {
   border-radius: 0 0 var(--border-radius);
   top: calc(var(--border-radius) * -1);
-  box-shadow: 5px 5px 0 5px var(--black-purple-gradient);
+  box-shadow: 5px 5px 0 5px var(--body-bg);
 }
 
 .nav-list li.active::after {
   border-radius: 0 var(--border-radius) 0 0;
   bottom: calc(var(--border-radius) * -1);
-  box-shadow: 5px -5px 0 5px var(--black-purple-gradient);
+  box-shadow: 5px -5px 0 5px var(--body-bg);
 }
 
 .nav-list li:nth-child(1) a {
@@ -183,7 +186,7 @@ nav {
 
 @media screen and (min-width: 576px) {
   nav {
-    height: auto;
+    height: 64px;
   }
 }
 </style>

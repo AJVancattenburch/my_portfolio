@@ -1,26 +1,23 @@
 <template>
-  <div class="col-12 d-flex">
-    <div class="col-4 col-lg-3 d-flex flex-column align-items-start">
-      <NavBar />
+  <section class="col-12 d-flex justify-content-center page-wrapper">
+    <div class="col-2 vertical-nav-container d-none d-lg-flex">
+      <NavbarVertical />
     </div>
-    <div class="col-8 col-lg-9 bg-main d-flex flex-column justify-content-center align-items-start">
+    <div class="col-12 col-lg-10 page-container">
       <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Technologies />
-        <Projects />
-        <Feedback />
-        <Contact />
-        <footer class="black-gradient text-light px-3">
-          Designed By: Anthony Vancattenburch
-        </footer>
+      <About />
+      <Education />
+      <Experience />
+      <Technologies />
+      <Projects />
+      <Feedback />
+      <Contact />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import NavBar from '../components/Navbar.vue';
+import NavbarVertical from '../components/NavbarVertical.vue';
 import Hero from '../components/Hero.vue';
 import About from '../components/About.vue';
 import Education from '../components/Education.vue';
@@ -32,7 +29,7 @@ import Contact from '../components/Contact.vue';
 
 export default {
   components: {
-    NavBar,
+    NavbarVertical,
     Hero,
     About,
     Education,
@@ -46,18 +43,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.bg-main {
+.page-wrapper {
   position: relative;
   background: var(--black-purple-radial-gradient);
-  height: 100%;
-  width: 100%;
-}
+  overflow: hidden;
 
-footer {
-  position: fixed;
-  bottom: 0;
-  display: grid;
-  height: 32px;
-  width: 100%;
+  .page-container {
+    padding: 0;
+    margin: 0;
+    background: var(--black-purple-radial-gradient);
+    transform: translateX(120px);
+  }
+
+  .vertical-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: min-content;
+    max-width: 120px;
+    padding: 0;
+    margin: 0;
+    background: var(--black-purple-radial-gradient);
+    z-index: 100;
+    overflow: hidden;
+  }
 }
 </style>
