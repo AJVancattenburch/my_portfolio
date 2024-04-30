@@ -18,6 +18,7 @@
 
 <script>
 import NavbarVertical from '../components/NavbarVertical.vue';
+import Navbar from '../components/Navbar.vue';
 import Hero from '../components/Hero.vue';
 import About from '../components/About.vue';
 import Education from '../components/Education.vue';
@@ -30,6 +31,7 @@ import Contact from '../components/Contact.vue';
 export default {
   components: {
     NavbarVertical,
+    Navbar,
     Hero,
     About,
     Education,
@@ -44,6 +46,8 @@ export default {
 
 <style scoped lang="scss">
 .page-wrapper {
+  margin: 0;
+  padding: 0;
   position: relative;
   width: 100%;
   background: var(--black-transparent-gradient);

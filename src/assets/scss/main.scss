@@ -22,7 +22,7 @@ main {
 a {
   text-decoration: none;
 }
-
+//If you want the thumb to not interfere with the view of the navbar, you can set the z-index of the thumb to -1. This will make the thumb appear behind the navbar.
 ::-webkit-scrollbar {
   display: block;
   width: 15px;
@@ -31,11 +31,14 @@ a {
   &-thumb {
     background: var(--purple-black-gradient);
     border-radius: 10px;
+    z-index: -1;
   }
   &-track {
     background: var(--black-gradient-alt);
     border-radius: 0px;
-    z-index: -1;
+    &-piece {
+      margin-top: 55px;
+    }
   }
   &-corner {
     display: none !important;

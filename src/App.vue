@@ -1,11 +1,14 @@
 <script setup>
 import { AppState } from './AppState'
-
+import Navbar from './components/Navbar.vue'
 
 </script>
 
 <template>
   <header>
+    <div class="col-12 d-lg-none">
+      <Navbar />
+    </div>
   </header>
   <main>
     <router-view />
