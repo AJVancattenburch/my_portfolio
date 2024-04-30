@@ -68,9 +68,19 @@ export default {
     max-width: webkit-fill-available;
     padding: 0;
     margin: 0;
-    background: var(--black-purple-radial-gradient);
+    background: var(--black-purple-gradient);
     z-index: 100;
     overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0, var(--dark-purple) 100%, transparent 65%);
+      z-index: 1;
+    }
   }
 }
 </style>
