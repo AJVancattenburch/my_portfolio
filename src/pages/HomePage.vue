@@ -18,7 +18,6 @@
 
 <script>
 import NavbarVertical from '../components/NavbarVertical.vue';
-import Navbar from '../components/Navbar.vue';
 import Hero from '../components/Hero.vue';
 import About from '../components/About.vue';
 import Education from '../components/Education.vue';
@@ -31,7 +30,6 @@ import Contact from '../components/Contact.vue';
 export default {
   components: {
     NavbarVertical,
-    Navbar,
     Hero,
     About,
     Education,
@@ -78,7 +76,7 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent 0, var(--dark-purple) 100%, transparent 65%);
+      background: linear-gradient(90deg, transparent 75%, #181326 100%);
       z-index: 1;
     }
   }

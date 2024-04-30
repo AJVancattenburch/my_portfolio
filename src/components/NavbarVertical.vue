@@ -50,12 +50,22 @@ export default {
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
-  background: var(--purple-black-gradient);
   box-sizing: border-box;
   font-size: 1.25rem;
-
+  z-index: 1;
+  .vertical-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #181326, #0e0c13);
+    z-index: -1;
+  }
   .nav-link::before,
-  .nav-item::before {
+  .nav-item::before,
+  .nav-item::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -99,14 +109,18 @@ export default {
         display: block;
         background-clip: padding-box;
         border-radius: 1rem;
-        //background: none;  
-        box-shadow: inset 20px 0 30px 10px var(--shadow-pink), inset -20px 0 0px 10px #181326;
+        box-shadow: inset 20px 0 30px 10px var(--shadow-pink);
         filter: drop-shadow(0 0 10px var(--pink));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
         &::before {
           content: '';
           background: var(--black-purple-radial-gradient);
-          box-shadow: inset 50px 0 30px 10px var(--dark-pink);
+          box-shadow: inset 20px 0 30px 10px var(--dark-pink);
+          border-radius: 1rem;
+        }
+        &::after {
+          content: '';
+          background: linear-gradient(90deg, transparent, #0e0c13 75%);
           border-radius: 1rem;
         }
       }
@@ -118,7 +132,7 @@ export default {
         &::before {
           content: '';
           background: var(--black-purple-radial-gradient-alt);
-          box-shadow: inset 50px 0 30px 10px var(--shadow-inactive);
+          box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
           border-radius: 1rem;
         }
       }
@@ -140,7 +154,7 @@ export default {
           border-radius: 1rem;
           display: flex;
           align-items: center;
-          z-index: 1000;
+          z-index: 2;
         }
       }
     }
