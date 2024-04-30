@@ -90,15 +90,15 @@ export default {
         background-clip: padding-box;
         border-radius: 1rem;
         //background: none;  
-        box-shadow: inset 50px 0 30px 10px var(--shadow-dark-purple);
-        filter: drop-shadow(0 0 10px var(--shadow-red));
+        box-shadow: inset 20px 0 30px 10px var(--shadow-pink), inset -20px 0 0px 10px #181326;
+        filter: drop-shadow(0 0 10px var(--pink));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
       }
       &:not(.active) {
         position: relative;
         background: var(--black-purple-radial-gradient-alt);
         //outline: 3px ridge var(--shadow-inactive);
-        filter: drop-shadow(0 0 10px var(--shadow-dark-purple)) drop-shadow(0 0 15px var(--shadow-red));
+        filter: drop-shadow(0 0 10px var(--shadow-dark-purple));
         &::before {
           content: '';
           position: absolute;
