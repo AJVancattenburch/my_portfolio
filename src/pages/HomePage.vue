@@ -1,6 +1,6 @@
 <template>
-  <section class="col-12 d-flex justify-content-end page-wrapper">
-    <div class="col-2 vertical-nav-container d-none d-lg-flex">
+  <section class="row d-flex justify-content-end page-wrapper">
+    <div class="col-2 vertical-nav-container d-none d-lg-block">
       <NavbarVertical />
     </div>
     <div class="col-12 col-lg-10 page-container">
@@ -45,12 +45,14 @@ export default {
 <style scoped lang="scss">
 .page-wrapper {
   position: relative;
+  width: 100%;
   background: var(--black-transparent-gradient);
   overflow: hidden;
 
   .page-container {
     padding: 0;
     margin: 0;
+    max-width: webkit-fill-available;
     background: var(--black-purple-radial-gradient);
   }
 
@@ -59,9 +61,9 @@ export default {
     top: 0;
     left: 0rem;
     height: 100vh;
-    width: min-content;
-    padding: 0 2rem 0 0;
-    margin: 0px -30px 0px -45px;
+    max-width: webkit-fill-available;
+    padding: 0 0.5rem 0 0;
+    margin: 0;
     background: var(--black-gradient);
     z-index: 100;
     overflow: hidden;

@@ -52,12 +52,17 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-size: 1.25rem;
-  background: var(--black-gradient);
+}
+:is(.nav-item):has(.active) {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  width: 100%;
+  display: block;
+  background: transparent !important;
 }
 
 .vertical-nav {
   position: relative;
-  width: 100%;
   height: 100vh;
   background: var(--black-transparent-gradient) !important;
   ul.nav-list {
@@ -72,7 +77,7 @@ export default {
     & li.nav-item {
       width: 100%;
       padding: 0.25rem;
-      margin: 0.75rem 0 0.75rem 6rem;
+      margin: 0.75rem 0 0.75rem 2rem;
       border-radius: 1rem;
       background: var(--black-purple-radial-gradient);
       &:active,
@@ -82,12 +87,16 @@ export default {
         view-transition-name: nav;
         display: block;
         background-clip: padding-box;
-        border-radius: 50% 0 0 50%;
-        background: none !important;  
-        box-shadow: inset 50px 0 30px 10px var(--shadow-red);
-        filter: drop-shadow(0 0 10px var(--pink));
+        border-radius: 1rem;
+        //background: none;  
+        box-shadow: inset 50px 0 30px 10px var(--shadow-dark-purple);
+        filter: drop-shadow(0 0 10px var(--shadow-red));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
         user-select: none;
+      }
+      &:not(.active) {
+        background: var(--black-gradient);
+        box-shadow: inset 50px 0 30px 10px var(--shadow-dark-purple);
       }
       & a.nav-link {
         color: var(--text-primary);
@@ -100,13 +109,7 @@ export default {
         &:hover {
           color: var(--purple);
         }
-        &:active,
-        &.active,
-        &:focus {
-          background: #000000;
-          box-shadow: inset 0 0 10px 10px #0e0c13;
-          transition: background box-shadow 0.3s;
-        }
+        
       }
     }
   }
