@@ -1,7 +1,7 @@
-import { dev } from '../env'
+import { dev, devCodespace } from '../env'
 
 function log(type, content) {
-  if (dev) {
+  if (dev || devCodespace) {
     // eslint-disable-next-line no-console
     console[type](`[${type}] :: ${new Date().toLocaleTimeString()} :: `, ...content)
   } else {

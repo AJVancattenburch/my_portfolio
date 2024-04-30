@@ -12,24 +12,35 @@
 import navLinks from '../constants/NavLinks';
 import { logger } from '../utils/Logger';
 import { accountService } from '../services/AccountService';
+import { computed, ref } from 'vue';
 
 export default {
   setup() {
+
+    const foundLink = computed(() => {
+      return navLinks.find(link => link.id);
+    });
+
     //Compensates for fixed headers so header does not cover the top of the scrolled element. Adjust padding (`yOffset` constant below) as needed. 1 increment = 1px.
     async function scrollTo(id) {
       try {
         let scrollElem = document.getElementById(id);
-        const foundLink = navLinks.find(link => link.id === id);
         
-        await accountService.setLinkAsScrollElem(foundLink, scrollElem);
-        //update the active link.isactive property:
+        await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
+        
       } catch (error) {
         logger.error(`Element with id ${id} not found in navLinks.`);
       }
     }
+
     return {
       scrollTo,
       navLinks,
+      isActive: computed(()  => {
+        if (foundLink.value.isActive) {
+          return !foundLink.value.isActive;
+        }
+      }),
     };
   },
 }
@@ -67,7 +78,6 @@ export default {
       border-radius: 1rem;
       background: var(--black-purple-radial-gradient);
       &:active,
-      &:focus,
       &.active {
         view-transition-name: nav;
         display: block;
@@ -78,7 +88,7 @@ export default {
         filter: drop-shadow(0 0 10px var(--pink));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
         user-select: none;
-        z-index: 1000;
+        //The reason the active link doesn't keep it's active state is because the active class is removed when the link is clicked. This is because the active class is added to the link that is clicked, and the active class is removed from the link that was previously clicked. This is why the active class is removed from the link that was previously clicked. If you don't want 
       }
       & a.nav-link {
         color: var(--text-primary);
@@ -91,13 +101,7 @@ export default {
         &:hover {
           color: var(--purple);
         }
-        &:active,
-        &.active,
-        &:focus {
-          background: #000000;
-          box-shadow: inset 0 0 10px 10px #0e0c13;
-          transition: background box-shadow 0.3s;
-        }
+        
       }
     }
   }
