@@ -2,7 +2,7 @@
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-5">
   <ul class="nav-list">
     <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLink === link.id }" class="nav-item">
-      <a class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
+      <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
 </nav>
@@ -50,8 +50,18 @@ export default {
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
+  background: var(--purple-black-gradient);
   box-sizing: border-box;
   font-size: 1.25rem;
+
+  .nav-link::before,
+  .nav-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 :is(.nav-item):has(.active) {
   background-clip: text !important;
@@ -93,23 +103,23 @@ export default {
         box-shadow: inset 20px 0 30px 10px var(--shadow-pink), inset -20px 0 0px 10px #181326;
         filter: drop-shadow(0 0 10px var(--pink));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+        &::before {
+          content: '';
+          background: var(--black-purple-radial-gradient);
+          box-shadow: inset 50px 0 30px 10px var(--dark-pink);
+          border-radius: 1rem;
+        }
       }
       &:not(.active) {
         position: relative;
         background: var(--black-purple-radial-gradient-alt);
-        //outline: 3px ridge var(--shadow-inactive);
+        outline: var(--border-inactive);
         filter: drop-shadow(0 0 10px var(--shadow-dark-purple));
         &::before {
           content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
           background: var(--black-purple-radial-gradient-alt);
           box-shadow: inset 50px 0 30px 10px var(--shadow-inactive);
           border-radius: 1rem;
-          z-index: -1;
         }
       }
       & a.nav-link {
@@ -123,7 +133,15 @@ export default {
         &:hover {
           color: var(--purple);
         }
-        
+        &::before {
+          content: attr(link-text) " ";
+          padding: 1rem 2.2rem;
+          color: var(--text-primary);
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          z-index: 1000;
+        }
       }
     }
   }

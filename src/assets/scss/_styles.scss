@@ -39,6 +39,9 @@
   --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
   --purple-gradient-top: linear-gradient(0deg, var(--dark-purple) 0%, #231d2e99 100%);
   --green-pink-gradient: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
+
+  /* Borders */
+  --border-inactive: 3px ridge #33333367;
 }
 
 /* These are the classes that we can use in our components to apply the styles we have defined in our scss file. We can use these classes in our components by adding them to the class
