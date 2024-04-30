@@ -1,4 +1,14 @@
+import { generateId } from "../utils/GenerateId.js";
 import { aspNet, bootstrap, cSharp, css, docker, expressjs, postman, figma, html, javascript, mongodb, mysql, nextjs, nodejs, reactjs, tailwindcss, threejs, vuejs } from '../assets/img/tech/_index';
+
+export class Technology {
+  constructor(data) {
+    this.id = data.id || generateId();
+    this.name = data.name;
+    this.image = data.image;
+    this.color = data.color;
+  }
+}
 
 const technologyData = {
   id: "technologies",

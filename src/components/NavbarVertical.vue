@@ -1,7 +1,7 @@
 <template>
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-5">
-  <ul v-for="link in navLinks" :key="link.id" class="nav-list">
-    <li :class="link.isActive ? 'active' : !link.isActive" class="nav-item">
+  <ul class="nav-list">
+    <li v-for="link in navLinks" :key="link.id" :class="link.isActive ? 'active' : !link.isActive" class="nav-item">
       <a class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { watchEffect } from 'vue';
 import navLinks from '../constants/NavLinks';
 import { logger } from '../utils/Logger';
 import { accountService } from '../services/AccountService';
@@ -25,7 +24,7 @@ export default {
         await accountService.setLinkAsScrollElem(foundLink, scrollElem);
         //update the active link.isactive property:
         navLinks.forEach(link => {
-          if (link.id === id) {
+          if (link.id === scrollElem.id) {
             link.isActive = true;
           } else {
             link.isActive = false;
@@ -78,7 +77,6 @@ export default {
       &:active,
       &:focus,
       &.active {
-        position: absolute;
         view-transition-name: nav;
         display: block;
         background-clip: padding-box;

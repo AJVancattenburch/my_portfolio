@@ -5,11 +5,11 @@
       <h1 class="experience-title text-primary">{{ experienceData.title }}.</h1>
       <div class="experience-container pt-5">
         <div
-          v-for="experience in experienceData.experiences"
-          :key="experience.company_name"
+          v-for="company in experienceData.experiences"
+          :key="company.company_name"
           class="experience-item"
         >
-          <ExperienceCard :experience="experience" />
+          <ExperienceCard :company="company" />
         </div>
       </div>
     </div>

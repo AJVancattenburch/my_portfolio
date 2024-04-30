@@ -10,9 +10,9 @@ import { AppState } from './AppState'
   <main>
     <router-view />
   </main>
-  <section class="col-12 d-flex justify-content-end">
-    <footer class="col-lg-10 d-flex justify-content-center black-gradient-reverse text-light px-3">Designed By: Anthony Vancattenburch</footer>
-  </section>
+  <footer class="col-12 d-flex justify-content-end">
+    <span class="col-lg-10 d-flex justify-content-center black-gradient-reverse text-light px-3">Designed By: Anthony Vancattenburch</span>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -28,7 +28,7 @@ footer {
   display: grid;
   height: 32px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   overflow: hidden;
 }
 </style>

@@ -6,10 +6,10 @@
       </div>
       <div class="col-11 flex-column ps-3">
         <div class="d-flex education-item-details">
-          <h2 :class="`${school.cssSelector}-title`" class="education-item-title">{{ school.title }}</h2>
+          <h2 :class="`${school.cssSelector}-title`" class="education-item-major">{{ school.major }}</h2>
           <p class="education-item-date fw-semibold ms-auto ps-3">{{ school.date }}</p>
         </div>
-        <h4 class="education-item-title text-secondary">@ {{ school.school_name }}</h4>
+        <h4 class="education-item-major text-secondary">@ {{ school.school_name }}</h4>
       </div>
     </div>
     <ul v-if="school.school_name === 'CodeWorks'" class="pt-3">

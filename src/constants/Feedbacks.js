@@ -1,3 +1,16 @@
+import { generateId } from "../utils/GenerateId.js";
+
+export class Testimonial {
+  constructor(data) {
+    this.id = data.id || generateId();
+    this.name = data.name;
+    this.designation = data.designation;
+    this.company = data.company;
+    this.image = data.image;
+    this.body = data.body;
+  }
+}
+
 const feedbacks = {
   id: "feedbacks",
   title: "Testimonials",

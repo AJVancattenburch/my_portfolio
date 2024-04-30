@@ -1,21 +1,21 @@
 <template>
-  <div class="card mb-4 p-3 pb-0 education-item purple-gradient text-primary mb-3">
+  <div class="card mb-4 p-3 pb-0 company-card purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
-      <div :class="`${experience.cssSelector}-img-container`" class="img-container">
-        <img :src="experience.icon" :alt="`Image of ${experience.company_name} logo`" :class="`${experience.cssSelector}-icon`" class="col-1 experience-item-icon img-fluid rounded-circle" width="50" />
+      <div :class="`${company.cssSelector}-img-container`" class="img-container">
+        <img :src="company.icon" :alt="`Image of ${company.company_name} logo`" :class="`${company.cssSelector}-icon`" class="col-1 company-icon img-fluid rounded-circle" width="50" />
       </div>
       <div class="col-11 flex-column ps-3">
         <div class="d-flex">
-        <div class="col-12 d-flex experience-item-details">
-          <h4 :class="`${experience.cssSelector}-title`" class="col-9 experience-item-title">@ {{ experience.company_name }}</h4>
-          <p class="col-2 experience-item-date ms-auto">{{ experience.date }}</p>
+        <div class="col-12 d-flex company-details">
+          <h4 :class="`${company.cssSelector}-title`" class="col-9 company-title">@ {{ company.company_name }}</h4>
+          <p class="col-2 company-date ms-auto">{{ company.date }}</p>
         </div>
         </div>
-        <h2 class="experience-item-title">{{ experience.title }}</h2>
+        <h2 class="company-title">{{ company.title }}</h2>
       </div>
     </div>
     <ul class="pt-4">
-      <li v-for="(point, index) in experience.points" :key="index" class="fw-semibold">{{ point }}</li>
+      <li v-for="(point, index) in company.points" :key="index" class="fw-semibold">{{ point }}</li>
     </ul>
   </div>
 </template>
@@ -23,7 +23,7 @@
 <script>
 export default {
   props: {
-    experience: {
+    company: {
       type: Object,
       required: true,
     },
@@ -38,7 +38,7 @@ export default {
   .img-container {
     width: 100%;
     height: 100%;
-    .experience-item-icon {
+    .company-icon {
       width: 100%;
     }
   }
@@ -59,7 +59,7 @@ export default {
     .img-container {
       width: 100%;
       height: 100%;
-      .experience-item-icon {
+      .company-icon {
         width: 60px;
       }
       /* CHANGING THE BACKGROUND COLOR OF YOUR 'FREELANCE DEVELOPER' BRAND/LOGO (mobile view): Currently set to black. Change the #000 hex color to whatever you want your background to be for your logo. If you don't want a background color, simply delete the below `.myLogo-icon` styles below */
@@ -71,7 +71,7 @@ export default {
       }
     }
   }
-  .experience-item {
+  .company-card {
     &-icon {
     position: absolute;
     top: -30px;

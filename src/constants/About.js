@@ -1,4 +1,14 @@
+import { generateId } from "../utils/GenerateId.js";
 import { fullStack, vuejsReactjs, nodejsAspnetCore, webArtist } from '../assets/img/cardImg/_index';
+
+export class AboutCard {
+  constructor(data) {
+    this.id = data.id || generateId();
+    this.imgSrc = data.imgSrc;
+    this.imgAlt = data.imgAlt;
+    this.title = data.title;
+  }
+}
 
 const about = {
   id: 'about',

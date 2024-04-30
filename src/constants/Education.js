@@ -1,4 +1,16 @@
+import { generateId } from "../utils/GenerateId.js";
 import { codeworks, wildLearner, grasshopper } from '../assets/img/education/_index';
+
+export class School {
+  constructor(data) {
+    this.id = data.id || generateId();
+    this.major = data.major;
+    this.school_name = data.school_name;
+    this.icon = data.icon;
+    this.date = data.date;
+    this.cssSelector = data.cssSelector;
+  }
+}
 
 const educationData = {
   id: "education",
@@ -6,10 +18,9 @@ const educationData = {
   subtitle: "What I have learned so far",
   schools: [
     {
-      title: "Full Stack Software Development",
+      major: "Full Stack Software Development",
       school_name: "CodeWorks",
       icon: codeworks,
-      iconBg: "#383E56",
       date: "March 2023 - July 2023",
       cssSelector: "codeworks",
       points: [
@@ -21,10 +32,9 @@ const educationData = {
       ],
     },
     {
-      title: "Earned Certifications",
+      major: "Earned Certifications",
       school_name: "Wild Learner",
       icon: wildLearner,
-      iconBg: "#E6DEDD",
       date: "Jan 2023 - June 2023",
       cssSelector: "wildlearner",
       points: [
@@ -39,10 +49,9 @@ const educationData = {
       ]
     },
     {
-      title: "Earned Certifications",
+      major: "Earned Certifications",
       school_name: "Grasshopper",
       icon: grasshopper,
-      iconBg: "#383E56",
       date: "Jan 2022 - Jan 2023",
       cssSelector: "grasshopper",
       points: [

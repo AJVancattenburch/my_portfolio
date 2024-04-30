@@ -1,4 +1,14 @@
+import { generateId } from "../utils/GenerateId.js"
 import { about, educationData, experienceData, projectData, technologyData, feedbacks, contactData } from '../constants/_index'
+
+export class NavLink {
+  constructor(data) {
+    this.id = data.id || generateId()
+    this.name = data.name
+    this.title = data.title
+    this.isActive = data.isActive
+  }
+}
 
 const navLinks = [
   {

@@ -1,10 +1,23 @@
+import { generateId } from "../utils/GenerateId.js";
 import { ql, myLogo, codeworks, imag } from '../assets/img/company/_index';
+
+export class Company {
+  constructor(data) {
+    this.id = data.id || generateId();
+    this.title = data.title;
+    this.company_name = data.company_name;
+    this.icon = data.icon;
+    this.date = data.date;
+    this.cssSelector = data.cssSelector;
+    this.points = data.points;
+  }
+}
 
 const experienceData = {
   id: "experience",
   title: "Work Experience",
   subtitle: "What I have done so far...",
-  experiences: [
+  companies: [
     {
       title: "Software Test Engineer",
       company_name: "QualityLogic",
