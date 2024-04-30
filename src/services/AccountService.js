@@ -1,6 +1,6 @@
 import { AppState } from '../AppState'
 import { Account } from '../models/Account'
-import { logger } from '../utils/Logger.js'
+import { logger } from '../utils/Logger'
 import { api } from './AxiosService'
 
 class AccountService {
@@ -24,7 +24,7 @@ class AccountService {
   }
 
   async calculateYOffset(scrollElem) {
-    const yOffset = -65;
+    const yOffset = 0;
     let y = await scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
     logger.log(`Scrolled to HTMLElement:`, scrollElem, `@ offset Y-axis by ${yOffset}px.`)
