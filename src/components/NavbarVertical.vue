@@ -80,6 +80,7 @@ export default {
       margin: 0.75rem 0 0.75rem 2rem;
       border-radius: 1rem;
       background: var(--black-purple-radial-gradient);
+      user-select: none;
       &:active,
       &:focus,
       &.active {
@@ -92,11 +93,24 @@ export default {
         box-shadow: inset 50px 0 30px 10px var(--shadow-dark-purple);
         filter: drop-shadow(0 0 10px var(--shadow-red));
         transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
-        user-select: none;
       }
       &:not(.active) {
-        background: var(--black-gradient);
-        box-shadow: inset 50px 0 30px 10px var(--shadow-dark-purple);
+        position: relative;
+        background: var(--black-purple-radial-gradient-alt);
+        //outline: 3px ridge var(--shadow-inactive);
+        filter: drop-shadow(0 0 10px var(--shadow-dark-purple)) drop-shadow(0 0 15px var(--shadow-red));
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--black-purple-radial-gradient-alt);
+          box-shadow: inset 50px 0 30px 10px var(--shadow-inactive);
+          border-radius: 1rem;
+          z-index: -1;
+        }
       }
       & a.nav-link {
         color: var(--text-primary);

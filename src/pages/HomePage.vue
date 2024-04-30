@@ -62,9 +62,9 @@ export default {
     left: 0rem;
     height: 100vh;
     max-width: webkit-fill-available;
-    padding: 0 0.5rem 0 0;
+    padding: 0;
     margin: 0;
-    background: var(--black-gradient);
+    background: var(--black-purple-radial-gradient);
     z-index: 100;
     overflow: hidden;
   }

@@ -19,6 +19,7 @@
   --shadow-green: #00cea8a5;
   --shadow-red: #D85571a5;
   --shadow-pink: #ec008ca5;
+  --shadow-inactive: #333333a5;
   
   /* Dark Colors */
   --dark-purple: #3e3164;
@@ -30,10 +31,11 @@
   /* Gradients */
   --black-gradient: linear-gradient(to right, #232323, #000000);
   --black-gradient-alt: linear-gradient(to bottom, #000000, #232323);
-  --black-transparent-gradient: linear-gradient(to left, #000000 0%, #110e19 30%, transparent);
+  --black-transparent-gradient: linear-gradient(to right, #000000 0%, #110e19);
   --white-gradient: radial-gradient(circle at center, #F7F7F7dd 0%, #E7E7E799 70%, transparent);
   --purple-black-gradient: linear-gradient(to bottom, transparent 0, var(--dark-purple) 30%, transparent 65%);
   --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);
+  --black-purple-radial-gradient-alt: radial-gradient(circle at center, #0e0c13 0%, #181326);
   --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
   --purple-gradient-top: linear-gradient(0deg, var(--dark-purple) 0%, #231d2e99 100%);
   --green-pink-gradient: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
