@@ -18,6 +18,7 @@ class AccountService {
       return
     }
     foundLink.isActive = true
+    logger.log('Link Status:', foundLink.isActive)
     await this.calculateYOffset(scrollElem)
     logger.log(`Scrolling to '${foundLink.id}...'`)
   }

@@ -1,7 +1,7 @@
 <template>
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-5">
   <ul class="nav-list">
-    <li v-for="link in navLinks" :key="link.id" :class="link.isActive ? 'active' : !link.isActive" class="nav-item">
+    <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : link.isActive }" class="nav-item">
       <a class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -23,14 +23,6 @@ export default {
         
         await accountService.setLinkAsScrollElem(foundLink, scrollElem);
         //update the active link.isactive property:
-        navLinks.forEach(link => {
-          if (link.id === scrollElem.id) {
-            link.isActive = true;
-          } else {
-            link.isActive = false;
-          }
-          logger.log('Link Status:', link)
-        });
       } catch (error) {
         logger.error(`Element with id ${id} not found in navLinks.`);
       }
