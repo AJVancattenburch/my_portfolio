@@ -12,10 +12,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto black-gradient-reverse">
         <!-- ANCHOR - This is where you left off. Still need to show links in dropdown menu aren't showing currently likely just a styling issue. -->
         <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
-          <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
+          <a :link-text="link.name" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
@@ -108,8 +108,24 @@ a:hover {
 
 .nav-link {
   text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.25rem;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: var(--text-secondary) !important;
+  }
 }
 
+.navbar-nav {
+  position: absolute;
+  right: 0;
+  height: auto;
+  padding: 2.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: var(--black-transparent-gradient) !important;
+}
 .navbar-nav .router-link-exact-active {
   border-bottom: 2px solid var(--bs-success);
   border-bottom-left-radius: 0;
