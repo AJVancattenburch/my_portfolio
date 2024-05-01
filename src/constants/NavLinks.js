@@ -30,15 +30,15 @@ const navLinks = [
     isActive: false
   },
   {
-    id: projectData.id,
-    name: "Projects",
-    title: "What I have contributed to and created",
-    isActive: false
-  },
-  {
     id: technologyData.id,
     name: "Tech",
     title: "What I have experience working with",
+    isActive: false
+  },
+  {
+    id: projectData.id,
+    name: "Projects",
+    title: "What I have contributed to and created",
     isActive: false
   },
   {

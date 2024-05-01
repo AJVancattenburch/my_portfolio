@@ -13,8 +13,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
-        <li>
-          
+        <!-- ANCHOR - This is where you left off. Still need to show links in dropdown menu aren't showing currently likely just a styling issue. -->
+        <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
+          <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
@@ -24,6 +25,39 @@
     </div>
   </nav>
 </template>
+
+<script>
+import { computed, ref } from 'vue';
+import { accountService } from '../services/AccountService';
+import navLinks from '../constants/NavLinks';
+import { logger } from '../utils/Logger';
+
+export default {
+  setup() {
+    let activeLinkId = ref(null);
+
+    const foundLink = computed(() => {
+      return navLinks.find(link => link.id === activeLinkId.value);
+    });
+
+    async function scrollTo(id) {
+      try {
+        let scrollElem = document.getElementById(id);
+        activeLinkId.value = id;
+        await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
+      } catch (error) {
+        logger.error(`Element with id ${id} not found in navLinks.`);
+      }
+    }
+    return {
+      activeLinkId,
+      foundLink,
+      scrollTo,
+      navLinks,
+    };
+  },
+}
+</script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");

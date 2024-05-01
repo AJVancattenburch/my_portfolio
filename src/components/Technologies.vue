@@ -7,7 +7,7 @@
         <div
           v-for="technology in technologyData.technologies"
           :key="technology.name"
-          class="col-4 col-sm-3 col-lg-2 col-xl-1 technology-item"
+          class="col-4 col-sm-3 col-lg-2 technology-item"
         >
           <TechnologyCard :technology="technology" />
         </div>
@@ -31,6 +31,7 @@ export default {
 <style scoped lang="scss">
 .technologies {
   &-wrapper {
+    height: 100vh;
     overflow: hidden;
     padding: 2rem 0;
   }
@@ -48,6 +49,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  &-item {
+    margin: 4rem;
   }
 }
 

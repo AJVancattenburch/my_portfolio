@@ -1,3 +1,4 @@
+import navLinks from "./NavLinks";
 import heroData from './Hero';
 import about from './About';
 import educationData from './Education';
@@ -8,6 +9,7 @@ import feedbacks from './Feedbacks';
 import contactData from './Contact';
 
 export {
+  navLinks,
   heroData,
   about,
   educationData,

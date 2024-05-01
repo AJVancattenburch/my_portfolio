@@ -4,7 +4,7 @@
     <img @click="scrollTo('hero')" alt="logo" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
   </div>
   <ul class="nav-list">
-    <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLink === link.id }" class="nav-item">
+    <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
       <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -21,17 +21,17 @@ import { accountService } from '../services/AccountService';
 export default {
   setup() {
     let heroSection = ref(heroData.id);
-    let activeLink = ref(null);
+    let activeLinkId = ref(null);
 
     const foundLink = computed(() => {
-      return navLinks.find(link => link.id === activeLink.value);
+      return navLinks.find(link => link.id === activeLinkId.value);
     });
     
     //Compensates for fixed headers so header does not cover the top of the scrolled element. Adjust padding (`yOffset` constant below) as needed. 1 increment = 1px.
     async function scrollTo(id) {
       try {
         let scrollElem = document.getElementById(id);
-        activeLink.value = id;
+        activeLinkId.value = id;
 
         await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
         
@@ -41,7 +41,7 @@ export default {
     }
     return {
       heroSection,
-      activeLink,
+      activeLinkId,
 
       scrollTo,
       navLinks,

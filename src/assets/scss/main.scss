@@ -36,8 +36,11 @@ a {
   &-track {
     background: var(--black-gradient-alt);
     border-radius: 0px;
-    &-piece {
-      margin-top: 55px;
+    //Only give the track piece the 'margin-top' property on medium and smaller screens to compensate for horizontal nav height.
+    @media (max-width: 992px) {
+      &-piece {
+        margin-top: 55px;
+      }
     }
   }
   &-corner {
