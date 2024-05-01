@@ -52,16 +52,14 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-size: 1.25rem;
-  z-index: 1;
-  .vertical-nav::before {
+  .vertical-nav::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #181326, #0e0c13);
-    z-index: -1;
+    background: linear-gradient(90deg, transparent 70%, #0e0c13);
   }
   .nav-link::before,
   .nav-item::before,
@@ -84,81 +82,93 @@ export default {
 .vertical-nav {
   position: relative;
   height: 100vh;
-  background: var(--black-transparent-gradient) !important;
+  background: var(--black-purple-radial-gradient) !important;
   ul.nav-list {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
-    & li.nav-item {
-      width: 100%;
-      padding: 0.25rem;
-      margin: 0.75rem 0 0.75rem 2rem;
+  }
+
+  li.nav-item {
+    padding: 0.25rem;
+    margin: 0.75rem 0.75rem 0.75rem 2rem;
+    border-radius: 1rem;
+    background: var(--black-purple-radial-gradient);
+    //clip-path: polygon(0 0, 98% 0, 98% 100%, 0 100%);
+    user-select: none;
+    z-index: 3;
+    &:active,
+    &:focus,
+    &.active {
+      position: relative;
+      view-transition-name: nav;
+      display: block;
+      background-clip: padding-box;
       border-radius: 1rem;
-      background: var(--black-purple-radial-gradient);
-      user-select: none;
-      &:active,
-      &:focus,
-      &.active {
-        position: relative;
-        view-transition-name: nav;
-        display: block;
-        background-clip: padding-box;
-        border-radius: 1rem;
-        box-shadow: inset 20px 0 30px 10px var(--shadow-pink);
-        filter: drop-shadow(0 0 10px var(--pink));
-        transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
-        &::before {
-          content: '';
-          background: var(--black-purple-radial-gradient);
-          box-shadow: inset 20px 0 30px 10px var(--dark-pink);
-          border-radius: 1rem;
-        }
-        &::after {
-          content: '';
-          background: linear-gradient(90deg, transparent, #0e0c13 75%);
-          border-radius: 1rem;
-        }
-      }
-      &:not(.active) {
-        position: relative;
-        background: var(--black-purple-radial-gradient-alt);
-        outline: var(--border-inactive);
-        filter: drop-shadow(0 0 10px var(--shadow-dark-purple));
-        &::before {
-          content: '';
-          background: var(--black-purple-radial-gradient-alt);
-          box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
-          border-radius: 1rem;
-        }
-      }
-      & a.nav-link {
-        color: var(--text-primary);
+      box-shadow: inset 20px 0 30px 10px var(--dark-pink);
+      filter: drop-shadow(-7px 0 3px var(--dark-pink));
+      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+      &::before {
+        content: '';
         width: 100%;
-        display: block;
-        padding: 1rem 2rem;
+        background: var(--black-purple-radial-gradient);
+        box-shadow: inset 20px 0 30px 10px var(--dark-pink);
         border-radius: 1rem;
-        text-decoration: none;
-        transition: color 0.3s;
-        &:hover {
-          color: var(--purple);
-        }
-        &::before {
-          content: attr(link-text) " ";
-          padding: 1rem 2.2rem;
-          color: var(--text-primary);
-          border-radius: 1rem;
-          display: flex;
-          align-items: center;
-          z-index: 2;
-        }
+      }
+      &::after {
+        content: '';
+        background: linear-gradient(90deg, transparent, #14101f 75%, #0e0c13 100%);
+        border-radius: 1rem;
+      }
+    }
+    &:not(.active) {
+      position: relative;
+      background: var(--black-purple-radial-gradient-alt);
+      //outline: var(--border-inactive);
+      filter: drop-shadow(0 0 10px var(--shadow-dark-purple));
+      &::before {
+        content: '';
+        background: var(--black-purple-radial-gradient-alt);
+        box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
+        border-radius: 1rem;
+      }
+      &::after {
+        content: '';
+        background: linear-gradient(90deg, transparent, #14101f 75%, #0e0c13 100%);
+        border-radius: 1rem;
       }
     }
   }
+  
+  a.nav-link {
+    color: var(--text-primary);
+    width: 100%;
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    z-index: 3;
+    &::before {
+      content: attr(link-text) " ";
+      padding: 1rem 2.2rem;
+      color: var(--text-primary);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s;
+      z-index: 3;
+    }
+    &:hover::before {
+      color: #fff;
+      transition: color 0.3s;
+    }
+  }
+  
   ::view-transition-group(nav) {
     animation-duration: 1s;
   }

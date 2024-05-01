@@ -49,7 +49,6 @@ export default {
   position: relative;
   width: 100%;
   background: var(--black-transparent-gradient);
-  overflow: hidden;
 
   .page-container {
     padding: 0;
@@ -61,23 +60,24 @@ export default {
   .vertical-nav-container {
     position: fixed;
     top: 0;
-    left: 0rem;
+    left: 0;
     height: 100vh;
     max-width: webkit-fill-available;
     padding: 0;
     margin: 0;
     background: var(--black-purple-gradient);
-    z-index: 100;
-    overflow: hidden;
+    z-index: 3;
     &::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent 75%, #181326 100%);
-      z-index: 1;
+      background: linear-gradient(90deg, transparent 0%, #14101f 70%, #0f0d16 90%);
+      box-shadow: 0 5px 3px 5px #0f0d16;
+      z-index: 3;
+
     }
   }
 }
