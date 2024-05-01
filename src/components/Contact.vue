@@ -1,34 +1,34 @@
 <template>
-  <section id="contact" class=" pb-5">
-    <div class="col-12 contact-content p-5">
-      <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
-      <h1 class="contact-title text-primary">Contact.</h1>
-      <form ref="formRef" @submit.prevent="handleSubmit" class="col-12 col-md-8 col-lg-6 form d-flex flex-column mt-5 pt-0">
-        <div class="col-12 input-container name-input">
-          <input id="name" type="text" v-model="newEmail.name" placeholder=" " class="input" minlength="2" required />
-          <div class="cut"></div>
-          <label for="name" class="placeholder">Your Name</label>
-          <label class="d-flex flex-column"></label>
-        </div>
-        <div class="col-12 input-container email-input">
-          <input id="email" type="email" v-model="newEmail.email" placeholder=" " class="input" minlength="5" required />
-          <div class="cut"></div>
-          <label for="email" class="placeholder">Your Email</label>
-        </div>
-        <div class="col-12 input-container message-input">
-          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " class="input textarea" minlength="10" maxlength="1000" required />
-          <div class="cut cut-long"></div>
-          <label for="message" class="placeholder">Your Message</label>
-        </div>
-        <div class="col-12 pt-5 mt-5">
-          <button type="submit" class="col-12 outline-none rounded-3">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            {{ loading ? "Sending..." : "Send Message" }}
-          </button>
-        </div>
+  <section id="contact" class="contact-wrapper p-5">
+    <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
+    <h1 class="contact-title text-primary">Contact.</h1>
+    <div class="col-12 col-md-8 col-lg-6 d-flex flex-column login-box mt-5">
+      <form ref="formRef" @submit.prevent="handleSubmit">
+        <fieldset>
+          <legend class="d-none">Contact Form</legend>
+          <div class="col-12 user-box">
+            <input id="name" name="name" type="text" v-model="newEmail.name" class="input" minlength="2" required />
+            <label for="name">Your Name</label>
+            <label class="d-flex flex-column"></label>
+          </div>
+          <div class="col-12 user-box">
+            <input id="email" name="email" type="email" v-model="newEmail.email" class="input" minlength="5" required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="col-12 user-box">
+            <textarea id="message" rows="7" v-model="newEmail.message" class="input textarea" minlength="10" maxlength="1000" required />
+            <label for="message">Your Message</label>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 pt-5 mt-5">
+            <button type="submit" class="outline-none rounded-3">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              {{ loading ? "Sending..." : "Send Message" }}
+            </button>
+          </div>
+        </fieldset>
       </form>
     </div>
   </section>
@@ -99,14 +99,6 @@ export default {
     font-weight: 900;
     margin-bottom: 2rem;
   }
-}
-
-.placeholder {
-  position: absolute;
-  font-size: 1rem;
-  color: var(--text-secondary);
-  transition: all 0.3s;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {
