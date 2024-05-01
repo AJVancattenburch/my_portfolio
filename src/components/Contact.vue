@@ -101,6 +101,14 @@ export default {
   }
 }
 
+.placeholder {
+  position: absolute;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .contact {
     &-content {

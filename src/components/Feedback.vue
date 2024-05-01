@@ -31,8 +31,9 @@ export default {
 <style scoped lang="scss">
 .feedbacks {
   &-wrapper {
-    overflow: hidden;
+    height: 100vh;
     padding: 2rem 0;
+    overflow: hidden;
   }
   &-subtitle {
     font-size: 1.1rem;

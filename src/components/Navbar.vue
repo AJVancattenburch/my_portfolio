@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg custom-navbar black-gradient px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex align-items-center">
-        <img alt="logo" src="../assets/img/icons/logo.svg" class="my-logo" height="45" />
+        <img src="../assets/img/icons/logo.svg" title="SVG logo Design By: Anthony Vancattenburch" alt="SVG Logo Design By: Anthony Vancattenburch" class="my-logo" height="45" />
         <span class="my-name">AJ Vancattenburch</span>
       </div>
     </router-link>
@@ -15,7 +15,7 @@
       <ul class="navbar-nav ms-auto black-gradient-reverse">
         <!-- ANCHOR - This is where you left off. Still need to show links in dropdown menu aren't showing currently likely just a styling issue. -->
         <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
-          <a :link-text="link.name" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
+          <a :link-text="link.name" :title="link.sectionTitle" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
@@ -77,15 +77,13 @@ export default {
   width: 100vw;
   z-index: 1000;
   filter: brightness(0.9);
-  .my-logo {
-    border-radius: 50%;
-  }
   .my-name {
     font-weight: 550;
     margin-left: 1rem;
     text-shadow: 0 1px 2px var(--blue);
   }
 }
+
 .navbar-toggler {
   padding: 0.5rem;
   z-index: 2;
@@ -100,28 +98,23 @@ export default {
   }
 }
 
-
-
 a:hover {
   text-decoration: none;
 }
-
 .nav-link {
-  text-transform: uppercase;
+  padding-top: 0rem;
   font-weight: 500;
-  font-size: 1.25rem;
   user-select: none;
   cursor: pointer;
   &:hover {
     color: var(--text-secondary) !important;
   }
 }
-
 .navbar-nav {
   position: absolute;
   right: 0;
   height: auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background: var(--black-transparent-gradient) !important;

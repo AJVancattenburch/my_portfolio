@@ -94,6 +94,8 @@
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
+  background-color: var(--black-gradient);
+  color: var(--text-primary) !important;
   top: 20px;
 }
 
