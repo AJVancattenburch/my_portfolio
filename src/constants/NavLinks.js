@@ -1,5 +1,5 @@
 import { generateId } from "../utils/GenerateId.js"
-import { about, educationData, experienceData, projectData, technologyData, feedbacks, contactData } from '../constants/_index'
+import { heroData, about, educationData, experienceData, projectData, technologyData, feedbacks, contactData } from '../constants/_index'
 
 export class NavLink {
   constructor(data) {

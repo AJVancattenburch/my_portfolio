@@ -14,20 +14,12 @@ class AccountService {
   }
 
   async setLinkAsScrollElem(foundLink, scrollElem) {
-    if (!foundLink.id === scrollElem.id) {
-      return
-    }
-    foundLink.isActive = true
-    logger.log('Link Status:', foundLink.isActive)
-    await this.calculateYOffset(scrollElem)
-    logger.log(`Scrolling to '${foundLink.id}...'`)
-  }
+    let position = await scrollElem.getBoundingClientRect().top + window.scrollY
+    window.scrollTo({ top: position, behavior: 'smooth' });
+    logger.log(`Scrolled to HTMLElement:`, scrollElem)
+    scrollElem.id = foundLink.id
 
-  async calculateYOffset(scrollElem) {
-    const yOffset = 0;
-    let y = await scrollElem.getBoundingClientRect().top + window.scrollY + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-    logger.log(`Scrolled to HTMLElement:`, scrollElem, `@ offset Y-axis by ${yOffset}px.`)
+    logger.log(`Scrolling to '${scrollElem.id}'`)
   }
 }
 

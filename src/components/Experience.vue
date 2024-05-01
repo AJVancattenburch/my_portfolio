@@ -5,7 +5,7 @@
       <h1 class="experience-title text-primary">{{ experienceData.title }}.</h1>
       <div class="experience-container pt-5">
         <div
-          v-for="company in experienceData.experiences"
+          v-for="company in experienceData.companies"
           :key="company.company_name"
           class="experience-item"
         >

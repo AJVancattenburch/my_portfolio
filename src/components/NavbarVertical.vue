@@ -1,5 +1,8 @@
 <template>
-<nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-5">
+<nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-4">
+  <div class="col-7 d-flex justify-content-center ps-2 pb-2">
+    <img @click="scrollTo('hero')" alt="logo" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
+  </div>
   <ul class="nav-list">
     <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLink === link.id }" class="nav-item">
       <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
@@ -11,15 +14,17 @@
 <script>
 import { computed, ref } from 'vue';
 import navLinks from '../constants/NavLinks';
+import heroData from '../constants/Hero';
 import { logger } from '../utils/Logger';
 import { accountService } from '../services/AccountService';
 
 export default {
   setup() {
+    let heroSection = ref(heroData.id);
     let activeLink = ref(null);
 
     const foundLink = computed(() => {
-      return navLinks.find(link => link.id);
+      return navLinks.find(link => link.id === activeLink.value);
     });
     
     //Compensates for fixed headers so header does not cover the top of the scrolled element. Adjust padding (`yOffset` constant below) as needed. 1 increment = 1px.
@@ -27,6 +32,7 @@ export default {
       try {
         let scrollElem = document.getElementById(id);
         activeLink.value = id;
+
         await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
         
       } catch (error) {
@@ -34,6 +40,7 @@ export default {
       }
     }
     return {
+      heroSection,
       activeLink,
 
       scrollTo,
@@ -52,25 +59,28 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-size: 1.25rem;
-  .vertical-nav::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent 70%, #0e0c13);
-  }
-  .nav-link::before,
-  .nav-item::before,
-  .nav-item::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
+
+.vertical-nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 70%, #0e0c13);
+}
+
+.nav-link::before,
+.nav-item::before,
+.nav-item::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 :is(.nav-item):has(.active) {
   background-clip: text !important;
   -webkit-background-clip: text !important;
@@ -83,9 +93,13 @@ export default {
   position: relative;
   height: 100vh;
   background: var(--black-purple-radial-gradient) !important;
+  .my-logo {
+    user-select: none;
+    z-index: 3;
+  }
   ul.nav-list {
     position: relative;
-    top: 0;
+    top: 0.5rem;
     left: 0;
     height: 100%;
     display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <section class="purple-gradient">
+  <section :id="heroData.id" class="purple-gradient">
     <div class="col-12 d-flex hero-wrapper p-5 pe-0">
       <div class="col-12 col-lg-7 text-container">
         <h1 class="hero-header">{{heroData.myGreeting}}

@@ -64,8 +64,8 @@
 
 .black-gradient-reverse {
   background: #000000;
-  background: -webkit-linear-gradient(to left, #232323, #000000);
-  background: linear-gradient(to left, #232323, #000000);
+  background: -webkit-linear-gradient(to left, #232323 0, #000000 10%, #0f0d16 100%);
+  background: linear-gradient(to left, #232323 0, #000000 10%, #0f0d16 100%);
 }
 
 .purple-gradient {

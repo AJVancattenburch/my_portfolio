@@ -12,6 +12,7 @@ export class Skill {
 }
 
 const heroData = {
+  id: "hero",
   myGreeting: "Hi, I'm ",
   myName: "Anthony",
   myTitle: "Full Stack Developer",
