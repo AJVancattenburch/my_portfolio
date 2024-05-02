@@ -5,18 +5,18 @@
       <h1 class="contact-title text-primary">Contact.</h1>
       <form ref="formRef" @submit.prevent="handleSubmit" class="col-12 col-md-8 col-lg-6 form d-flex flex-column mt-5 pt-0">
         <div class="col-12 input-container name-input">
-          <input id="name" type="text" v-model="newEmail.name" placeholder=" " class="input" minlength="2" required />
+          <input id="name" type="text" v-model="newEmail.name" placeholder=" " :label-text="labelText.name" class="input" minlength="2" required />
           <div class="cut"></div>
           <label for="name" class="placeholder">Your Name</label>
           <label class="d-flex flex-column"></label>
         </div>
         <div class="col-12 input-container email-input">
-          <input id="email" type="email" v-model="newEmail.email" placeholder=" " class="input" minlength="5" required />
+          <input id="email" type="email" v-model="newEmail.email" placeholder=" " :label-text="labelText.mail" class="input" minlength="5" required />
           <div class="cut"></div>
           <label for="email" class="placeholder">Your Email</label>
         </div>
         <div class="col-12 input-container message-input">
-          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " class="input textarea" minlength="10" maxlength="1000" required />
+          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " :label-text="labelText.message" class="input textarea" minlength="10" maxlength="1000" required />
           <div class="cut cut-long"></div>
           <label for="message" class="placeholder">Your Message</label>
         </div>
@@ -47,6 +47,11 @@ export default {
       email: "",
       message: "",
     });
+    const labelText = ref({
+      name: "Your Name",
+      mail: "Your Email",
+      message: "Your Message",
+    });
     const loading = ref(false);
 
     function handleChange(e) {
@@ -74,6 +79,7 @@ export default {
     return {
       formRef,
       newEmail,
+      labelText,
       loading,
       handleChange,
       handleSubmit,
@@ -99,14 +105,6 @@ export default {
     font-weight: 900;
     margin-bottom: 2rem;
   }
-}
-
-.placeholder {
-  position: absolute;
-  font-size: 1rem;
-  color: var(--text-secondary);
-  transition: all 0.3s;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {

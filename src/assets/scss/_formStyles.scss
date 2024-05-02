@@ -87,22 +87,53 @@
 }
 
 .placeholder {
-  font-family: sans-serif;
   left: 20px;
   line-height: 14px;
   pointer-events: none;
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
-  background-color: var(--black-gradient);
-  color: var(--text-primary) !important;
   top: 20px;
 }
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown):invalid ~ .placeholder {
-  color: red;
+  color: var(--shadow-red);
   transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+  &:valid {
+    outline: 0.5px dashed var(--shadow-green);
+  }
+  &:invalid {
+    outline: 0.5px dashed var(--shadow-red);
+  }
+}
+
+input:placeholder-shown ~ .placeholder,
+textarea:placeholder-shown ~ .placeholder {
+  color: transparent;
+  -webkit-text-fill-color: var(--text-primary);
+}
+
+
+input:not(:placeholder-shown):valid ~ .placeholder,
+textarea:not(:placeholder-shown):valid ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  visibility: hidden;
+  &::before {
+    content: 'Confirmed ✓';
+    font-size: 12px;
+    color: var(--green);
+    position: absolute;
+    text-align: center;
+    display: block;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 
