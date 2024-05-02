@@ -7,11 +7,63 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { computed, onMounted } from 'vue';
 import { logger } from '../utils/Logger';
+import { PDFDocument } from 'pdf-lib';
 
-const isMobile = computed(() => window.innerWidth < 768);
+export default {
+  props: {
+    pdfDocument: {
+      type: Object,
+      required: true,
+    },
+    style: {
+      type: String,
+      required: true,
+    },
+    newStyle: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+  const isMobile = computed(() => window.innerWidth < 768);
+
+  const PDFDocument = computed(() => {
+    return props.pdfDocument;
+  });
+  const style = computed(() => {
+    return props.style;
+  });
+  const newStyle = computed(() => {
+    return props.newStyle;
+  });
+  function changePDFStyle(PDFDocument, style, newStyle) {
+      const pdfDoc = PDFDocument;
+      const pages = pdfDoc.getPages();
+      for (let i = 0; i < pages.length; i++) {
+          const page = pages[i];
+          const { width, height } = page.getSize();
+          const { x, y } = { x: 5, y: height - 5 };
+          const fontSize = 20;
+          page.drawText(style, { x, y, size: fontSize });
+      }
+      logger.log('PDF Style Changed', pdfDoc);
+      return pdfDoc;
+    }
+
+    onMounted(() => {
+      logger.log('ResumeCard Mounted', PDFDocument, style, newStyle);
+      //changePDFStyle(PDFDocument, style, newStyle);
+    });
+    return {
+      isMobile,
+      PDFDocument,
+      changePDFStyle,
+    }
+  },
+}
 
 </script>
 
