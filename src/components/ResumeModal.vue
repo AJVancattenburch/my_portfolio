@@ -10,9 +10,48 @@
         <slot></slot>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.modal {
+  &-content {
+    color: var(--text-primary);
+    background: linear-gradient(180deg, #323639 40%, #525659);
+    .btn-close {
+      position: relative;
+      filter: invert(1);
+      &::after {
+        content: '×';
+        position: absolute;
+        top: -19px;
+        right: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        font-size: 2.55rem;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+::webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 1rem;
+  }
+}
+</style>

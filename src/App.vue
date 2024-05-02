@@ -17,9 +17,11 @@ import ResumeCard from './components/ResumeCard.vue'
         <img src="./assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="75" />
       </button>
     </div>
-    <ResumeModal id="resumeModal">
-      <ResumeCard />
-    </ResumeModal>
+    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+      <ResumeModal id="resumeModal">
+        <ResumeCard />
+      </ResumeModal>
+    </div>
   </main>
   <footer class="col-12 d-flex justify-content-end">
     <span class="col-lg-10 d-flex justify-content-center black-gradient-reverse text-light px-3">Designed By: Anthony Vancattenburch</span>
