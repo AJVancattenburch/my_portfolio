@@ -19,7 +19,6 @@
 
 <script>
 import projectData from '../constants/Projects';
-import technologyData from "../constants/Technologies.js";
 import ProjectCard from './ProjectCard.vue';
 
 export default {

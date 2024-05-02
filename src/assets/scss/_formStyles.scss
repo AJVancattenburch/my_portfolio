@@ -79,12 +79,11 @@
   width: 100px;
 }
 
-//.input:focus ~ .cut,
-//.input:not(:placeholder-shown) ~ .cut,
-//.input:focus ~ .cut-long,
-//.input:not(:placeholder-shown) ~ .cut-long
-.input:focus:is( ~ .cut, ~ .cut-long),
-.input:not(:placeholder-shown):is( ~ .cut, ~ .cut-long) {
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut,
+.input:focus ~ .cut-long,
+.input:not(:placeholder-shown) ~ .cut-long {
   transform: translateY(8px);
 }
 
@@ -100,17 +99,17 @@
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown):invalid ~ .placeholder {
-  color: var(--shadow-red);
+  color: var(--shadow-pink);
   transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-input:not(:placeholder-shown),
-textarea:not(:placeholder-shown) {
-  &:valid {
-    outline: 0.5px dashed var(--shadow-green);
+:is(input, textarea):not(:placeholder-shown)
+ {
+  &:valid::after {
+    outline: 1px ridge var(--shadow-green);
   }
-  &:invalid {
-    outline: 0.5px dashed var(--shadow-red);
+  &:invalid::after {
+    outline: 0.5px dashed var(--shadow-pink);
   }
 }
 

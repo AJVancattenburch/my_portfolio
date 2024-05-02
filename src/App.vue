@@ -12,6 +12,11 @@ import Navbar from './components/Navbar.vue'
   </header>
   <main>
     <router-view />
+    <div class="resume-btn-container d-flex justify-content-center">
+      <button type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <img src="./assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="75" />
+      </button>
+    </div>
   </main>
   <footer class="col-12 d-flex justify-content-end">
     <span class="col-lg-10 d-flex justify-content-center black-gradient-reverse text-light px-3">Designed By: Anthony Vancattenburch</span>
@@ -23,6 +28,13 @@ import Navbar from './components/Navbar.vue'
 
 :root {
   --main-height: calc(100vh - 32px - 64px);
+}
+
+.resume-btn-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
 }
 
 footer {
