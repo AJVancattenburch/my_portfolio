@@ -23,17 +23,20 @@
     background: linear-gradient(180deg, #323639 40%, #525659);
     .btn-close {
       position: relative;
-      filter: invert(1);
+      visibility: hidden;
       &::after {
         content: '×';
         position: absolute;
-        top: -19px;
-        right: 2px;
+        top: -35px;
+        right: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: red;
-        font-size: 2.55rem;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        font-weight: 300;
+        visibility: visible;
       }
     }
   }
