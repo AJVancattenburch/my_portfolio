@@ -1,6 +1,6 @@
 @import url('./_styles.scss');
 
-.login-box button {
+.form button {
   position: relative;
   top: 5rem;
   display: flex;
@@ -19,24 +19,24 @@
 }
 
 /* Set the initial background colors for the pseudo-elements */
-.login-box button[type="submit"] span:nth-child(1) {
+.form button[type="submit"] span:nth-child(1) {
   background: var(--shadow-blue);
 }
 
-.login-box button[type="submit"] span:nth-child(2) {
+.form button[type="submit"] span:nth-child(2) {
   background: var(--shadow-green);
   z-index: 100;
 }
 
-.login-box button[type="submit"] span:nth-child(3) {
+.form button[type="submit"] span:nth-child(3) {
   background: var(--shadow-pink);
 }
 
-.login-box button[type="submit"] span:nth-child(4) {
+.form button[type="submit"] span:nth-child(4) {
   background: var(--shadow-red);
 }
 
-.login-box button span {
+.form button span {
   position: absolute;
   display: block;
   background: transparent;
@@ -64,7 +64,7 @@ form:valid button[type="submit"] {
   background: var(--purple-gradient);
 }
 
-.login-box button span:nth-child(1) {
+.form button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -84,7 +84,7 @@ form:valid button[type="submit"] {
   }
 }
 
-.login-box button span:nth-child(2) {
+.form button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -104,7 +104,7 @@ form:valid button[type="submit"] {
   }
 }
 
-.login-box button span:nth-child(3) {
+.form button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -124,7 +124,7 @@ form:valid button[type="submit"] {
   }
 }
 
-.login-box button span:nth-child(4) {
+.form button span:nth-child(4) {
   position: absolute;
   bottom: -100%;
   left: 0;

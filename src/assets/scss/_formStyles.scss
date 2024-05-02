@@ -79,10 +79,12 @@
   width: 100px;
 }
 
-.input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut,
-.input:focus ~ .cut-long,
-.input:not(:placeholder-shown) ~ .cut-long {
+//.input:focus ~ .cut,
+//.input:not(:placeholder-shown) ~ .cut,
+//.input:focus ~ .cut-long,
+//.input:not(:placeholder-shown) ~ .cut-long
+.input:focus:is( ~ .cut, ~ .cut-long),
+.input:not(:placeholder-shown):is( ~ .cut, ~ .cut-long) {
   transform: translateY(8px);
 }
 
@@ -118,6 +120,10 @@ textarea:placeholder-shown ~ .placeholder {
   -webkit-text-fill-color: var(--text-primary);
 }
 
+.input:focus ~ .placeholder {
+  color: transparent;
+  -webkit-text-fill-color: var(--blue);
+}
 
 input:not(:placeholder-shown):valid ~ .placeholder,
 textarea:not(:placeholder-shown):valid ~ .placeholder {
@@ -134,10 +140,4 @@ textarea:not(:placeholder-shown):valid ~ .placeholder {
     height: 100%;
     width: 100%;
   }
-}
-
-
-.input:focus ~ .placeholder {
-  color: transparent;
-  -webkit-text-fill-color: var(--blue);
 }

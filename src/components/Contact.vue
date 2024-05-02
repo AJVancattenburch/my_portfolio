@@ -11,12 +11,12 @@
           <label class="d-flex flex-column"></label>
         </div>
         <div class="col-12 input-container email-input">
-          <input id="email" type="email" v-model="newEmail.email" placeholder=" " :label-text="labelText.mail" class="input" minlength="5" required />
+          <input id="email" type="email" v-model="newEmail.email" placeholder=" " class="input" minlength="5" required />
           <div class="cut"></div>
           <label for="email" class="placeholder">Your Email</label>
         </div>
         <div class="col-12 input-container message-input">
-          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " :label-text="labelText.message" class="input textarea" minlength="10" maxlength="1000" required />
+          <textarea id="message" rows="7" v-model="newEmail.message" placeholder=" " class="input textarea" minlength="10" maxlength="1000" required />
           <div class="cut cut-long"></div>
           <label for="message" class="placeholder">Your Message</label>
         </div>
@@ -48,9 +48,9 @@ export default {
       message: "",
     });
     const labelText = ref({
-      name: "Your Name",
-      mail: "Your Email",
-      message: "Your Message",
+      name: "Who do I have the pleasure of speaking with?",
+      mail: "Where can I reach you?",
+      message: "What would you like to say?",
     });
     const loading = ref(false);
 
