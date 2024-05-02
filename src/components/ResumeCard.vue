@@ -28,7 +28,7 @@ const isMobile = computed(() => window.innerWidth < 768);
   border-radius: 10px;
 }
 
-.mobile-pdf> {
+.mobile-pdf {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
