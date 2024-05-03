@@ -8,13 +8,13 @@
         <div class="hero-subheader">
           <span class="my-title">{{ heroData.myTitle }}</span>
           <br />
-          <div v-for="skill in heroData.mySkills" :key="skill.name">
+          <div v-for="skill in heroData.mySkills" :key="skill.name" class="skill-container">
             <span class="text-secondary pe-2">{{ skill.hook }}</span>
             <span :class="skill.textGradient">{{ skill.name }}</span>
           </div>
         </div>
       </div>
-      <div class="image-container d-flex justify-content-center align-items-center">
+      <div class="image-container">
         <img :src="heroData.myImageHero" alt="Hero" class="my-image img-fluid" />
       </div>
     </div>
@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('../assets/scss/mobile/_heroStyles.scss');
+
 .purple-gradient {
   position: relative;
   &::before {
@@ -77,88 +79,27 @@ export default {
     filter: brightness(1.2);
   }
   .image-container {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    user-select: none;
     .my-image {
-      position: absolute;
-      bottom: -7rem;
-      right: -56px;
-      width: 60%;
+      width: 85%;
+      height: 85%;
+      object-fit: cover;
+      object-position: center;
       filter:
         drop-shadow(3px -3px 15px #000000)
         drop-shadow(75px 0px 2px var(--purple))
-        drop-shadow(75px 0px 2px var(--red))
+        drop-shadow(75px 0px 2px var(--blue))
         drop-shadow(75px 25px 2px var(--green))
         drop-shadow(75px 25px 2px var(--blue));
-    }
-  }
-}
-
-@media (min-width: 1400px) {
-  .image-container {
-    .my-image {
-      width: 50% !important;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-wrapper {
-    padding: 3rem 0 0 2rem !important;
-  }
-  .hero-header {
-    font-size: 60px;
-    line-height: 80px;
-  }
-  .hero-subheader {
-    font-size: 26px;
-    line-height: 40px;
-  }
-  .image-container {
-    .my-image {
-      width: 60% !important;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-wrapper {
-    height: 97vh !important;
-  }
-  .hero-header {
-    font-size: 50px !important;
-    line-height: 60px !important;
-  }
-  .hero-subheader {
-    font-size: 20px !important;
-    line-height: 30px !important;
-  }
-  .image-container {
-    overflow: hidden;
-    .my-image {
-      top: 3.75rem;
-      width: 60% !important;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-wrapper {
-    height: 94vh !important;
-  }
-  .hero-header {
-    font-size: 40px !important;
-    line-height: 50px !important;
-  }
-  .hero-subheader {
-    font-size: 18px !important;
-    line-height: 28px !important;
-  }
-  .image-container {
-    .my-image {
-      top: 33%;
-      width: 100% !important;
     }
   }
 }

@@ -1,5 +1,4 @@
 <template>
-  <!-- Modal -->
   <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
@@ -8,9 +7,6 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <slot></slot>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
       </div>
     </div>
   </div>
@@ -21,24 +17,6 @@
   &-content {
     color: var(--text-primary);
     background: linear-gradient(180deg, #323639 40%, #525659);
-    .btn-close {
-      position: relative;
-      visibility: hidden;
-      &::after {
-        content: '×';
-        position: absolute;
-        top: -35px;
-        right: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
-        font-size: 3rem;
-        font-weight: 300;
-        visibility: visible;
-      }
-    }
   }
   &-body {
     display: flex;
@@ -47,7 +25,26 @@
     height: 100%;
     width: 100%;
   }
+  .btn-close {
+    position: relative;
+    visibility: hidden;
+    &::after {
+      content: '×';
+      position: absolute;
+      top: -35px;
+      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 300;
+      visibility: visible;
+    }
+  }
 }
+
 ::webkit-scrollbar {
   display: none;
 }

@@ -1,19 +1,5 @@
-import { generateId } from "../utils/GenerateId.js";
 import { cwChallenges, grantReady, threaditAI, gamePursuit } from '../assets/img/projects/_index';
 import { github } from '../assets/img/icons/_index';
-
-export class Project {
-  constructor(data) {
-    this.id = data.id || generateId();
-    this.name = data.name;
-    this.description = data.description;
-    this.tags = data.tags;
-    this.image = data.image;
-    this.source_code_link = data.source_code_link;
-    this.source_code_icon = data.source_code_icon;
-    this.cssSelector = data.cssSelector;
-  }
-}
 
 const projectData = {
   id: "projects",

@@ -1,16 +1,4 @@
-import { generateId } from "../utils/GenerateId.js";
 import { codeworks, wildLearner, grasshopper } from '../assets/img/education/_index';
-
-export class School {
-  constructor(data) {
-    this.id = data.id || generateId();
-    this.major = data.major;
-    this.school_name = data.school_name;
-    this.icon = data.icon;
-    this.date = data.date;
-    this.cssSelector = data.cssSelector;
-  }
-}
 
 const educationData = {
   id: "education",
