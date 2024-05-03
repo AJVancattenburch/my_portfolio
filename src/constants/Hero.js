@@ -1,5 +1,5 @@
 // @ts-ignore-next-line
-import myImage from '../assets/img/my-image-cutout.png';
+import myImage from '../assets/img/my-image-cutout.webp';
 
 const heroData = {
   id: "hero",

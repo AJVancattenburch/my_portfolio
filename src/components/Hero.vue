@@ -35,6 +35,7 @@ export default {
 
 <style scoped lang="scss">
 @import url('../assets/scss/mobile/_heroStyles.scss');
+@import url('../assets/scss/_loaders.scss');
 
 .purple-gradient {
   position: relative;
