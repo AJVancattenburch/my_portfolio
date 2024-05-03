@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-4 p-3 pb-0 company-card purple-gradient text-primary mb-3">
+  <div class="card mb-4 p-3 company-card purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
       <div :class="`${company.cssSelector}-img-container`" class="img-container">
         <img :src="company.icon" :alt="`Image of ${company.company_name} logo`" :class="`${company.cssSelector}-icon`" class="col-1 company-icon img-fluid rounded-circle" width="50" />

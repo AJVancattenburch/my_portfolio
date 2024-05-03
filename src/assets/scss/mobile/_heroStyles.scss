@@ -96,3 +96,15 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .image-container {
+    bottom: 0 !important;
+    height: 75% !important;
+    .my-image {
+      bottom: -100px !important;
+      object-fit: cover !important;
+      object-position: bottom !important;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+<script setup>
+import heroData from '../constants/Hero';
+</script>
+
 <template>
   <section :id="heroData.id" class="purple-gradient">
     <div class="col-12 d-flex hero-wrapper p-5 pe-0">
@@ -20,18 +24,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import heroData from '../constants/Hero';
-
-export default {
-  setup() {
-    return {
-      heroData,
-    };
-  },
-};
-</script>
 
 <style scoped lang="scss">
 @import url('../assets/scss/mobile/_heroStyles.scss');

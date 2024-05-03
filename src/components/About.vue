@@ -1,3 +1,8 @@
+<script setup>
+import about from '../constants/About';
+import AboutCard from './AboutCard.vue';
+</script>
+
 <template>
   <section ref="about" :id="about.id" class="about-wrapper">
     <div class="about-content p-5">
@@ -18,22 +23,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import about from '../constants/About';
-import AboutCard from './AboutCard.vue';
-
-export default {
-  setup() {
-    return {
-      about,
-    };
-  },
-  components: {
-    AboutCard,
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .about {
@@ -80,7 +69,7 @@ export default {
       padding-bottom: 1rem !important;
     }
     &-card-container {
-      padding-top: 0rem;
+      padding: 0 !important;
     }
   }
 }

@@ -13,7 +13,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ms-auto black-gradient-reverse">
-        <!-- ANCHOR - This is where you left off. Still need to show links in dropdown menu aren't showing currently likely just a styling issue. -->
         <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
           <a :link-text="link.name" :title="link.sectionTitle" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
         </li>
