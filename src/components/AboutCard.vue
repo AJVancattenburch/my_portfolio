@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  card: { type: Object, required: true },
+});
+</script>
+
 <template>
   <section class="green-pink-gradient">
     <div class="about-card purple-gradient">
@@ -10,17 +16,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  props: {
-    card: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .green-pink-gradient {

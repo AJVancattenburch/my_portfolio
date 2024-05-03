@@ -1,3 +1,38 @@
+<script setup>
+import { ref } from 'vue'
+import { logger } from '../utils/Logger'
+import { emailService } from '../services/EmailService'
+
+const loading = ref(false)
+const formRef = ref(null)
+const newEmail = ref({
+  name: '',
+  email: '',
+  message: '',
+})
+const labelText = ref({
+  name: 'Who do I have the pleasure of speaking with?',
+  mail: 'Where can I reach you?',
+  message: 'What would you like to say?',
+})
+
+async function handleSubmit(e) {
+  try {
+    e.preventDefault()
+    loading.value = true
+    await emailService.sendEmail(newEmail.value)
+    loading.value = false
+    newEmail.value = {
+      name: '',
+      email: '',
+      message: '',
+    }
+  } catch (error) {
+    logger.error(error)
+  }
+}
+</script>
+
 <template>
   <section id="contact" class=" pb-5">
     <div class="col-12 contact-content p-5">
@@ -33,60 +68,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import { ref } from 'vue';
-import { logger } from '../utils/Logger';
-import { emailService } from '../services/EmailService'
-
-export default {
-  setup() {
-    const formRef = ref(null);
-    const newEmail = ref({
-      name: "",
-      email: "",
-      message: "",
-    });
-    const labelText = ref({
-      name: "Who do I have the pleasure of speaking with?",
-      mail: "Where can I reach you?",
-      message: "What would you like to say?",
-    });
-    const loading = ref(false);
-
-    function handleChange(e) {
-      const { name, value } = e.target;
-
-      newEmail.value = { ...newEmail.value, [name]: value };
-    }
-
-    async function handleSubmit(e) {
-      try {
-        e.preventDefault();
-        loading.value = true;
-        await emailService.sendEmail(newEmail.value);
-        loading.value = false;
-        newEmail.value = {
-          name: "",
-          email: "",
-          message: "",
-        };
-      } catch (error) {
-        logger.error(error);
-      }
-    }
-
-    return {
-      formRef,
-      newEmail,
-      labelText,
-      loading,
-      handleChange,
-      handleSubmit,
-    }
-  },
-}
-</script>
 
 <style scoped lang="scss">
 @import url('../assets/scss/_formStyles.scss');

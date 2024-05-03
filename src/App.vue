@@ -31,6 +31,12 @@ import ResumeCard from './components/ResumeCard.vue'
   --main-height: calc(100vh - 32px - 64px);
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 footer {
   position: fixed;
   bottom: 0;
