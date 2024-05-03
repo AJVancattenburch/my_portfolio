@@ -1,3 +1,8 @@
+<script setup>
+import experienceData from '../constants/Experience';
+import ExperienceCard from './ExperienceCard.vue';
+</script>
+
 <template>
   <section :id="experienceData.id" class="experience-wrapper">
     <div class="experience-content p-5">
@@ -15,18 +20,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import experienceData from '../constants/Experience';
-
-export default {
-  setup() {
-    return {
-      experienceData,
-    };
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .experience {

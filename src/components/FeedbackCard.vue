@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  testimonial: { type: Object, required: true },
+});
+</script>
+
 <template>
   <div class="card mb-2 ps-4 py-4 testimonial-item purple-gradient text-primary me-3">
     <div class="d-flex flex-column testimonial-item-header mb-3">
@@ -20,17 +26,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    testimonial: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .card {

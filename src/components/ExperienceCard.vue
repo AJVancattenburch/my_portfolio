@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  company: { type: Object, required: true },
+});
+</script>
+
 <template>
   <div class="card mb-4 p-3 company-card purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
@@ -19,17 +25,6 @@
     </ul>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    company: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .card {

@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  school: { type: Object, required: true }
+})
+</script>
+
 <template>
   <div class="card mb-4 p-3 education-item purple-gradient text-primary mb-3">
     <div class="d-flex align-items-center">
@@ -20,17 +26,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    school: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .card {

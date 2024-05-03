@@ -1,3 +1,8 @@
+<script setup>
+import educationData from '../constants/Education';
+import EducationCard from './EducationCard.vue';
+</script>
+
 <template>
   <section :id="educationData.id" class="education-wrapper">
     <div class="education-content p-5">
@@ -15,20 +20,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import educationData from '../constants/Education';
-import EducationCard from './EducationCard.vue';
-
-export default {
-  setup() {
-    return {
-      educationData,
-    };
-  },
-  components: { EducationCard },
-};
-</script>
 
 <style scoped lang="scss">
 .education {

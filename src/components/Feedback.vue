@@ -1,3 +1,8 @@
+<script setup>
+import feedbacks from '../constants/Feedbacks';
+import FeedbackCard from './FeedbackCard.vue';
+</script>
+
 <template>
   <section :id="feedbacks.id" class="feedbacks-wrapper">
     <div class="feedbacks-content p-5">
@@ -15,18 +20,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import feedbacks from '../constants/Feedbacks';
-
-export default {
-  setup() {
-    return {
-      feedbacks,
-    };
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .feedbacks {
