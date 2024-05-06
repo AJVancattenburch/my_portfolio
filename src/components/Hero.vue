@@ -6,8 +6,8 @@ import heroData from '../constants/Hero';
   <section :id="heroData.id" class="purple-gradient">
     <div class="col-12 d-flex hero-wrapper p-5 pe-0">
       <div class="col-12 col-lg-7 text-container">
-        <h1 class="hero-header">{{heroData.myGreeting}}
-          <span class="highlight-purple">{{heroData.myName}}</span>
+        <h1 class="hero-header">{{ heroData.myGreeting }}
+          <span class="highlight-purple">{{ heroData.myName }}</span>
         </h1>
         <div class="hero-subheader">
           <span class="my-title">{{ heroData.myTitle }}</span>
@@ -90,8 +90,8 @@ import heroData from '../constants/Hero';
       filter:
         drop-shadow(3px -3px 15px #000000)
         drop-shadow(75px 0px 2px var(--purple))
-        drop-shadow(75px 0px 2px var(--blue))
-        drop-shadow(75px 25px 2px var(--green))
+        drop-shadow(75px 0px 2px var(--green))
+        drop-shadow(75px 25px 2px var(--pink))
         drop-shadow(75px 25px 2px var(--blue));
     }
   }

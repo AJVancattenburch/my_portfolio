@@ -1,99 +1,106 @@
 <script setup>
-import { footerLinks } from "../constants/FooterLinks.js";
-import SVGGitHub from "./SVGGithub.vue";
-import SVGLinkedIn from "./SVGLInkedIn.vue";
+import { ref } from 'vue';
+import { footerLinks } from '../constants/FooterLinks';
+import SVGGitHub from './SVGGithub.vue';
+import SVGLinkedIn from './SVGLInkedIn.vue';
 
 const githubLink = footerLinks.githubLink
 const linkedInLink = footerLinks.linkedInLink
+
 </script>
 
 <template>
-  <ul class="d-flex flex-column justify-content-center">
-    <li>
-      <a :href="githubLink.external_url" target="_blank" rel="noopener noreferrer">
-        <SVGGitHub class="svg-brands svg-github" />
-      </a>
-    </li>
-    <li>
-      <a :href="linkedInLink.external_url" target="_blank" rel="noopener noreferrer">
-        <SVGLinkedIn class="svg-brands svg-linkedin" />
-      </a>
-    </li>
-  </ul>
+  <section class="link-container">
+    <ul class=" d-flex flex-column justify-content-center">
+      <li class="">
+        <a :href="githubLink.external_url" target="_blank" rel="noopener noreferrer">
+          <SVGGithub :fillColor="'var(--purple)'" :strokeColor="'var(--dark-purple)'" :strokeWidth="3" :strokeLinecap="'round'" :strokeLinejoin="'round'" :bgDark="'#18193F'" class="svg-brands svg-github" />
+        </a>
+      </li>
+      <li class="mt-4">
+        <a :href="linkedInLink.external_url" target="_blank" rel="noopener noreferrer">
+          <SVGLinkedIn class="svg-brands svg-linkedin" />
+        </a>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <style scoped lang="scss">
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
+.link-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #000;
 }
 
 ul {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 ul li {
   position: relative;
   list-style: none;
   margin: 0 20px;
+  padding: 10px 10px 20px 10px;
   cursor: pointer;
 }
+
 ul li a {
   text-decoration: none;
 }
+
 ul li a .svg-brands {
   font-size: 6em;
   color: #222;
   width: 100px;
   height: 100px;
   border-radius: 1rem;
-  margin-top: 2rem;
   &.svg-github {
     position: relative;
-    left: -15px;
+    top: -2.5px;
+    left: -2.5px;
     width: 115px;
     height: 115px;
   }
 }
-ul li svg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 6em;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s ease-in-out;
+
+li {
+  &::after {
+    content: '';
+    position: absolute;
+    border-top: 2px solid red;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::after {
+    background: #ff000099;
+    animation: slideDownBg 0.3s ease-in-out;
+  }
+
+  &.svg-linkedin {
+    height: 100px;
+    width: 100px;
+  }
 }
 
-ul li:nth-child(1) svg::before {
-  background-image: linear-gradient(45deg, 
-    #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
-    #bc1888 100%);
-  -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-  border-bottom: 4px solid #dc2743;
-}
-ul li:nth-child(2) svg::before {
-  content: "";
-  color: #25D366;
-  border-bottom: 4px solid #25D366;
-}
-ul li:nth-child(3) svg::before {
-  content: "";
-  color: #1DA1F2;
-  border-bottom: 4px solid #1DA1F2;
-}
-ul li:hover svg::before {
-  height: 100%;
-  z-index: 1000;
+@keyframes slideDownBg {
+  0% {
+    height: 1%;
+  }
+  100% {
+    height: 100%;
+    background: red !important;
+  }
 }
 </style>
