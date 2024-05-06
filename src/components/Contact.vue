@@ -68,7 +68,7 @@ async function handleSubmit(e) {
         </div>
       </form>
     </div>
-    <div class="col-12 col-md-2 col-lg-4 d-flex justify-content-center">
+    <div class="col-12 col-md-2 col-lg-4 d-flex mt-5 ms-5">
       <ContactLinks />
     </div>
 
