@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { logger } from '../utils/Logger'
 import { emailService } from '../services/EmailService'
+import ContactLinks from './ContactLinks.vue'
 
 const loading = ref(false)
 const formRef = ref(null)
@@ -35,11 +36,12 @@ async function handleSubmit(e) {
 
 <template>
   <section id="contact" class=" pb-5">
-    <div class="col-12 contact-content p-5">
-      <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
-      <h1 class="contact-title text-primary">Contact.</h1>
-      <form ref="formRef" @submit.prevent="handleSubmit" class="col-12 col-md-8 col-lg-6 form d-flex flex-column mt-5 pt-0">
-        <div class="col-12 input-container name-input">
+    <div class="col-12 d-flex contact-content p-5">
+      <div class="col-12 col-md-8 col-lg-6 form-container d-flex-flex-column mt-5 pt-0">
+        <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
+        <h1 class="contact-title text-primary">Contact.</h1>
+        <form ref="formRef" @submit.prevent="handleSubmit" class="form">
+          <div class="col-12 input-container name-input">
           <input id="name" type="text" v-model="newEmail.name" placeholder=" " :label-text="labelText.name" class="input" minlength="2" required />
           <div class="cut"></div>
           <label for="name" class="placeholder">Your Name</label>
@@ -65,6 +67,11 @@ async function handleSubmit(e) {
           </button>
         </div>
       </form>
+    </div>
+    <div class="col-12 col-md-2 col-lg-4 d-flex justify-content-center">
+      <ContactLinks />
+    </div>
+
     </div>
   </section>
 </template>
