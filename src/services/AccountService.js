@@ -18,8 +18,7 @@ class AccountService {
     window.scrollTo({ top: position, behavior: 'smooth' });
     logger.log(`Scrolled to HTMLElement:`, scrollElem)
     scrollElem.id = foundLink.id
-
-    logger.log(`Scrolling to '${scrollElem.id}'`)
+    logger.log(`ScrollId: '${scrollElem.id}' matches NavLinkId: '${foundLink.id}'`)
   }
 }
 

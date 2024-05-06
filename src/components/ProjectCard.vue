@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  project: { type: Object, required: true }
+});
+</script>
+
 <template>
   <div class="project-item purple-gradient me-4 pb-4">
     <div class="project-item-content d-flex flex-column">
@@ -30,17 +36,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    project: {
-      type: Object,
-      required: true,
-    },
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .project-item {

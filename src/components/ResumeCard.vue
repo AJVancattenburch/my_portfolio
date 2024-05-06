@@ -1,3 +1,9 @@
+<script setup>
+import { computed } from 'vue';
+
+const isMobile = computed(() => window.innerWidth < 768);
+</script>
+
 <template>
   <div class="modal-body">
     <div class="col-12 my-resume-pdf-container" style="height: 100%; width: 100%">
@@ -6,20 +12,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { computed } from 'vue';
-
-export default {
-  setup() {
-    const isMobile = computed(() => window.innerWidth < 768);
-
-    return {
-      isMobile,
-    };
-  },
-};
-</script>
 
 <style lang="scss">
 .my-resume-pdf-container {

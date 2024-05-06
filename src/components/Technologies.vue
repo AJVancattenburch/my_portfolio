@@ -1,3 +1,7 @@
+<script setup>
+import technologyData from '../constants/Technologies';
+</script>
+
 <template>
   <section ref="technologies" :id="technologyData.id" class="technologies-wrapper">
     <div class="technologies-content p-5">
@@ -15,18 +19,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import technologyData from '../constants/Technologies';
-
-export default {
-  setup() {
-    return {
-      technologyData,
-    };
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .technologies {

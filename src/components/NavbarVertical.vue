@@ -1,12 +1,39 @@
+<script setup>
+import { computed, ref } from 'vue';
+import navLinks from '../constants/NavLinks';
+import heroData from '../constants/Hero';
+import { logger } from '../utils/Logger';
+import { accountService } from '../services/AccountService';
+
+let hero = ref(heroData.id);
+let activeLinkId = ref(null);
+
+const foundLink = computed(() => {
+  return navLinks.find(link => link.id === activeLinkId.value);
+});
+
+async function scrollTo(id) {
+  try {
+    let scrollElem = document.getElementById(id);
+    activeLinkId.value = id;
+
+    await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
+    
+  } catch (error) {
+    logger.error(`Element with id ${id} not found in navLinks.`);
+  }
+}
+</script>
+
 <template>
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-4">
   <div class="col-7 d-flex justify-content-center ps-2 pb-2">
-    <img @click="scrollTo('hero')" title="SVG logo Design By: Anthony Vancattenburch" alt="Anthony's custom SVG logo/brand" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
+    <img @click="scrollTo(hero)" title="SVG logo Design By: Anthony Vancattenburch" alt="Anthony's custom SVG logo/brand" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
   </div>
 
   <resume-modal-button class="resume-modal-container d-flex justify-content-center">
     <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
-      <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="40" />
+      <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="35" />
     </a>
   </resume-modal-button>
   <ul class="nav-list">
@@ -16,45 +43,6 @@
   </ul>
 </nav>
 </template>
-
-<script>
-import { computed, ref } from 'vue';
-import navLinks from '../constants/NavLinks';
-import heroData from '../constants/Hero';
-import { logger } from '../utils/Logger';
-import { accountService } from '../services/AccountService';
-
-export default {
-  setup() {
-    let heroSection = ref(heroData.id);
-    let activeLinkId = ref(null);
-
-    const foundLink = computed(() => {
-      return navLinks.find(link => link.id === activeLinkId.value);
-    });
-    
-    //Compensates for fixed headers so header does not cover the top of the scrolled element. Adjust padding (`yOffset` constant below) as needed. 1 increment = 1px.
-    async function scrollTo(id) {
-      try {
-        let scrollElem = document.getElementById(id);
-        activeLinkId.value = id;
-
-        await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
-        
-      } catch (error) {
-        logger.error(`Element with id ${id} not found in navLinks.`);
-      }
-    }
-    return {
-      heroSection,
-      activeLinkId,
-
-      scrollTo,
-      navLinks,
-    };
-  },
-}
-</script>
 
 <style scoped lang="scss">
 
@@ -208,9 +196,5 @@ export default {
       transition: color 0.3s;
     }
   }
-  
-  ::view-transition-group(nav) {
-    animation-duration: 1s;
-  }
 }
-</style>
+</style>../constants/Links

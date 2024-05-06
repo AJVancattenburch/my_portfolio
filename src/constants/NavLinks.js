@@ -1,4 +1,4 @@
-import { about, educationData, experienceData, projectData, technologyData, feedbacks, contactData } from '../constants/_index'
+import { about, educationData, experienceData, projectData, technologyData, feedbacks, contactData } from './_index'
 
 const navLinks = [
   {
@@ -50,16 +50,6 @@ const navLinks = [
     sectionTitle: "Scroll to 'Contact' section",
     isActive: false
   },
-  // {
-  //   name: "Github",
-  //   title: "View my activity on Github",
-  //   external_url: "https://github.com/AJVancattenburch"
-  // },
-  // {
-  //   name: "LinkedIn",
-  //   title: "Connect with me on LinkedIn",
-  //   external_url: "https://linkedin.com/in/anthonyvancattenburch/"
-  // }
 ]
 
-export default navLinks
+export default navLinks;

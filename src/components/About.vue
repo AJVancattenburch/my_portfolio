@@ -1,6 +1,5 @@
 <script setup>
 import about from '../constants/About';
-import AboutCard from './AboutCard.vue';
 </script>
 
 <template>

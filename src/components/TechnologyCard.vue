@@ -1,3 +1,9 @@
+<script setup>
+defineProps({
+  technology: { type: Object, required: true },
+});
+</script>
+
 <template>
   <section class="tech-card purple-gradient rounded-3 me-auto my-3">
     <div class="tech-card-content d-flex flex-column justify-content-center align-items-center p-3">
@@ -10,17 +16,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  props: {
-    technology: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .tech-card {

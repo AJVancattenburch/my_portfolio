@@ -1,7 +1,7 @@
 <template>
   <section class="row d-flex justify-content-end page-wrapper">
     <div class="col-2 vertical-nav-container d-none d-lg-block">
-      <NavbarVertical />
+      <NavbarVertical :navLink="navLink" />
     </div>
     <div class="col-12 col-lg-10 page-container">
       <Hero />
@@ -16,8 +16,9 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import NavbarVertical from '../components/NavbarVertical.vue';
+import { navLinks } from "../constants/_index.js";
 import Hero from '../components/Hero.vue';
 import About from '../components/About.vue';
 import Education from '../components/Education.vue';
@@ -26,20 +27,22 @@ import Projects from '../components/Projects.vue';
 import Technologies from '../components/Technologies.vue';
 import Feedback from '../components/Feedback.vue';
 import Contact from '../components/Contact.vue';
+import { computed, onMounted } from "vue";
+import { logger } from "../utils/Logger.js";
 
-export default {
-  components: {
-    NavbarVertical,
-    Hero,
-    About,
-    Education,
-    Experience,
-    Projects,
-    Technologies,
-    Feedback,
-    Contact
+const navLink = computed(() => {
+  let link;
+  for (link in navLinks) {
+    link = navLinks[link];
   }
-}
+  return link;
+})
+
+onMounted(() => {
+  logger.log('Link:', navLink.value)
+})
+
+
 </script>
 
 <style scoped lang="scss">

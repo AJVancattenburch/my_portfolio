@@ -1,3 +1,8 @@
+<script setup>
+import projectData from '../constants/Projects';
+import ProjectCard from './ProjectCard.vue';
+</script>
+
 <template>
   <section ref="projects" :id="projectData.id" class="projects-wrapper">
     <div class="projects-content p-5">
@@ -16,20 +21,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import projectData from '../constants/Projects';
-import ProjectCard from './ProjectCard.vue';
-
-export default {
-  setup() {
-    return { projectData };
-  },
-  components: {
-    ProjectCard,
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .projects {
