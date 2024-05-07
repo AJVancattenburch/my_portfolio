@@ -38,7 +38,7 @@ defineProps({
   justify-content: center;
   align-items: center;
   background: var(--black-purple-radial-gradient);
-  padding: 2rem;
+  padding-block: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 1rem #0000001a;
   transition: 0.3s ease-in-out;

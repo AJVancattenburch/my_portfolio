@@ -10,14 +10,14 @@ import about from '../constants/About';
       <p class="about-text text-primary">
         Driven by my personal journey and guided by a deep sense of purpose as a developer, I am always excited to contribute with a dynamic and forward-thinking team. I bring <span class="highlight">perseverance</span>, <span class="highlight">integrity</span>, and a <span class="highlight">rapid learning ability</span> to every project, striving to create impactful software solutions that push boundaries and drive positive change.
       </p>
-    </div>
-    <div class="about-card-container d-flex flex-wrap align-items-center">
-      <div
-        v-for="card in about.cards"
-        :key="card.title"
-        class="about-card-item p-3"
-      >
-        <AboutCard :card="card" />
+      <div class="about-card-container d-flex flex-wrap align-items-center">
+        <div
+          v-for="card in about.cards"
+          :key="card.title"
+          class="about-card-item py-3"
+        >
+          <AboutCard :card="card" />
+        </div>
       </div>
     </div>
   </section>
@@ -27,9 +27,6 @@ import about from '../constants/About';
 .about {
   &-wrapper {
     width: 100%;
-  }
-  &-card-container {
-    padding: 2rem;
   }
   &-subtitle {
     font-size: 1.1rem;
