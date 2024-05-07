@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { logger } from '../utils/Logger'
 import { emailService } from '../services/EmailService'
 import ContactLinks from './ContactLinks.vue'
@@ -16,6 +16,8 @@ const labelText = ref({
   mail: 'Where can I reach you?',
   message: 'What would you like to say?',
 })
+
+const isMobile = computed(() => window.innerWidth < 768)
 
 async function handleSubmit(e) {
   try {
@@ -68,11 +70,14 @@ async function handleSubmit(e) {
         </div>
       </form>
     </div>
-    <div class="col-12 col-md-2 col-lg-4 d-flex mt-5 ms-5">
+    <div v-if="!isMobile" class="contact-link-container col-md-2 col-lg-4 d-flex mt-5 ms-5">
       <ContactLinks />
     </div>
-
-    </div>
+    
+  </div>
+  <div v-if="isMobile" class="contact-link-container col-12 d-md-none d-flex flex-row justify-content-start align=items-center mt-5">
+    <ContactLinks />
+  </div>
   </section>
 </template>
 

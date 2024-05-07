@@ -8,9 +8,9 @@ const heroData = {
   myTitle: "Full Stack Developer",
   myImageHero: myImage,
   mySkills: [
-    { hook: "Proficiency in", name: "Data & API Integration", textGradient: "pink-text-gradient" },
-    { hook: "Impactful", name: "Software Optimization", textGradient: "blue-text-gradient" },
-    { hook: "Captivating", name: "UX & UI Design", textGradient: "green-text-gradient" },
+    { hook: "Proficiency in", name: "Data & API Integration", textGradient: "green-text-gradient" },
+    { hook: "Impactful", name: "Software Optimization", textGradient: "pink-text-gradient" },
+    { hook: "Captivating", name: "UX & UI Design", textGradient: "blue-text-gradient" },
   ],
 }
 
