@@ -29,9 +29,9 @@ onMounted(() => {
 
 <template>
   <section class="row d-flex justify-content-end page-wrapper">
-    <resume-modal-button class="resume-modal-container d-flex justify-content-center">
+    <resume-modal-button class="col-12 resume-modal-container d-flex justify-content-end">
       <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
-        <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="35" />
+        <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" class="resume-modal-btn-icon" height="50" />
       </a>
     </resume-modal-button>
     <div class="col-2 vertical-nav-container d-none d-lg-block">
@@ -57,22 +57,36 @@ onMounted(() => {
   position: relative;
   width: 100%;
   background: var(--black-transparent-gradient);
-
   .resume {
     &-modal-container {
-      position: absolute;
-      top: 3.5%;
-      right: 10%;
+      position: fixed;
+      top: 15px;
+      right: 5px;
       cursor: pointer;
       transition: transform 0.3s;
       z-index: 3;
     }
     &-modal-btn {
+      position: relative;
       background: var(--black-purple-radial-gradient);
-      box-shadow: inset 0 4px 10px var(--shadow-purple);
       border-radius: 50%;
-      padding: 0.5rem;
       transition: transform 0.3s;
+      &-icon {
+        width: 50px;
+        height: 50px;
+        filter: drop-shadow(0 0 3px var(--text-secondary));
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 100%;
+        box-shadow: inset 0 0 2px 2px var(--purple), 0 0 3px 3px var(--red), 0 0 4px 4px var(--blue), 0 0 5px 5px var(--green);
+        border-radius: 50%;
+        transition: opacity 0.3s;
+      }
       &:hover {
         transform: scale(1.1);
       }
