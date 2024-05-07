@@ -10,20 +10,20 @@
     drop-shadow(0px 4px 4px #ffffff80)
     drop-shadow(0px 8px 8px #00000040)
     drop-shadow(8px 8px 8px #00000040);
+    transition: filter 500ms;
   &:focus-within {
     border: 2px solid #00000080;
     background-image: var(--purple-radial-gradient), linear-gradient(var(--dark-purple), var(--shadow-pink));
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    transition: background 500ms;
     filter: 
       drop-shadow(0px 4px 4px var(--shadow-pink))
       drop-shadow(0px 8px 8px var(--shadow-green))
       drop-shadow(8px 8px 8px var(--shadow-purple));
     .cut {
-      background: currentColor;
-    }
-    :not(:placeholder-shown) ~ .cut {
-      background: transparent;
+      background: #3E316499;
+      filter: drop-shadow(0px 4px 4px #00000080);
     }
   }
 }

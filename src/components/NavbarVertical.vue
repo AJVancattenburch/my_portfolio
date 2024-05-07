@@ -27,15 +27,10 @@ async function scrollTo(id) {
 
 <template>
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-4">
-  <div class="col-7 d-flex justify-content-center ps-2 pb-2">
+  <div class="col-7 d-flex justify-content-end ps-2 pb-2">
     <img @click="scrollTo(hero)" title="SVG logo Design By: Anthony Vancattenburch" alt="Anthony's custom SVG logo/brand" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
   </div>
-
-  <resume-modal-button class="resume-modal-container d-flex justify-content-center">
-    <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
-      <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="35" />
-    </a>
-  </resume-modal-button>
+  
   <ul class="nav-list">
     <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
       <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
@@ -62,27 +57,6 @@ async function scrollTo(id) {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent 70%, #0e0c13);
-}
-
-.resume {
-  &-modal-container {
-    position: absolute;
-    top: 3.5%;
-    right: 10%;
-    cursor: pointer;
-    transition: transform 0.3s;
-    z-index: 3;
-  }
-  &-modal-btn {
-    background: var(--black-purple-radial-gradient);
-    box-shadow: inset 0 4px 10px var(--shadow-purple);
-    border-radius: 50%;
-    padding: 0.5rem;
-    transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 }
 
 .nav-link::before,

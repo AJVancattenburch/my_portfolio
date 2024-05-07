@@ -1,21 +1,3 @@
-<template>
-  <section class="row d-flex justify-content-end page-wrapper">
-    <div class="col-2 vertical-nav-container d-none d-lg-block">
-      <NavbarVertical :navLink="navLink" />
-    </div>
-    <div class="col-12 col-lg-10 page-container">
-      <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Technologies />
-      <Projects />
-      <Feedback />
-      <Contact />
-    </div>
-  </section>
-</template>
-
 <script setup>
 import NavbarVertical from '../components/NavbarVertical.vue';
 import { navLinks } from "../constants/_index.js";
@@ -45,6 +27,29 @@ onMounted(() => {
 
 </script>
 
+<template>
+  <section class="row d-flex justify-content-end page-wrapper">
+    <resume-modal-button class="resume-modal-container d-flex justify-content-center">
+      <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" height="35" />
+      </a>
+    </resume-modal-button>
+    <div class="col-2 vertical-nav-container d-none d-lg-block">
+      <NavbarVertical :navLink="navLink" />
+    </div>
+    <div class="col-12 col-lg-10 page-container">
+      <Hero />
+      <About />
+      <Education />
+      <Experience />
+      <Technologies />
+      <Projects />
+      <Feedback />
+      <Contact />
+    </div>
+  </section>
+</template>
+
 <style scoped lang="scss">
 .page-wrapper {
   margin: 0;
@@ -52,6 +57,27 @@ onMounted(() => {
   position: relative;
   width: 100%;
   background: var(--black-transparent-gradient);
+
+  .resume {
+    &-modal-container {
+      position: absolute;
+      top: 3.5%;
+      right: 10%;
+      cursor: pointer;
+      transition: transform 0.3s;
+      z-index: 3;
+    }
+    &-modal-btn {
+      background: var(--black-purple-radial-gradient);
+      box-shadow: inset 0 4px 10px var(--shadow-purple);
+      border-radius: 50%;
+      padding: 0.5rem;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 
   .page-container {
     padding: 0;
