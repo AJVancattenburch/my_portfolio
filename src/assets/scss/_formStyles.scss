@@ -1,15 +1,31 @@
 @import url('./_styles.scss');
 
 .form {
-  background: var(--black-purple-radial-gradient);
+  background: var(--black-purple-radial-gradient-alt);
   border-radius: 20px;
   box-sizing: border-box;
   height: 520px;
   padding: 20px;
   filter: 
-  drop-shadow(0px 4px 4px #ffffff80)
-  drop-shadow(0px 8px 8px #00000040)
-  drop-shadow(8px 8px 8px #00000040);
+    drop-shadow(0px 4px 4px #ffffff80)
+    drop-shadow(0px 8px 8px #00000040)
+    drop-shadow(8px 8px 8px #00000040);
+  &:focus-within {
+    border: 2px solid #00000080;
+    background-image: var(--purple-radial-gradient), linear-gradient(var(--dark-purple), var(--shadow-pink));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    filter: 
+      drop-shadow(0px 4px 4px var(--shadow-pink))
+      drop-shadow(0px 8px 8px var(--shadow-green))
+      drop-shadow(8px 8px 8px var(--shadow-purple));
+    .cut {
+      background: currentColor;
+    }
+    :not(:placeholder-shown) ~ .cut {
+      background: transparent;
+    }
+  }
 }
 
 .title {
@@ -120,6 +136,8 @@ textarea:placeholder-shown ~ .placeholder {
 .input:focus ~ .placeholder {
   color: transparent;
   -webkit-text-fill-color: var(--blue);
+  text-shadow: 1px 1px 0.5px #000;
+  filter: brightness(1.2);
 }
 
 input:not(:placeholder-shown):valid ~ .placeholder,
