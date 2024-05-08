@@ -64,10 +64,10 @@ ul li:nth-child(2) a::before {
 
 ul li:nth-child(3) a::before {
   content: "\F0C3A";
-  background-image: linear-gradient(#FFD700, #FFA500);
+  background-image: linear-gradient(var(--red), var(--dark-red));
   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
-  border-bottom: 4px solid #FFD700;
+  border-bottom: 4px solid var(--red);
 }
 
 ul li:hover a::before {
