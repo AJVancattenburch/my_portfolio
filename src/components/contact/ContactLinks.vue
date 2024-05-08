@@ -11,9 +11,9 @@ const templateLink = footerLinks.templateLink
 
 <template>
   <ul :class="isMobile ? 'flex-row' : 'flex-column'" class="position-relative d-flex justify-content-center align-items-center">
-    <li><a :href="linkedInLink.external_url" :title="linkedInLink.title"><i class="mdi-brands mdi mdi-linkedin"></i></a></li>
-    <li><a :href="ghLink.external_url" :title="ghLink.title"><i class="mdi-brands mdi mdi-github"></i></a></li>
-    <li><a :href="templateLink.external_url" :title="templateLink.title"><img :src="templateLink.imgSrc" /></a></li>
+    <li><a :href="linkedInLink.external_url" :title="linkedInLink.title"><i class="brands mdi mdi-linkedin"></i></a></li>
+    <li><a :href="ghLink.external_url" :title="ghLink.title"><i class="brands mdi mdi-github"></i></a></li>
+    <li><a :href="templateLink.external_url" :title="templateLink.title"><i class="brands mdi mdi-ballot-recount-outline"></i></a></li>
 </ul>
 </template>
 
@@ -29,12 +29,12 @@ ul li a {
   text-decoration: none;
 }
 
-ul li a .mdi-brands {
+ul li a .brands {
   font-size: 6em;
   color: #222;
 }
 
-ul li a::before {
+ul li a:not(i.mdi)::before {
   font-family: "Material Design Icons";
   position: absolute;
   top: 10%;
@@ -60,6 +60,14 @@ ul li:nth-child(2) a::before {
   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   border-bottom: 4px solid var(--purple);
+}
+
+ul li:nth-child(3) a::before {
+  content: "\F0C3A";
+  background-image: linear-gradient(#FFD700, #FFA500);
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid #FFD700;
 }
 
 ul li:hover a::before {

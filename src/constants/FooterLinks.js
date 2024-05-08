@@ -16,7 +16,7 @@ const linkedInLink = {
 
 const templateLink = {
   name: "My Portfolio Template",
-  title: "Like my portfolio? Click here to fork my easy to use template!",
+  title: "Like my custom template? Click here to fork, then seamlessly add your own content & theme!",
   imgSrc: websiteTemplate,
   external_url: "https://github.com/AJVancattenburch/my_portfolio/tree/main"
 }
