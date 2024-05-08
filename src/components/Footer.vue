@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import { computed } from 'vue';
-import SVGGithub from './SVGGithub.vue';
-import SVGLinkedIn from './SVGLInkedIn.vue';
+import SVGGithub from './scalableVectorGraphics/SVGGithub.vue';
+import SVGLinkedIn from './scalableVectorGraphics/SVGLInkedIn.vue';
 import { footerLinks } from '../constants/FooterLinks';
 
 const ghLink = computed(() => footerLinks.githubLink);

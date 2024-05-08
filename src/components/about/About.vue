@@ -1,5 +1,5 @@
 <script setup>
-import about from '../constants/About';
+import about from '../../constants/About';
 </script>
 
 <template>

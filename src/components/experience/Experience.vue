@@ -1,5 +1,5 @@
 <script setup>
-import experienceData from '../constants/Experience';
+import experienceData from '../../constants/Experience';
 import ExperienceCard from './ExperienceCard.vue';
 </script>
 

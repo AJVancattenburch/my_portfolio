@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import { footerLinks } from '../constants/FooterLinks';
+import { footerLinks } from '../../constants/FooterLinks';
 
 const isMobile = computed(() => window.innerWidth < 768);
 

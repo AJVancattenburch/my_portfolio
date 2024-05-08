@@ -1,5 +1,5 @@
 <script setup>
-import technologyData from '../constants/Technologies';
+import technologyData from '../../constants/Technologies';
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
-import ResumeModal from './components/ResumeModal.vue';
-import ResumeCard from './components/ResumeCard.vue';
+import ResumeModal from './components/resumeModal/ResumeModal.vue';
+import ResumeCard from './components/resumeModal/ResumeCard.vue';
 import Footer from './components/Footer.vue';
 </script>
 

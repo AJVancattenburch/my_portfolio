@@ -1,5 +1,5 @@
 <script setup>
-import feedbacks from '../constants/Feedbacks';
+import feedbacks from '../../constants/Feedbacks';
 import FeedbackCard from './FeedbackCard.vue';
 </script>
 

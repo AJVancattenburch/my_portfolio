@@ -1,5 +1,5 @@
 <script setup>
-import projectData from '../constants/Projects';
+import projectData from '../../constants/Projects';
 import ProjectCard from './ProjectCard.vue';
 </script>
 

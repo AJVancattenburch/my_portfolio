@@ -1,17 +1,16 @@
 <script setup>
-import { buttonBorder } from '../assets/img/borders/_index'
 import NavbarVertical from '../components/NavbarVertical.vue';
 import { navLinks } from "../constants/_index.js";
 import Hero from '../components/Hero.vue';
-import About from '../components/About.vue';
-import Education from '../components/Education.vue';
-import Experience from '../components/Experience.vue';
-import Projects from '../components/Projects.vue';
-import Technologies from '../components/Technologies.vue';
-import Feedback from '../components/Feedback.vue';
-import Contact from '../components/Contact.vue';
+import About from '../components/about/About.vue';
+import Education from '../components/education/Education.vue';
+import Experience from '../components/experience/Experience.vue';
+import Projects from '../components/projects/Projects.vue';
+import Technologies from '../components/technologies/Technologies.vue';
+import Feedback from '../components/feedback/Feedback.vue';
+import Contact from '../components/contact/Contact.vue';
 import { computed, onMounted } from "vue";
-import { logger } from "../utils/Logger.js";
+import { logger } from "../utils/Logger";
 
 const navLink = computed(() => {
   let link;

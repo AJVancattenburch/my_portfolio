@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { logger } from '../utils/Logger'
-import { emailService } from '../services/EmailService'
+import { logger } from '../../utils/Logger'
+import { emailService } from '../../services/EmailService'
 import ContactLinks from './ContactLinks.vue'
 
 const loading = ref(false)
@@ -82,8 +82,8 @@ async function handleSubmit(e) {
 </template>
 
 <style scoped lang="scss">
-@import url('../assets/scss/_formStyles.scss');
-@import url('../assets/scss/_formButton.scss');
+@import url('../../assets/scss/_formStyles.scss');
+@import url('../../assets/scss/_formButton.scss');
 .contact {
   &-wrapper {
     height: 95vh;

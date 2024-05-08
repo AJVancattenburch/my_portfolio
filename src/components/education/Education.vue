@@ -1,5 +1,5 @@
 <script setup>
-import educationData from '../constants/Education';
+import educationData from '../../constants/Education';
 import EducationCard from './EducationCard.vue';
 </script>
 
