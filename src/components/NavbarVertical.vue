@@ -33,7 +33,7 @@ async function scrollTo(id) {
   
   <ul class="nav-list">
     <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
-      <a :link-text="link.name" class="nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
+      <a :link-text="link.name" class="d-flex align-items-center nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
 </nav>
@@ -167,7 +167,7 @@ async function scrollTo(id) {
     &::before {
       content: attr(link-text) " ";
       position: absolute;
-      padding: 0 2rem 0.5rem;
+      padding: 0 2rem;
       color: var(--text-primary);
       border-radius: 1rem;
       display: flex;
