@@ -96,4 +96,10 @@ import heroData from '../constants/Hero';
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .hero-wrapper {
+    filter: scale(0.75);
+  }
+}
 </style>

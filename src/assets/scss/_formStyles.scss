@@ -1,7 +1,7 @@
 @import url('./_styles.scss');
 
 .form {
-  background: var(--black-purple-radial-gradient-alt);
+  background: #100221ea;
   border-radius: 20px;
   box-sizing: border-box;
   height: 520px;
@@ -13,16 +13,16 @@
     transition: filter 500ms;
   &:focus-within {
     border: 2px solid #00000080;
-    background-image: var(--purple-radial-gradient), linear-gradient(var(--dark-purple), var(--shadow-pink));
+    background: linear-gradient(var(--dark-purple), var(--dark-pink));
     background-origin: border-box;
     background-clip: padding-box, border-box;
     transition: background 500ms;
     filter: 
-      drop-shadow(0px 4px 4px var(--shadow-pink))
-      drop-shadow(0px 8px 8px var(--shadow-green))
-      drop-shadow(8px 8px 8px var(--shadow-purple));
+      drop-shadow(0px 4px 4px var(--dark-pink))
+      drop-shadow(0px 8px 8px var(--dark-green))
+      drop-shadow(8px 8px 8px var(--dark-purple));
     .cut {
-      background: #3E316499;
+      background: #4b225899;
       filter: drop-shadow(0px 4px 4px #00000080);
     }
   }

@@ -42,7 +42,7 @@ async function handleSubmit(e) {
       <div class="col-12 col-md-8 col-lg-6 form-container d-flex-flex-column mt-5 pt-0">
         <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
         <h1 class="contact-title text-primary">Contact.</h1>
-        <form ref="formRef" @submit.prevent="handleSubmit" class="form">
+        <form ref="formRef" @submit.prevent="handleSubmit" class="form purple-gradient">
           <div class="col-12 input-container name-input">
           <input id="name" type="text" v-model="newEmail.name" placeholder=" " :label-text="labelText.name" class="input" minlength="2" required />
           <div class="cut"></div>

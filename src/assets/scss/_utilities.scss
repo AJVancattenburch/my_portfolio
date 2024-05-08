@@ -74,11 +74,12 @@ select {
 }
 
 form:invalid button[type="submit"] {
-  color: var(--bs-btn-disabled-color);
+  color: var(--text-secondary);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
+  filter: brightness(0.8) grayscale(0.5) blur(1px);
   span:nth-child(1),
   span:nth-child(2),
   span:nth-child(3),

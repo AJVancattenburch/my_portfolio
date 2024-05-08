@@ -5,11 +5,8 @@
 
 body {
   overscroll-behavior: none;
-  /* NOTE - The bottom 2 properties prevent the modal from replacing custom scrollbar styles with the default browser scrollbar styles. */
-  .modal-open {
-  padding-right: -15px !important;
-  overflow: hidden !important;
-  }
+  /* NOTE - The bottom property set on body will prevent modals from replacing custom scrollbar styles with the default browser scrollbar styles. */
+  padding-right: 0 !important;
 }
 
 #app {
