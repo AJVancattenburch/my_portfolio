@@ -98,9 +98,7 @@ async function scrollTo(id) {
 
   li.nav-item {
     position: relative;
-    width: auto;
     height: 70px;
-    padding-top: 0.5rem;
     margin: 0.75rem 0.75rem 0.75rem 2rem;
     border-radius: 1rem;
     background: var(--black-purple-radial-gradient);
@@ -110,7 +108,9 @@ async function scrollTo(id) {
     &:focus,
     &.active {
       position: relative;
-      display: flex;
+      width: auto;
+      height: 70px;
+      display: block;
       background-clip: padding-box;
       border-radius: 1rem;
       //box-shadow: inset 20px 0 30px 10px var(--dark-pink), inset 25px 0 30px 17px #00000080;;
@@ -119,24 +119,23 @@ async function scrollTo(id) {
       &::before {
         content: '';
         position: absolute;
-        top: 0;
-        width: 100%;
-        height: 70px;
+        
         background: var(--black-purple-radial-gradient);
         box-shadow: inset 20px 0 30px 10px var(--dark-pink);
         border-radius: 1rem;
         z-index: -1;
       }
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, #14101f  100%);
-      //box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
-      border-radius: 1rem;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, transparent 60%, #14101f  100%);
+        //box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
+        border-radius: 1rem;
+      }
     }
     &:not(.active) {
       position: relative;
@@ -168,7 +167,7 @@ async function scrollTo(id) {
     &::before {
       content: attr(link-text) " ";
       position: absolute;
-      padding: 0 2rem;
+      padding: 0 2rem 0.5rem;
       color: var(--text-primary);
       border-radius: 1rem;
       display: flex;
