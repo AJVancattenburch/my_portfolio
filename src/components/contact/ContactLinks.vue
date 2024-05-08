@@ -6,12 +6,14 @@ const isMobile = computed(() => window.innerWidth < 768);
 
 const ghLink = footerLinks.githubLink;
 const linkedInLink = footerLinks.linkedInLink
+const templateLink = footerLinks.templateLink
 </script>
 
 <template>
   <ul :class="isMobile ? 'flex-row' : 'flex-column'" class="position-relative d-flex justify-content-center align-items-center">
     <li><a :href="linkedInLink.external_url" :title="linkedInLink.title"><i class="mdi-brands mdi mdi-linkedin"></i></a></li>
     <li><a :href="ghLink.external_url" :title="ghLink.title"><i class="mdi-brands mdi mdi-github"></i></a></li>
+    <li><a :href="templateLink.external_url" :title="templateLink.title"><img :src="templateLink.imgSrc" /></a></li>
 </ul>
 </template>
 
