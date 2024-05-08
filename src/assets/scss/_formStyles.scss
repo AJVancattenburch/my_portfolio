@@ -146,13 +146,13 @@ textarea:not(:placeholder-shown):valid ~ .placeholder {
   visibility: hidden;
   &::before {
     content: 'Confirmed ✓';
+    position: absolute;
+    height: 100%;
+    width: 100%;
     font-size: 12px;
     color: var(--green);
-    position: absolute;
     text-align: center;
     display: block;
     visibility: visible;
-    height: 100%;
-    width: 100%;
   }
 }

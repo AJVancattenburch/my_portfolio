@@ -96,23 +96,21 @@ async function scrollTo(id) {
   }
 
   li.nav-item {
-    padding: 0.25rem;
+    padding: 0rem;
     margin: 0.75rem 0.75rem 0.75rem 2rem;
     border-radius: 1rem;
     background: var(--black-purple-radial-gradient);
-    //clip-path: polygon(0 0, 98% 0, 98% 100%, 0 100%);
     user-select: none;
     z-index: 3;
-    &:active,
-    &:focus,
-    &.active {
+    :active,
+    :focus,
+    .active {
       position: relative;
-      view-transition-name: nav;
       display: block;
       background-clip: padding-box;
       border-radius: 1rem;
-      box-shadow: inset 20px 0 30px 10px var(--dark-pink);
-      filter: drop-shadow(-7px 0 3px var(--dark-pink));
+      //box-shadow: inset 20px 0 30px 10px var(--dark-pink), inset 25px 0 30px 17px #00000080;;
+      filter: drop-shadow(-7px 0 3px var(--dark-pink)), drop-shadow(7px 0 3px var(--shadow-inactive));
       transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
       &::before {
         content: '';
@@ -120,6 +118,7 @@ async function scrollTo(id) {
         background: var(--black-purple-radial-gradient);
         box-shadow: inset 20px 0 30px 10px var(--dark-pink);
         border-radius: 1rem;
+        z-index: -1;
       }
       &::after {
         content: '';
@@ -130,7 +129,6 @@ async function scrollTo(id) {
     &:not(.active) {
       position: relative;
       background: var(--black-purple-radial-gradient-alt);
-      //outline: var(--border-inactive);
       filter: drop-shadow(0 0 10px var(--shadow-dark-purple));
       &::before {
         content: '';
@@ -157,6 +155,7 @@ async function scrollTo(id) {
     z-index: 3;
     &::before {
       content: attr(link-text) " ";
+      position: absolute;
       padding: 1rem 2.2rem;
       color: var(--text-primary);
       border-radius: 1rem;

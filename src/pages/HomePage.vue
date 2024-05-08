@@ -1,4 +1,5 @@
 <script setup>
+import { buttonBorder } from '../assets/img/borders/_index'
 import NavbarVertical from '../components/NavbarVertical.vue';
 import { navLinks } from "../constants/_index.js";
 import Hero from '../components/Hero.vue';
@@ -24,14 +25,15 @@ onMounted(() => {
   logger.log('Link:', navLink.value)
 })
 
+const isMobile = computed(() => window.innerWidth < 768);
 
 </script>
 
 <template>
   <section class="row d-flex justify-content-end page-wrapper">
-    <resume-modal-button class="col-12 resume-modal-container d-flex justify-content-end">
+    <resume-modal-button v-if="!isMobile" class="col-12 resume-modal-container d-flex justify-content-end">
       <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
-        <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" class="resume-modal-btn-icon" height="50" />
+        <img src="../assets/img/my-resume.svg" title="Check out my resume!" alt="Modal button to view my resume" class="resume-modal-btn-icon" height="45" />
       </a>
     </resume-modal-button>
     <div class="col-2 vertical-nav-container d-none d-lg-block">
@@ -68,28 +70,45 @@ onMounted(() => {
     }
     &-modal-btn {
       position: relative;
-      background: var(--black-purple-radial-gradient);
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
       transition: transform 0.3s;
+      display: flex;
+      justify-content: center;
       &-icon {
-        width: 50px;
-        height: 50px;
-        filter: drop-shadow(0 0 3px var(--text-secondary));
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 100%;
-        box-shadow: inset 0 0 2px 2px var(--purple), 0 0 3px 3px var(--red), 0 0 4px 4px var(--blue), 0 0 5px 5px var(--green);
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
-        transition: opacity 0.3s;
+        mix-blend-mode: overlay;
+        filter: drop-shadow(0 0 3px var(--text-secondary));
+        transition: 0.3s;
+        &:active {
+          mix-blend-mode: multiply;
+          transform: scale(0.9);
+          transition: 0.3s;
+        }
       }
-      &:hover {
-        transform: scale(1.1);
-      }
+    }
+    &-modal-btn::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 60px;
+      width: 60px;
+      display: flex;
+      background-image: url(/src/assets/img/borders/button-border.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* outline: 6px; */
+      /* outline-style: solid; */
+      box-shadow: inset 0 0 11px 9px #2a2047e9, inset 0 0 8px #00000080;
+      border-radius: 50%;
+      outline-offset: -4px;
+      z-index: -1;
     }
   }
 

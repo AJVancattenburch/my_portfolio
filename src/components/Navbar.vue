@@ -16,6 +16,9 @@
         <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
           <a :link-text="link.name" :title="link.sectionTitle" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
         </li>
+        <li class="nav-item">
+          <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal" title="Check out my resume!">Resume</a>
+        </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <div>

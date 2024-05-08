@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="green-pink-gradient">
+  <section class="green-pink-gradient me-4">
     <div class="about-card purple-gradient">
       <div class="about-card-img-container">
         <img :src="card.imgSrc" :alt="card.imgAlt" :title="card.imgAlt" class="img-fluid about-card-img" />

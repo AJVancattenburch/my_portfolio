@@ -14,6 +14,9 @@
 
 <style scoped lang="scss">
 .modal {
+  &-open {
+    overflow: hidden;
+  }
   &-content {
     color: var(--text-primary);
     background: linear-gradient(180deg, #323639 40%, #525659);
