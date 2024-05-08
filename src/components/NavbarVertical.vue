@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import navLinks from '../constants/NavLinks';
 import heroData from '../constants/Hero';
 import { logger } from '../utils/Logger';
-import { accountService } from '../services/AccountService';
+import { sectionsService } from '../services/SectionsService';
 
 let hero = ref(heroData.id);
 let activeLinkId = ref(null);
@@ -17,7 +17,7 @@ async function scrollTo(id) {
     let scrollElem = document.getElementById(id);
     activeLinkId.value = id;
 
-    await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
+    await sectionsService.setLinkAsScrollElem(foundLink.value, scrollElem);
     
   } catch (error) {
     logger.error(`Element with id ${id} not found in navLinks.`);
@@ -27,7 +27,7 @@ async function scrollTo(id) {
 
 <template>
 <nav class="vertical-nav black-gradient d-flex justify-content-start flex-column pt-4">
-  <div class="col-7 d-flex justify-content-end ps-2 pb-2">
+  <div class="col-12 logo-container d-flex justify-content-start pb-2 ps-4 ms-3">
     <img @click="scrollTo(hero)" title="SVG logo Design By: Anthony Vancattenburch" alt="Anthony's custom SVG logo/brand" src="../assets/img/icons/logo.svg" class="my-logo" height="65" />
   </div>
   
@@ -82,6 +82,7 @@ async function scrollTo(id) {
   height: 100vh;
   background: var(--black-purple-radial-gradient) !important;
   .my-logo {
+    margin-right: 20px;
     user-select: none;
     z-index: 3;
   }
@@ -96,35 +97,46 @@ async function scrollTo(id) {
   }
 
   li.nav-item {
-    padding: 0rem;
+    position: relative;
+    width: auto;
+    height: 70px;
+    padding-top: 0.5rem;
     margin: 0.75rem 0.75rem 0.75rem 2rem;
     border-radius: 1rem;
     background: var(--black-purple-radial-gradient);
     user-select: none;
     z-index: 3;
     :active,
-    :focus,
-    .active {
+    &:focus,
+    &.active {
       position: relative;
-      display: block;
+      display: flex;
       background-clip: padding-box;
       border-radius: 1rem;
       //box-shadow: inset 20px 0 30px 10px var(--dark-pink), inset 25px 0 30px 17px #00000080;;
-      filter: drop-shadow(-7px 0 3px var(--dark-pink)), drop-shadow(7px 0 3px var(--shadow-inactive));
+      //filter: drop-shadow(-7px 0 3px var(--dark-pink)), drop-shadow(7px 0 3px var(--shadow-inactive));
       transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
       &::before {
         content: '';
+        position: absolute;
+        top: 0;
         width: 100%;
+        height: 70px;
         background: var(--black-purple-radial-gradient);
         box-shadow: inset 20px 0 30px 10px var(--dark-pink);
         border-radius: 1rem;
         z-index: -1;
       }
-      &::after {
-        content: '';
-        background: linear-gradient(90deg, transparent, #14101f 75%, #0e0c13 100%);
-        border-radius: 1rem;
-      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #14101f  100%);
+      //box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
+      border-radius: 1rem;
     }
     &:not(.active) {
       position: relative;
@@ -156,7 +168,7 @@ async function scrollTo(id) {
     &::before {
       content: attr(link-text) " ";
       position: absolute;
-      padding: 1rem 2.2rem;
+      padding: 0 2rem;
       color: var(--text-primary);
       border-radius: 1rem;
       display: flex;

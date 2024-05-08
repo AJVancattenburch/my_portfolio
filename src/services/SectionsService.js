@@ -1,17 +1,6 @@
-import { AppState } from '../AppState'
-import { Account } from '../models/Account'
 import { logger } from '../utils/Logger'
-import { api } from './AxiosService'
 
-class AccountService {
-  async getAccount() {
-    try {
-      const res = await api.get('/account')
-      AppState.account = new Account(res.data)
-    } catch (err) {
-      logger.error('HAVE YOU STARTED YOUR SERVER YET???', err)
-    }
-  }
+class SectionsService {
 
   async setLinkAsScrollElem(foundLink, scrollElem) {
     let position = await scrollElem.getBoundingClientRect().top + window.scrollY
@@ -22,4 +11,4 @@ class AccountService {
   }
 }
 
-export const accountService = new AccountService()
+export const sectionsService = new SectionsService()

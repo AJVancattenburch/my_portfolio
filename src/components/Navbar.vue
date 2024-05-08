@@ -30,7 +30,7 @@
 
 <script>
 import { computed, ref } from 'vue';
-import { accountService } from '../services/AccountService';
+import { sectionsService } from '../services/SectionsService.js';
 import navLinks from '../constants/NavLinks';
 import { logger } from '../utils/Logger';
 
@@ -46,7 +46,7 @@ export default {
       try {
         let scrollElem = document.getElementById(id);
         activeLinkId.value = id;
-        await accountService.setLinkAsScrollElem(foundLink.value, scrollElem);
+        await sectionsService.setLinkAsScrollElem(foundLink.value, scrollElem);
       } catch (error) {
         logger.error(`Element with id ${id} not found in navLinks.`);
       }

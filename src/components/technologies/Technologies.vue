@@ -1,5 +1,6 @@
 <script setup>
 import technologyData from '../../constants/Technologies';
+import TechnologyCard from './TechnologyCard.vue';
 </script>
 
 <template>

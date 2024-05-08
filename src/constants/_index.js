@@ -7,7 +7,7 @@ import projectData from './Projects';
 import technologyData from './Technologies';
 import feedbacks from './Feedbacks';
 import contactData from './Contact';
-import { footerLinks } from './FooterLinks.js';
+import { footerLinks } from './FooterLinks';
 
 export {
   navLinks,
