@@ -26,4 +26,17 @@ defineProps({
   width: 6rem;
   border: 2px double var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  *:not(img) {
+    transform: scale(0.89);
+  }
+  img {
+    transform: scale(1.1);
+  }
+  .tech-card {
+    height: 5rem;
+    width: 4.5rem;
+  }
+}
 </style>

@@ -12,7 +12,7 @@ import TechnologyCard from './TechnologyCard.vue';
         <div
           v-for="technology in technologyData.technologies"
           :key="technology.name"
-          class="col-4 col-sm-3 col-lg-2 technology-item"
+          class="col-3 col-sm-4 col-lg-2 technology-item"
         >
           <TechnologyCard :technology="technology" />
         </div>
