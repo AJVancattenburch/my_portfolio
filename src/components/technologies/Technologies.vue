@@ -4,7 +4,7 @@ import TechnologyCard from './TechnologyCard.vue';
 </script>
 
 <template>
-  <section ref="technologies" :id="technologyData.id" class="technologies-wrapper">
+  <section :id="technologyData.id" class="technologies-wrapper">
     <div class="technologies-content p-5">
       <h5 class="technologies-subtitle text-uppercase text-secondary">{{ technologyData.subtitle }}</h5>
       <h1 class="technologies-title text-primary">{{ technologyData.title }}.</h1>

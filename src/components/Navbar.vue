@@ -1,3 +1,30 @@
+<script setup>
+import { computed, ref } from 'vue';
+import navLinks from '../constants/NavLinks';
+import { logger } from '../utils/Logger';
+
+let activeLinkId = ref(null)
+
+const foundLink = computed(() => {
+  return navLinks.find(link => link.id === activeLinkId.value);
+});
+
+async function scrollTo(id) {
+  try {
+    let scrollElem = document.getElementById(id);
+    if (!scrollElem) {
+      throw new Error(`Element with ref ${id} not found.`);
+    }
+    activeLinkId.value = id;
+    let topOffsetY = scrollElem.getBoundingClientRect().top + window.scrollY - 50;
+    window.scrollTo({ top: topOffsetY, behavior: 'smooth' });
+    logger.log(`Scrolled to HTMLElement:`, scrollElem)
+    logger.log(`ScrollId: '${scrollElem.id}' matches NavLinkId: '${foundLink.value.id}'`)
+  } catch (error) {
+    logger.error(error.message);
+  }
+}
+</script>
 
 <template>
   <nav class="navbar navbar-expand-lg custom-navbar black-gradient px-3">
@@ -28,40 +55,7 @@
   </nav>
 </template>
 
-<script>
-import { computed, ref } from 'vue';
-import { sectionsService } from '../services/SectionsService.js';
-import navLinks from '../constants/NavLinks';
-import { logger } from '../utils/Logger';
-
-export default {
-  setup() {
-    let activeLinkId = ref(null);
-
-    const foundLink = computed(() => {
-      return navLinks.find(link => link.id === activeLinkId.value);
-    });
-
-    async function scrollTo(id) {
-      try {
-        let scrollElem = document.getElementById(id);
-        activeLinkId.value = id;
-        await sectionsService.setLinkAsScrollElem(foundLink.value, scrollElem);
-      } catch (error) {
-        logger.error(`Element with id ${id} not found in navLinks.`);
-      }
-    }
-    return {
-      activeLinkId,
-      foundLink,
-      scrollTo,
-      navLinks,
-    };
-  },
-}
-</script>
-
-<style scoped>
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {

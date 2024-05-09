@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard.vue';
 </script>
 
 <template>
-  <section ref="projects" :id="projectData.id" class="projects-wrapper">
+  <section :id="projectData.id" class="projects-wrapper">
     <div class="projects-content p-5">
       <h5 class="projects-subtitle text-uppercase text-secondary">{{ projectData.subtitle }}</h5>
       <h1 class="projects-title text-primary">{{ projectData.title }}.</h1>

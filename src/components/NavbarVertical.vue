@@ -3,10 +3,9 @@ import { computed, ref } from 'vue';
 import navLinks from '../constants/NavLinks';
 import heroData from '../constants/Hero';
 import { logger } from '../utils/Logger';
-import { sectionsService } from '../services/SectionsService';
 
 let hero = ref(heroData.id);
-let activeLinkId = ref(null);
+let activeLinkId = ref(null)
 
 const foundLink = computed(() => {
   return navLinks.find(link => link.id === activeLinkId.value);
@@ -15,12 +14,16 @@ const foundLink = computed(() => {
 async function scrollTo(id) {
   try {
     let scrollElem = document.getElementById(id);
+    if (!scrollElem) {
+      throw new Error(`Element with ref ${id} not found.`);
+    }
     activeLinkId.value = id;
-
-    await sectionsService.setLinkAsScrollElem(foundLink.value, scrollElem);
-    
+    let topOffsetY = scrollElem.getBoundingClientRect().top + window.scrollY - 50;
+    window.scrollTo({ top: topOffsetY, behavior: 'smooth' });
+    logger.log(`Scrolled to HTMLElement:`, scrollElem)
+    logger.log(`ScrollId: '${scrollElem.id}' matches NavLinkId: '${foundLink.value.id}'`)
   } catch (error) {
-    logger.error(`Element with id ${id} not found in navLinks.`);
+    logger.error(error.message);
   }
 }
 </script>
@@ -32,7 +35,7 @@ async function scrollTo(id) {
   </div>
   
   <ul class="nav-list">
-    <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
+    <li v-for="link in navLinks" :key="link?.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
       <a :link-text="link.name" class="d-flex align-items-center nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -167,7 +170,7 @@ async function scrollTo(id) {
     &::before {
       content: attr(link-text) " ";
       position: absolute;
-      padding: 0 2rem;
+      padding: 0 2rem 0.5rem;
       color: var(--text-primary);
       border-radius: 1rem;
       display: flex;

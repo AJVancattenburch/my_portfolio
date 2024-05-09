@@ -1,9 +1,10 @@
 <script setup>
 import about from '../../constants/About';
+import AboutCard from './AboutCard.vue';
 </script>
 
 <template>
-  <section ref="about" :id="about.id" class="about-wrapper">
+  <section :id="about.id" class="about-wrapper">
     <div class="about-content p-5">
       <h5 class="about-subtitle text-uppercase text-secondary">{{ about.subtitle }}</h5>
       <h1 class="about-title text-primary">{{ about.title }}.</h1>
