@@ -1,6 +1,6 @@
-:root {
-  /* These can all be accessed by using var(--variable-name) in your css <style> tags in your components, or by reusing them in your scss files (like how we are creating the green-pink-gradient class by referencing the --green and --pink variables from our color palette). */
+/* These `:root` selectors can all be accessed by using var(--variable-name) in your css <style> tags in your components, or by reusing them in your scss files (like how we are creating the green-pink-gradient class by referencing the --green and --pink variables from our color palette). */
 
+:root {
   /* Fonts */
   --text-primary: #E7E7E7;
   --text-secondary: #aaa6c3;
@@ -11,7 +11,6 @@
   --green: #00cea8;
   --red: #D85571;
   --pink: #ec008c;
-  --bronze: #CE9178;
   
   /* Shadows */
   --shadow-purple: #804deea5;
@@ -19,37 +18,28 @@
   --shadow-green: #00cea8a5;
   --shadow-red: #D85571a5;
   --shadow-pink: #ec008ca5;
-  --shadow-inactive: #333333a5;
   
   /* Dark Colors */
   --dark-purple: #3e3164;
-  --dark-blue: #314e64;
   --dark-green: #00664d;
   --dark-red: #63212b;
   --dark-pink: #7d003c;
 
   /* Gradients */
   --black-gradient: linear-gradient(to right, #232323, #000000);
-  --black-gradient-alt: linear-gradient(to bottom, #000000, #232323);
   --black-transparent-gradient: linear-gradient(to right, #000000 0%, #110e19);
-  --white-gradient: radial-gradient(circle at center, #F7F7F7dd 0%, #E7E7E799 70%, transparent);
-  --purple-black-gradient: linear-gradient(to bottom, transparent 0, var(--dark-purple) 30%, transparent 65%);
   --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);
   --black-purple-radial-gradient-alt: radial-gradient(circle at center, #0e0c13 0%, #181326);
   --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
-  --purple-gradient-top: linear-gradient(0deg, var(--dark-purple) 0%, #231d2e99 100%);
-  --purple-radial-gradient: radial-gradient(circle at center, var(--dark-purple) 0%, #231d2e99 100%);
-  --glass-purple-gradient: radial-gradient(circle at top, #3E316499 0%, #231d2e99 70%, #3E316499 100%);
-  --green-pink-gradient: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
-  //--form-gradient: linear-gradient(90deg, var(--dark-purple) 0%, #231d2e99 100%);
 
   /* Borders */
   --border-inactive: 3px ridge #33333367;
 }
 
-/* These are the classes that we can use in our components to apply the styles we have defined in our scss file. We can use these classes in our components by adding them to the class
- attribute of the html element we want to style (e.g. <div class="purple-text-gradient">Hello World</div>). I have included necessary fallbacks for older browsers that do not support the 
- linear-gradient property. */
+/* The classes below are what we use to style our components by adding them as an HTML class attribute
+Example:
+<div class="purple-text-gradient">Hello World</div>
+Necessary fallbacks are included for older browsers that do not support the linear-gradient property like IE Explorer */
 
 .text-primary {
   color: #E7E7E7 !important;
@@ -86,54 +76,42 @@
 
 .purple-text-gradient {
   background: var(--purple);
-  background: -webkit-linear-gradient(to top,
-    var(--purple), #ee00ff);
-  background: linear-gradient(to top,
-    var(--purple), #ee00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(to top, var(--purple), #ee00ff);
+  background: linear-gradient(to top, var(--purple), #ee00ff);
 }
 
 .yellow-text-gradient {
   background: #F7DF00;
   background: -webkit-linear-gradient(to top, #F7DF00, #E7B86C);
   background: linear-gradient(to top, #F7DF00, #E7B86C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .orange-text-gradient {
   background: #f12711;
   background: -webkit-linear-gradient(to top, #f12711, #f5af19);
   background: linear-gradient(to top, #f12711, #f5af19);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .green-text-gradient {
   background: var(--green);
   background: -webkit-linear-gradient(to top, var(--green), #00ce7f);
   background: linear-gradient(to top, var(--green), #00ce7f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .blue-text-gradient {
   background: var(--blue);
-  background: -webkit-linear-gradient(to top, #2f80ed,
-    var(--blue));
-  background: linear-gradient(to top, #2f80ed,
-    var(--blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(to top, #2f80ed, var(--blue));
+  background: linear-gradient(to top, #2f80ed, var(--blue));
 }
 
 .pink-text-gradient {
   background: var(--pink);
-  background: -webkit-linear-gradient(to top,
-    var(--pink), #fc6767);
-  background: linear-gradient(to top,
-    var(--pink), #fc6767);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(to top, var(--pink), #fc6767);
+  background: linear-gradient(to top, var(--pink), #fc6767);
+}
+
+.purple-text-gradient, .yellow-text-gradient, .orange-text-gradient, .green-text-gradient, .blue-text-gradient, .pink-text-gradient {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }

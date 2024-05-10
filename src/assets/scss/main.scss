@@ -31,12 +31,12 @@ a {
   border-radius: 10px;
   background: #232323;
   &-thumb {
-    background: var(--purple-black-gradient);
+    background: linear-gradient(to bottom, transparent 0, var(--dark-purple) 30%, transparent 65%);
     border-radius: 10px;
     z-index: -1;
   }
   &-track {
-    background: var(--black-gradient-alt);
+    background: linear-gradient(to bottom, #000000, #232323);
     border-radius: 0px;
     //Only give the track piece the 'margin-top' property on medium and smaller screens to compensate for horizontal nav height.
     @media (max-width: 992px) {

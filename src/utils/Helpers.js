@@ -1,4 +1,6 @@
-import { onMounted } from 'vue';
+import { computed, ref } from 'vue';
+import navLinks from '../constants/NavLinks';
+import { logger } from '../utils/Logger';
 
 const convertRGB = (color) => {
   const r = parseInt(color.substring(0, 2), 16);
@@ -6,7 +8,7 @@ const convertRGB = (color) => {
   const b = parseInt(color.substring(4, 6), 16);
 
   return { r, g, b };
-}
+};
 
 export function getContrastingColor(color) {
   const toHex = color.replace("#", "");
@@ -18,32 +20,23 @@ export function getContrastingColor(color) {
   return brightness > 128 ? "black" : "white";
 }
 
-export function preloadImage() {
-  const images = document.querySelectorAll("img[data-src]");
+const activeLinkId = ref(null);
+const foundLink = computed(() => {
+  return navLinks.find(link => link.id === activeLinkId.value)
+})
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      const img = entry.target;
-      if (img instanceof HTMLImageElement) {
-        img.src = img.dataset.src;
-        img.classList.remove("lazy-load");
-
-        observer.unobserve(img);
-      }
-    });
-  }, options);
-
-  images.forEach(img => observer.observe(img));
+export async function scrollTo(id) {
+  try {
+    let scrollElem = document.getElementById(id);
+    if (!scrollElem) {
+      throw new Error(`Element with ref ${id} not found.`);
+    }
+    activeLinkId.value = id;
+    let topOffsetY = scrollElem.getBoundingClientRect().top + window.scrollY - 50;
+    window.scrollTo({ top: topOffsetY, behavior: 'smooth' });
+    logger.log(`Scrolled to HTMLElement:`, scrollElem);
+    logger.log(`ScrollId: '${scrollElem.id}' matches NavLinkId: '${foundLink.value ? foundLink.value.id : ''}'`);
+  } catch (error) {
+    logger.error(error.message);
+  }
 }
-
-onMounted(() => {
-  preloadImage();
-});

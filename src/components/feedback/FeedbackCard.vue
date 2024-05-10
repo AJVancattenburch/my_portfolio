@@ -61,7 +61,7 @@ defineProps({
         border-radius: 10px;
         box-shadow: inset 0 0 6px var(--purple);
         &-thumb {
-          background: var(--white-gradient);
+          background: radial-gradient(circle at center, #F7F7F7dd 0%, #E7E7E799 70%, transparent);
           border-radius: 10px;
         }
       }
