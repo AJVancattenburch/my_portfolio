@@ -35,7 +35,7 @@ async function scrollTo(id) {
   </div>
   
   <ul class="nav-list">
-    <li v-for="link in navLinks" :key="link?.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
+    <li v-for="link in navLinks" :key="link?.id" :class="{ 'active' : link.id === activeLinkId }" class="nav-item">
       <a :link-text="link.name" class="d-flex align-items-center nav-link" @click="scrollTo(link.id)">{{ link.name }}</a>
     </li>
   </ul>
@@ -73,11 +73,11 @@ async function scrollTo(id) {
 }
 
 :is(.nav-item):has(.active) {
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-background-clip: text;
   width: 100%;
   display: block;
-  background: transparent !important;
+  background: transparent;
 }
 
 .vertical-nav {
@@ -116,8 +116,6 @@ async function scrollTo(id) {
       display: block;
       background-clip: padding-box;
       border-radius: 1rem;
-      //box-shadow: inset 20px 0 30px 10px var(--dark-pink), inset 25px 0 30px 17px #00000080;;
-      //filter: drop-shadow(-7px 0 3px var(--dark-pink)), drop-shadow(7px 0 3px var(--shadow-inactive));
       transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
       &::before {
         content: '';
@@ -136,7 +134,6 @@ async function scrollTo(id) {
         height: 100%;
         width: 100%;
         background: linear-gradient(90deg, transparent 60%, #14101f  100%);
-        //box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
         border-radius: 1rem;
       }
     }
@@ -147,7 +144,7 @@ async function scrollTo(id) {
       &::before {
         content: '';
         background: var(--black-purple-radial-gradient-alt);
-        box-shadow: inset 20px 0 30px 10px var(--shadow-inactive);
+        box-shadow: inset 20px 0 30px 10px #333333a5;
         border-radius: 1rem;
       }
       &::after {
@@ -184,4 +181,10 @@ async function scrollTo(id) {
     }
   }
 }
-</style>../constants/Links
+
+@media (max-width: 400px) {
+  .vertical-nav {
+    height: 100dvh;
+  }
+}
+</style>

@@ -22,7 +22,7 @@ const projectData = {
           },
           {
               name: "nodejs",
-              color: "purple-text-gradient"
+              color: "blue-text-gradient"
           },
           {
               name: "expressjs",
@@ -34,11 +34,15 @@ const projectData = {
           },
           {
               name: "coding-challenges",
-              color: "blue-text-gradient"
+              color: "green-text-gradient"
           },
           {
               name: "community",
               color: "orange-text-gradient"
+          },
+          {
+            name: "datamanipulation",
+            color: "purple-text-gradient"
           }
       ]
     },
@@ -53,23 +57,31 @@ const projectData = {
       tags: [
         {
           name: "vuejs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "frontendapplication",
-          color: "green-text-gradient",
-        },
-        {
-          name: "staticwebsite",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "landingpage",
-          color: "green-text-gradient",
+          color: "green-text-gradient"
         },
         {
           name: "javascript",
           color: "yellow-text-gradient",
+        },
+        {
+          name: "frontend",
+          color: "purple-text-gradient"
+        },
+        {
+          name: "staticwebsite",
+          color: "pink-text-gradient"
+        },
+        {
+          name: "landingpage",
+          color: "orange-text-gradient"
+        },
+        {
+          name: "scss",
+          color: "pink-text-gradient"
+        },
+        {
+          name: "bootstrap",
+          color: "blue-text-gradient"
         }
       ]
     },
@@ -84,27 +96,32 @@ const projectData = {
       tags: [
         {
           name: "reactjs",
-          color: "blue-text-gradient",
+          color: "blue-text-gradient"
         },
         {
           name: "threejs",
-          color: "green-text-gradient",
+          color: "green-text-gradient"
         },
         {
           name: "javascript",
-          color: "yellow-text-gradient",
+          color: "yellow-text-gradient"
         },
         {
           name: "tailwind",
-          color: "violet-text-gradient",
+          color: "purple-text-gradient"
         },
         {
           name: "openaiapi",
-          color: "orange-text-gradient",
+          color: "orange-text-gradient"
         },
         {
-          name: "restapi",
-          color: "blue-text-gradient",
+          name: "cloudinary",
+          color: "blue-text-gradient"
+
+        },
+        {
+          name: "webapi",
+          color: "yellow-text-gradient"
         }
       ]
     },
@@ -121,25 +138,29 @@ const projectData = {
           color: "green-text-gradient",
         },
         {
+          name: "javascript",
+          color: "yellow-text-gradient"
+        },
+        {
           name: "nodejs",
-          color: "blue-text-gradient",
+          color: "green-text-gradient",
         },
         {
           name: "expressjs",
           color: "pink-text-gradient",
         },
         {
+          name: "mongodb",
+          color: "green-text-gradient",
+        },
+        {
           name: "restapi",
-          color: "violet-text-gradient",
+          color: "blue-text-gradient",
         },
         {
           name: "postman",
           color: "orange-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
+        }
       ]
     }
   ]

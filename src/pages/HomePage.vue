@@ -142,4 +142,10 @@ const isMobile = computed(() => window.innerWidth < 768);
     }
   }
 }
+
+@media (max-width: 400px) {
+  .vertical-nav-container {
+    height: 100dvh;
+  }
+}
 </style>

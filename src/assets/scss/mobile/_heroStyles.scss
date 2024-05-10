@@ -51,14 +51,7 @@
 
 @media (max-width: 768px) and (min-width: 577px) {
   .hero-wrapper {
-    height: 97vh !important;
-    
-  }
-  .hero-header {
-    
-  }
-  .hero-subheader {
-   
+    height: 97vh !important; 
   }
   .image-container {
     bottom: 0;
@@ -66,14 +59,13 @@
       position: absolute;
       right: -76px;
       bottom: -85px;
-      
     }
   }
 }
 
 @media (max-width: 576px) {
   .hero-wrapper {
-    height: 100vh;
+    height: 100dvh;
   }
   .hero-header {
     font-size: 50px !important;

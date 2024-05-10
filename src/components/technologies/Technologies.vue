@@ -50,6 +50,9 @@ import TechnologyCard from './TechnologyCard.vue';
 
 @media (max-width: 768px) {
   .technologies {
+    &-wrapper {
+      height: 100dvh;
+    }
     &-title {
       font-size: 2.5rem;
     }
