@@ -21,10 +21,12 @@ let activeLinkId = ref(null);
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ms-auto black-gradient-reverse">
         <li v-for="link in navLinks" :key="link.id" :class="{ 'active' : activeLinkId === link.id }" class="nav-item">
-          <a :link-text="link.name" :title="link.sectionTitle" class="nav-link text-primary" @click="scrollTo(link.id)">{{ link.name }}</a>
+          <a :link-text="link.name" :title="link.sectionTitle" class="nav-link text-primary" @click="scrollTo(link.id)" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">{{ link.name }}</a>
         </li>
         <li class="nav-item">
-          <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal" title="Check out my resume!">Resume</a>
+          <span data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="true" aria-label="Toggle navigation">
+            <a type="button" role="button" class="resume-modal-btn" data-bs-toggle="modal" data-bs-target="#resumeModal" title="Check out my resume!">Resume</a>
+          </span>
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->

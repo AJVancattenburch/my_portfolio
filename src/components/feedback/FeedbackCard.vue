@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card mb-2 ps-4 py-4 testimonial-item purple-gradient text-primary me-3">
+  <div class="card mb-5 ps-4 py-4 testimonial-item purple-gradient text-primary me-3">
     <div class="d-flex flex-column testimonial-item-header mb-3">
       <h1 class="testimonial-item-quotes fw-bold">"</h1>
       <div class="col-12 d-flex">

@@ -12,7 +12,7 @@ import EducationCard from './EducationCard.vue';
         <div
           v-for="school in educationData.schools"
           :key="school.school_name"
-          class="education-item"
+          class="card-container education-item"
         >
           <EducationCard :school="school" />
         </div>

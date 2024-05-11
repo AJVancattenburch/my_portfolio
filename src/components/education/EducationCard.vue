@@ -10,7 +10,7 @@ defineProps({
       <div :class="`${school.cssSelector}-img-container`" class="img-container">
         <img :src="school.icon" :alt="`Image of ${school.school_name} logo`" :class="`${school.cssSelector}-icon`" class="col-1 education-item-icon img-fluid rounded-circle" />
       </div>
-      <div class="col-11 flex-column ps-3">
+      <div class="col-12 col-md-11 flex-column ps-3">
         <div class="d-flex education-item-details">
           <h2 :class="`${school.cssSelector}-title`" class="education-item-major">{{ school.major }}</h2>
           <p class="education-item-date fw-semibold ms-auto ps-3">{{ school.date }}</p>
