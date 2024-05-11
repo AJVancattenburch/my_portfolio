@@ -8,7 +8,7 @@ import TechnologyCard from './TechnologyCard.vue';
     <div class="technologies-content p-5">
       <h5 class="technologies-subtitle text-uppercase text-secondary">{{ technologyData.subtitle }}</h5>
       <h1 class="technologies-title text-primary">{{ technologyData.title }}.</h1>
-      <div class="col-10 col-lg-12 technologies-container d-flex flex-wrap justify-content-start pt-5">
+      <div class="col-sm-12 col-10 col-lg-12 technologies-container d-flex flex-wrap justify-content-start pt-5">
         <div
           v-for="technology in technologyData.technologies"
           :key="technology.name"
@@ -51,7 +51,7 @@ import TechnologyCard from './TechnologyCard.vue';
 @media (max-width: 768px) {
   .technologies {
     &-wrapper {
-      height: 100dvh;
+      height: auto;
     }
     &-title {
       font-size: 2.5rem;

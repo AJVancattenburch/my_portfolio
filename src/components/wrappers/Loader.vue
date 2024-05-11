@@ -37,7 +37,7 @@ const loaderStyle = ref({
 </template>
 
 <style scoped lang="scss">
-@import url('../../assets/scss/_loaders.scss');
+@import '../../assets/scss/_loaders.scss';
 .placeholder {
   height: v-bind(height);
   width: v-bind(width);

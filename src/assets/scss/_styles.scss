@@ -1,4 +1,5 @@
-/* These `:root` selectors can all be accessed by using var(--variable-name) in your css <style> tags in your components, or by reusing them in your scss files (like how we are creating the green-pink-gradient class by referencing the --green and --pink variables from our color palette). */
+/* KEY | Color Palette
+These `:root` selectors can all be accessed by using var(--variable-name) in your css <style> tags in your components, or by reusing them in your scss files (like how we are creating the green-pink-gradient class by referencing the --green and --pink variables from our color palette). */
 
 :root {
   /* Fonts */
@@ -27,16 +28,18 @@
 
   /* Gradients */
   --black-gradient: linear-gradient(to right, #232323, #000000);
+  --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
   --black-transparent-gradient: linear-gradient(to right, #000000 0%, #110e19);
   --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);
   --black-purple-radial-gradient-alt: radial-gradient(circle at center, #0e0c13 0%, #181326);
-  --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
 
   /* Borders */
   --border-inactive: 3px ridge #33333367;
 }
 
-/* The classes below are what we use to style our components by adding them as an HTML class attribute
+
+/* KEY | Gradient Text Classes
+Utilize the class selectors below as class names in your components to apply the gradient to the text.
 Example:
 <div class="purple-text-gradient">Hello World</div>
 Necessary fallbacks are included for older browsers that do not support the linear-gradient property like IE Explorer */
@@ -111,7 +114,7 @@ Necessary fallbacks are included for older browsers that do not support the line
 }
 
 .purple-text-gradient, .yellow-text-gradient, .orange-text-gradient, .green-text-gradient, .blue-text-gradient, .pink-text-gradient {
-  background-clip: text !important;
   -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }

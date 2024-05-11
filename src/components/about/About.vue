@@ -25,6 +25,8 @@ import AboutCard from './AboutCard.vue';
 </template>
 
 <style scoped lang="scss">
+@import '../../assets/scss/mobile/_aboutStyles.scss';
+
 .about {
   &-wrapper {
     width: 100%;
@@ -49,25 +51,5 @@ import AboutCard from './AboutCard.vue';
 .highlight {
   color: #00D8FF;
   font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .about {
-    &-title {
-      font-size: 2.5rem;
-    }
-    &-subtitle {
-      font-size: 0.95rem;
-    }
-    &-text {
-      width: 100%;
-    }
-    &-content {
-      padding-bottom: 1rem !important;
-    }
-    &-card-container {
-      padding: 0 !important;
-    }
-  }
 }
 </style>

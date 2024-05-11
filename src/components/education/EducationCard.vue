@@ -28,6 +28,8 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
+@import '../../assets/scss/mobile/_educationStyles.scss';
+
 .card {
   position: relative;
   width: 75%;
@@ -51,52 +53,5 @@ defineProps({
 .education-item-icon {
   width: 100%;
   height: 100%;
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-    padding-top: 3rem !important;
-    margin-bottom: 4rem !important;
-  }
-  .education-item {
-    &-icon:not(.wildlearner-icon) {
-    position: absolute !important;
-    top: -40px !important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75px;
-    height: 75px;
-    }
-    &-details {
-      flex-direction: column;
-    }
-    &-date {
-      position: relative;
-      width: 100%;
-      color: var(--text-secondary);
-      padding-left: 0 !important;
-    }
-    &-point {
-      padding-left: 1rem !important;
-    }
-  }
-  .wildlearner-img-container {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--text-primary) !important;
-    border-radius: 50%;
-    z-index: 1;
-    width: 75px;
-    height: 75px;
-  }
-  .wildlearner-title, .grasshopper-title {
-    white-space: nowrap;
-  }
 }
 </style>

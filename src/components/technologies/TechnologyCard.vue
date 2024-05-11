@@ -39,4 +39,25 @@ defineProps({
     width: 4.5rem;
   }
 }
+
+@media (max-width: 400px) {
+  .tech-card-content {
+      position: relative;
+    *:not(img) {
+      transform: scale(0.8);
+    }
+    img {
+      position: relative;
+      bottom: 1rem;
+      transform: scale(1.2);
+    }
+    h6 {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.3rem;
+    }
+  }
+}
 </style>

@@ -49,6 +49,7 @@ ul li a:not(i.mdi)::before {
 ul li:nth-child(1) a::before {
   content: "\F033B";
   background-image: linear-gradient(#155CDE, #2EB5F0);
+  background-clip: text;
   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   border-bottom: 4px solid #155CDE;
@@ -57,6 +58,7 @@ ul li:nth-child(1) a::before {
 ul li:nth-child(2) a::before {
   content: "\F02A4";
   background-image: linear-gradient(var(--purple), var(--dark-purple));
+  background-clip: text;
   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   border-bottom: 4px solid var(--purple);
@@ -65,16 +67,17 @@ ul li:nth-child(2) a::before {
 ul li:nth-child(3) a::before {
   content: "\F0C3A";
   background-image: linear-gradient(var(--red), var(--dark-red));
+  background-clip: text;
   -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
   border-bottom: 4px solid var(--red);
 }
 
 ul li:hover a::before {
-  animation: revealGradientChange 0.8s ease-in forwards;
+  animation: revealLinkGradient 0.8s ease-in forwards;
 }
 
-@keyframes revealGradientChange {
+@keyframes revealLinkGradient {
   100% {
     height: 90%;
     filter: hue-rotate(360deg) saturate(200%);

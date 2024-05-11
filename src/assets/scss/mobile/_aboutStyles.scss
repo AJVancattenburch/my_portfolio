@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .about {
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 0.95rem;
+    }
+    &-text {
+      width: 100%;
+    }
+    &-content {
+      padding-bottom: 1rem !important;
+    }
+    &-card-container {
+      padding: 0 !important;
+    }
+  }
+}

@@ -1,10 +1,12 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { logger } from '../../utils/Logger'
-import { emailService } from '../../services/EmailService'
-import ContactLinks from './ContactLinks.vue'
+import { computed, ref } from 'vue';
+import { logger } from '../../utils/Logger';
+import { emailService } from '../../services/EmailService';
+import ContactLinks from './ContactLinks.vue';
 
-const loading = ref(false)
+const isMobile = computed(() => window.innerWidth < 768)
+
+const sending = ref(false)
 const formRef = ref(null)
 const newEmail = ref({
   name: '',
@@ -17,14 +19,12 @@ const labelText = ref({
   message: 'What would you like to say?',
 })
 
-const isMobile = computed(() => window.innerWidth < 768)
-
 async function handleSubmit(e) {
   try {
     e.preventDefault()
-    loading.value = true
+    sending.value = true
     await emailService.sendEmail(newEmail.value)
-    loading.value = false
+    sending.value = false
     newEmail.value = {
       name: '',
       email: '',
@@ -42,7 +42,7 @@ async function handleSubmit(e) {
       <div class="col-12 col-md-8 col-lg-6 form-container d-flex-flex-column mt-5 pt-0">
         <h5 class="contact-subtitle text-uppercase text-secondary">Get In Touch</h5>
         <h1 class="contact-title text-primary">Contact.</h1>
-        <form ref="formRef" @submit.prevent="handleSubmit" class="form purple-gradient">
+        <form ref="formRef" @submit.prevent="handleSubmit" class="form">
           <div class="col-12 input-container name-input">
           <input id="name" type="text" v-model="newEmail.name" placeholder=" " :label-text="labelText.name" class="input" minlength="2" required />
           <div class="cut"></div>
@@ -65,7 +65,7 @@ async function handleSubmit(e) {
             <span></span>
             <span></span>
             <span></span>
-            {{ loading ? "Sending..." : "Send Message" }}
+            {{ sending ? "Sending..." : "Send Message" }}
           </button>
         </div>
       </form>
@@ -82,8 +82,9 @@ async function handleSubmit(e) {
 </template>
 
 <style scoped lang="scss">
-@import url('../../assets/scss/_formStyles.scss');
-@import url('../../assets/scss/_formButton.scss');
+@import '../../assets/scss/_formStyles.scss';
+@import '../../assets/scss/_formButton.scss';
+
 .contact {
   &-wrapper {
     height: 95vh;

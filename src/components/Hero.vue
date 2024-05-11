@@ -26,8 +26,8 @@ import heroData from '../constants/Hero';
 </template>
 
 <style scoped lang="scss">
-@import url('../assets/scss/mobile/_heroStyles.scss');
-@import url('../assets/scss/_loaders.scss');
+@import '../assets/scss/mobile/_heroStyles.scss';
+@import '../assets/scss/_loaders.scss';
 
 .purple-gradient {
   position: relative;
