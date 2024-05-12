@@ -99,6 +99,7 @@ npm install
 </p>
 --OR--
 <p><li>Run the following command in your terminal:</li></p>
+
 ```bash
 npm run serve
 ```
