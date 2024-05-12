@@ -56,53 +56,49 @@ Welcome to my portfolio template!
 
 To get started with this portfolio template, you will need to clone this repository to your local machine. You can do this by following the instructions below:
 
-<ol>
-  <p><li>Click on the green "Code" button located at the top right of the repository:</li></p>
+1. Click on the green "Code" button located at the top right of the repository:
+    <p>
+      <img src="https://i.ibb.co/4J6pZJg/image.png" class="img-fluid" width="75%" height="100%" />
+    </p>
 
-<img src="https://i.ibb.co/4J6pZJg/image.png" class="img-fluid" width="75%" height="100%" />
+2. Copy the HTTPS URL:
 
-<p><li>Copy the HTTPS URL:</li></p>
+    <p>
+      <img src="https://i.ibb.co/vBqjfpF/image.png" class="img-fluid" width="75%" height="100%" />
+    </p>
 
-<img src="https://i.ibb.co/vBqjfpF/image.png" class="img-fluid" width="75%" height="100%" />
+3. Open your terminal and navigate to the directory where you want to clone the repository:
+    ```bash
+    cd your-directory
+    ```
 
-<p><li>Open your terminal and navigate to the directory where you want to clone the repository:</li></p>
+4. Clone the repository:
+    ```bash
+    git clone https://github.com/AJVancattenburch/my_portfolio.git
+    ```
 
-```bash
-cd your-directory
-```
+5. Change directories into the cloned repository:
+    ```bash
+    cd my_portfolio
+    ```
 
-<p><li>Clone the repository:</li></p>
+6. Install the necessary dependencies:
+    ```bash
+    npm i
+    ```
+    - ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
 
-```bash
-git clone https://github.com/AJVancattenburch/my_portfolio.git
-```
+7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
+    <p>
+      <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="55%" />
+    </p>
 
-<p><li>Change directories into the cloned repository:</li></p>
+    --OR--
 
-```bash
-cd my_portfolio
-```
-
-<p><li>Install the necessary dependencies:</li></p>
-
-```bash
-npm i
-```
---OR--
-```bash
-npm install
-```
-
-<p><li>Remember to spin up your client by navigating to the <b><em>Run and Debug tab</em></b> ( or press <b><em>Ctrl+Shift+D</em></b> ) in vsCode and clicking the <b><em>Start Client</em></b> button on the Run and Debug Dropdown:</li></p>
-<p>
-  <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="65%" />
-</p>
---OR--
-<p><li>Run the following command in your terminal:</li></p>
-
-```bash
-npm run serve
-```
+  - Run the following command in your terminal:</li></p>
+    ```bash
+    npm run serve
+    ```
 
 ## 🧱 Data Structure and Organization
 
