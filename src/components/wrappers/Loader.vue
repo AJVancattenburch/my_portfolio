@@ -8,10 +8,8 @@ defineProps({
 });
 
 const containerStyle = ref({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column',
+  flex: 'flex',
+  center: 'center',
 })
 
 const loaderStyle = ref({
@@ -28,7 +26,7 @@ const loaderStyle = ref({
 <template>
   <section class="placeholder">
     &nbsp;
-    <div :style="containerStyle">
+    <div :style="{ display: containerStyle.flex, justifyContent: containerStyle.center, flexDirection: 'column'  }">
       <div :style="loaderStyle"></div>
       <div :style="loaderStyle"></div>
       <div :style="loaderStyle"></div>

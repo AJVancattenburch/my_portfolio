@@ -26,7 +26,6 @@ defineProps({
       <div class="scroll-box">
         <p class="project-card-description">{{ project.description }}</p>
       </div>
-      
       <div class="d-flex flex-wrap footer-box">
         <span class="col-12 d-flex justify-content-center align-items-center">
           <i class="mdi mdi-chevron-down text-secondary fs-5"></i>

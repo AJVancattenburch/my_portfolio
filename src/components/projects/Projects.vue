@@ -9,11 +9,11 @@ import ProjectCard from './ProjectCard.vue';
       <h5 class="projects-subtitle text-uppercase text-secondary">{{ projectData.subtitle }}</h5>
       <h1 class="projects-title text-primary">{{ projectData.title }}.</h1>
       <p class="projects-text text-primary">{{ projectData.text }}</p>
-      <div class="col-12 projects-container d-flex flex-wrap justify-content-center">
+      <div class="col-12 projects-container d-flex flex-wrap justify-content-start">
         <div
           v-for="project in projectData.projects"
           :key="project.name"
-          class="col-12 col-md-6 col-lg-3 d-flex flex-wrap project-item pt-5"
+          class="col-12 col-md-6 col-lg-4 d-flex flex-wrap project-item pt-5"
         >
           <ProjectCard :project="project" />
         </div>

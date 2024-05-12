@@ -1,5 +1,5 @@
 const feedbacks = {
-  id: "feedbacks",
+  id: "testimonials",
   title: "Testimonials",
   subtitle: "What Others Say...",
   testimonials: [

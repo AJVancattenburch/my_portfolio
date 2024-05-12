@@ -58,7 +58,7 @@ import FeedbackCard from './FeedbackCard.vue';
 @media (max-width: 768px) {
   .feedbacks {
     &-wrapper {
-      height: 100dvh;
+      height: auto;
     }
     &-title {
       font-size: 2.5rem;

@@ -4,7 +4,7 @@ These `:root` selectors can all be accessed by using var(--variable-name) in you
 :root {
   /* Fonts */
   --text-primary: #E7E7E7;
-  --text-secondary: #aaa6c3;
+  --text-secondary: #AAA6C3;
 
   /* Standard Colors */
   --purple: #804dee;
@@ -66,15 +66,14 @@ Necessary fallbacks are included for older browsers that do not support the line
 
 .purple-gradient {
   background: var(--dark-purple);
+  background: -webkit-linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
   background: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
-  background: -webkit-linear-gradient(-90deg,
-    var(--dark-purple) 0%, #231d2e99 100%);
 }
 
 .green-pink-gradient {
   background: var(--green);
-  background: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, var(--green) 1.9%, #bf61ff 97.5%);
 }
 
 .purple-text-gradient {
