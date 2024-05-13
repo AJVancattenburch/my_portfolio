@@ -153,62 +153,72 @@ To get started with this portfolio template, you will need to clone this reposit
       - **`/src/App.vue`** - Contains the main Vue file that renders the entire application.
       - **`/src/main.js`** - Contains the main JavaScript file that initializes the Vue application.
 
-      Your folder/file structure should look like this if you have cloned the repository correctly:
+      Your folder/file structure should look like this if you have cloned the repository correctly. I will also highlight the most important folders and files that you will be working with to customize your portfolio template:
 
-      ```bash
-      my_portfolio
-      ├── src
-      │   ├── assets
-      │   │   ├── img
-      │   │   │   ├── ...folders broken down by section for images
-      │   │   └── scss
-      │   │       ├── ...scss files
-      │   ├── components
-      │   │   ├── about
-      │   │   │   ├── About.vue
-      │   │   │   └── AboutCard.vue
-      │   │   ├── contact
-      │   │   │   ├── Contact.vue
-      │   │   │   └── ContactCard.vue
-      │   │   ├── education
-      │   │   │   ├── Education.vue
-      │   │   │   └── EducationCard.vue
-      │   │   ├── experience
-      │   │   │   ├── Experience.vue
-      │   │   │   └── ExperienceCard.vue
-      │   │   ├── feedback
-      │   │   │   ├── Feedback.vue
-      │   │   │   └── FeedbackCard.vue
-      │   │   ├── projects
-      │   │   │   ├── Project.vue
-      │   │   │   └── ProjectCard.vue
-      │   │   ├── resumeModal
-      │   │   │   ├── ResumeCard.vue
-      │   │   │   └── ResumeModal.vue
-      │   │   ├── scalableVectorGraphics
-      │   │   │   ├── SVGGitHub.vue
-      │   │   │   ├── SVGHeroBackground.vue
-      │   │   │   └── SVGLinkedIn.vue
-      │   │   ├── technologies
-      │   │   │   ├── Technologies.vue
-      │   │   │   └── TechnologyCard.vue
-      │   │   └── wrappers
-      │   │       └── Loader.vue
-      │   ├── constants
-      │   │   ├── _index.js
-      │   │   ├── About.js
-      │   │   ├── Contact.js
-      │   │   ├── Education.js
-      │   │   ├── Experience.js
-      │   │   ├── Feedbacks.js
-      │   │   ├── Projects.js
-      │   │   └── Technologies.js
-      │   ├── pages
-      │   │   └── HomePage.vue
-      │   ├── App.vue
-      │   └── main.js
+$\textcolor{red}{\textsf{Color didint work .}}$ 
+      ```diff
+      //Different color highlights:
+      //  +  =  Green
+      example: +├── src
+      //  -  =  Red
+      example: -├── src
+      //  ~  =  Blue
+      //  !  =  Yellow
+      // Pink:
+    my_portfolio
+    +├── src
+    +│   ├── assets <-- Contains all images types, and styles to be customized to change the theme used in the project.
+    │   │   ├── img <-- Contains all images used in the project, broken down by type.
+       │   │   │   ├── ...folders for different image types (e.g. icons, logos, project images, etc.)
+       │   │   └── scss <-- Contains all styles used in the project. This is where you can change the color scheme of the entire portfolio.
+       │   │       ├── ...other scss files
+       │   │       ├── _root.scss
+       │   ├── components
+       │   │   ├── about
+       │   │   │   ├── About.vue
+       │   │   │   └── AboutCard.vue
+       │   │   ├── contact
+       │   │   │   ├── Contact.vue
+       │   │   │   └── ContactCard.vue
+       │   │   ├── education
+       │   │   │   ├── Education.vue
+       │   │   │   └── EducationCard.vue
+       │   │   ├── experience
+       │   │   │   ├── Experience.vue
+       │   │   │   └── ExperienceCard.vue
+       │   │   ├── feedback
+       │   │   │   ├── Feedback.vue
+       │   │   │   └── FeedbackCard.vue
+       │   │   ├── projects
+       │   │   │   ├── Project.vue
+       │   │   │   └── ProjectCard.vue
+       │   │   ├── resumeModal
+       │   │   │   ├── ResumeCard.vue
+       │   │   │   └── ResumeModal.vue
+       │   │   ├── scalableVectorGraphics
+       │   │   │   ├── SVGGitHub.vue
+       │   │   │   ├── SVGHeroBackground.vue
+       │   │   │   └── SVGLinkedIn.vue
+       │   │   ├── technologies
+       │   │   │   ├── Technologies.vue
+       │   │   │   └── TechnologyCard.vue
+       │   │   └── wrappers
+       │   │       └── Loader.vue
+       │   ├── constants
+       │   │   ├── _index.js
+       │   │   ├── About.js
+       │   │   ├── Contact.js
+       │   │   ├── Education.js
+       │   │   ├── Experience.js
+       │   │   ├── Feedbacks.js
+       │   │   ├── Projects.js
+       │   │   └── Technologies.js
+       │   ├── pages
+       │   │   └── HomePage.vue
+       ├── App.vue
+       ├── main.js
+       └── .env
       ```
-
 
   ### 🪄 How to Render your Personalized Content
 
