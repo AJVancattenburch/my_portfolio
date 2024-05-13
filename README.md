@@ -36,17 +36,17 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- [🚀 Features](#-features-)
-- [📦 Prerequisites](#-prerequisites-)
-- [👨‍💻 Getting Started](#-getting-started-)
-- [📄 Documentation](#-documentation-)
-  - [🔍 Project Layout and Content](#-project-layout-and-content-)
-    - [🧱 Data Structure](#-data-structure-)
-    - [📂 File Structure](#-file-structure-)
-  - [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
-    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
-    - [🎨 How to Render your Personalized Styles / Themes](#-how-to-render-your-personalized-styles--themes-)
-- [🎫 License](#-license-)
+- [🚀 Features](#-features)
+- [📦 Prerequisites](#-prerequisites)
+- [👨‍💻 Getting Started](#-getting-started)
+- [📄 Documentation](#-documentation)
+  - [🔍 Project Layout and Content](#-project-layout-and-content)
+    - [🧱 Data Structure](#-data-structure)
+    - [📂 File Structure](#-file-structure)
+  - [📝 Personalizing your Custom Content](#-personalizing-your-custom-content)
+    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
+    - [🎨 How to Render your Personalized Styles / Themes](#-how-to-render-your-personalized-styles--themes)
+- [🎫 License](#-license)
 
 
 
