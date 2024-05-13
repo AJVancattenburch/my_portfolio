@@ -127,7 +127,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
- - ### 📦 Project Layout and Content
+  - ### 📦 Project Layout and Content
 
     - #### 🧱 Data Structure
 
