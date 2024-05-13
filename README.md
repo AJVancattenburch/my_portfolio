@@ -128,7 +128,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
- - ### 🔍 Project Layout and Content
+  - ### 🔍 Project Layout and Content
 
     - #### 🧱 Data Structure
 
@@ -150,7 +150,7 @@ To get started with this portfolio template, you will need to clone this reposit
       - **`/src/assets`** - Contains all images, icons, and SVG files used in the project.
       - **`/src/components`** - Contains all the Vue components that make up the portfolio page.
       - **`/src/constants`** - Contains all the static data for each section of the portfolio page.
-      - **`/src/pages/HomePage.vie`** - Contains the main view file that renders the portfolio page.
+      - **`/src/pages/HomePage.vue`** - Contains the main view file that renders the portfolio page.
       - **`/src/App.vue`** - Contains the main Vue file that renders the entire application.
       - **`/src/main.js`** - Contains the main JavaScript file that initializes the Vue application.
 
@@ -210,25 +210,28 @@ To get started with this portfolio template, you will need to clone this reposit
         └── env.js ← 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
-### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
+  - ### 📝 Personalizing your Custom Content [🔝](#-table-of-contents)
 
-By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
+    - #### 🧙‍♂️ How to Render your Personalized Content
 
-<img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
+      By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
 
-Each file in the `/src/constants` folder represents a different section of the portfolio page. 
+      <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
 
-### 🎨 How to Render your Personalized Styles [🔝](#-table-of-contents)
+      Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
-<p>
-  <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
-</p>
+    - #### 🎨 How to Render your Personalized Styles
 
-Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
+      The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
-As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
+      <p>
+        <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
+      </p>
+
+      Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
+
+      As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
 
   <!-- <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
   <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
