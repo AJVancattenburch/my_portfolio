@@ -114,6 +114,7 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm i
     ```
+    
     ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
