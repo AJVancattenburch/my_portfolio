@@ -39,9 +39,9 @@ Welcome to my portfolio template!
 - [✅ Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
-  - [📦 Project Layout and Content](#-project-layout-and-content-)
-    - [🧱 Data Structure](#-data-structure-)
-    - [📂 File Structure](#-file-structure-)
+  - [📦 Project Layout and Content](#-project-layout-and-content)
+    - [🧱 Data Structure](#-data-structure)
+    - [📂 File Structure](#-file-structure)
     - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
     - [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
 - [🎫 License](#-license-)
@@ -127,13 +127,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
-
-
-
   - ### 📦 Project Layout and Content
-
-
-
 
     - #### 🧱 Data Structure
 
