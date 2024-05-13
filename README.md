@@ -15,9 +15,6 @@ Welcome to my portfolio template!
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 ##### 📝 ***NOTE:*** *I will be adding more features and functionality to make this even more user-friendly and customizable for others to use, so keep checking back for updates!*
 
-<p align="center">
-  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
-</p>
 
 <div align="center">
   <a href="https://github.com/appsmithorg/appsmith/releases">
@@ -34,6 +31,11 @@ Welcome to my portfolio template!
   </a>
 </div>
 
+<p align="center">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
+
+
 ## 📖 Table of Contents
 - [🚀 Features](#-features-)
 - [📦 Prerequisites](#-prerequisites-)
@@ -49,6 +51,9 @@ Welcome to my portfolio template!
 - [📜 Legal Overview](#-legal-overview)
 - [🔏 Copyright](#-copyright)
 
+<p align="center">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
 
 ## 🚀 Features [🔝](#-table-of-contents)
 - Clean and modern design
@@ -58,6 +63,10 @@ Welcome to my portfolio template!
 - Instructions for personalizing content
 - Instructions for personalizing styles / themes
 
+<p align="top">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
+
 ## 📦 Prerequisites [🔝](#-table-of-contents)
 - **Node.js:** You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
@@ -66,6 +75,10 @@ Welcome to my portfolio template!
       <img src="https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js" alt="Node.js Download Badge" title="Click me to download Node.js"/>
     </a>
   </p>
+
+<p align="top">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
 
 
 ## 👨‍💻 Getting Started [🔝](#-table-of-contents)
@@ -128,8 +141,13 @@ To get started with this portfolio template, you will need to clone this reposit
 ## 📄 Documentation [🔝](#-table-of-contents)
 
 This section will provide a brief overview of the project layout and content, including the data structure and file structure of the portfolio template that you will be working with to customize your portfolio.
+
   
   - ### 🔍 Project Layout and Content
+
+    <p align="top">
+      <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+    </p>
 
     - #### 🧱 Data Structure
 
@@ -143,6 +161,10 @@ This section will provide a brief overview of the project layout and content, in
       <img src="./src/assets/img/README_images/image 1.png" class="img-fluid" width="100%" height="100%" />
 
       Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
+
+    <p align="top">
+      <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+    </p>
 
     - #### 📂 File Structure
 
@@ -211,6 +233,10 @@ This section will provide a brief overview of the project layout and content, in
         └── env.js ← 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
+<p align="top">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
+
   - ### 📝 Personalizing your Custom Content [🔝](#-table-of-contents)
 
     - #### 🧙‍♂️ How to Render your Personalized Content
@@ -225,9 +251,9 @@ This section will provide a brief overview of the project layout and content, in
 
       The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
-      <p>
-        <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
-      </p>
+        <p>
+          <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
+        </p>
 
       Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 
