@@ -39,7 +39,7 @@ Welcome to my portfolio template!
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
-  - [🔍 Project Layout and Content](#--project-layout-and-content-)
+  - [🔍 Project Layout and Content](#-project-layout-and-content-)
     - [🧱 Data Structure](#-data-structure-)
     - [📂 File Structure](#-file-structure-)
     - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
