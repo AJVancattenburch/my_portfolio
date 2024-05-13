@@ -43,7 +43,7 @@ Welcome to my portfolio template!
     * [🧱 Data Structure](#-data-structure)
     * [📂 File Structure](#-file-structure)
   + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content)
-    * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
+    * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview-)
