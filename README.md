@@ -36,7 +36,7 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- [🚀 Features](#-features)
+- [🚀 Features](#-features-)
 - [🛠️ Prerequisites](#%EF%B8%8F-prerequisites)
 - [👨‍💻 Getting Started](#👨‍💻-getting-started)
 - [📄 Documentation](#📄-documentation)
@@ -50,7 +50,7 @@ Welcome to my portfolio template!
 
 
 
-## 🚀Features
+## 🚀 Features
   - Clean and modern design
   - Consistent layout and styles
   - Easy to navigate and understand
