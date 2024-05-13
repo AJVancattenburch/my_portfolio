@@ -44,7 +44,7 @@ Welcome to my portfolio template!
     - [📂 File Structure](#-file-structure-)
   - [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
     - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
-    - [🎨 How to Render your Personalized Styles / Themes](#%EF%B8%8F-how-to-render-your-personalized-styles--themes-)
+    - [🎨 How to Render your Personalized Styles and Themes](#%EF%B8%8F-how-to-render-your-personalized-styles-and-themes-)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview-)
 - [©️ Copyright](#-copyright-)
@@ -218,7 +218,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
   Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-  ### 🎨 How to Render your Personalized Styles / Themes [🔝](#-table-of-contents)
+  ### 🎨 How to Render your Personalized Styles and Themes [🔝](#-table-of-contents)
 
   The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
