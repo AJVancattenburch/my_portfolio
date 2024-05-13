@@ -14,7 +14,7 @@ Welcome to my portfolio template!
 
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 
-> ##### 📝 **NOTE:** I will be adding more features and functionality to make this even more user-friendly and customizable for others to use, so keep checking back for updates!
+  ##### 📝 **NOTE:** I will be adding more features and functionality to make this even more user-friendly and customizable for others to use, so keep checking back for updates!
 
 <p align="center">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
