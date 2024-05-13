@@ -14,7 +14,7 @@ Welcome to my portfolio template!
 
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 
-  - ###### ${\color{F85571}📝 NOTE: \space \color{E7E7E7}I \space will \space be \space adding \space more \space features \space and \space functionality \space to \space make \space this \space even \space more \space user-friendly \space and \space customizable \space for \space others \space to \space use, \space so \space keep \space checking \space back \space for \space updates! 🚀 }$
+- ###### ${\color{F85571}📝 NOTE: \space \color{E7E7E7}I \space will \space be \space adding \space more \space features \space and \space functionality \space to \space make \space this \space even \space more \space user-friendly \space and \space customizable \space for \space others \space to \space use, \space so \space keep \space checking \space back \space for \space updates! 🚀 }$
 
 <p align="center">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
@@ -36,17 +36,17 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- [🚀 Features](#%EF%B8%8F-features-)
-- [🛠️ Prerequisites](#%EF%B8%8F-prerequisites)
-- [👨‍💻 Getting Started](#%EF%B8%8F-getting-started)
-- [📄 Documentation](#%EF%B8%8F-documentation)
-  + [🔍 Project Layout and Content](#%EF%B8%8F-project-layout-and-content)
-    - [🧱 Data Structure](#%EF%B8%8F-data-structure)
-    - [📂 File Structure](#%EF%B8%8F-file-structure)
-  + [📝 Personalizing your Custom Content](#%EF%B8%8F-personalizing-your-custom-content)
-    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
-    - [🎨 How to Render your Personalized Styles / Themes](#%EF%B8%8F-how-to-render-your-personalized-styles--themes)
-- [🎫 License](#%EF%B8%8F-license)
+- [🚀 Features](#-features-)
+- [📦 Prerequisites](#-prerequisites-)
+- [👨‍💻 Getting Started](#-getting-started-)
+- [📄 Documentation](#-documentation-)
+  - [🔍 Project Layout and Content](#-project-layout-and-content-)
+    - [🧱 Data Structure](#-data-structure-)
+    - [📂 File Structure](#-file-structure-)
+  - [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
+    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
+    - [🎨 How to Render your Personalized Styles / Themes](#-how-to-render-your-personalized-styles--themes-)
+- [🎫 License](#-license-)
 
 
 
@@ -58,15 +58,15 @@ Welcome to my portfolio template!
   - Instructions for personalizing content
   - Instructions for personalizing styles / themes
 
-  ## 🛠️ Prerequisites:
-  - **Node.js:**
-  You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
+## 📦 Prerequisites
+- **Node.js:**
+You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
-    <p>
-      <a href="https://nodejs.org/en/download/">
-        <img src="https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js" alt="Node.js Download Badge" title="Click me to download Node.js"/>
-      </a>
-    </p>
+  <p>
+    <a href="https://nodejs.org/en/download/">
+      <img src="https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js" alt="Node.js Download Badge" title="Click me to download Node.js"/>
+    </a>
+  </p>
 
 
 ## 👨‍💻 Getting Started
