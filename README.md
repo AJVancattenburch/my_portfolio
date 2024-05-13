@@ -14,7 +14,7 @@ Welcome to my portfolio template!
 
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 
->**📝 NOTE:** I will be adding more features and functionality to make it even more user-friendly and customizable for others to use.
+>**📝 NOTE:** I will be adding more features and functionality to make this even more user-friendly and customizable for others to use, so keep checking back for updates! 🚀
 
 <p align="center">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
@@ -36,15 +36,21 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- 🎨 [Features](#features)
-- 🧑🏻‍💻 [Getting Started](#getting-started)
-- 🧱 [Data Structure and Organization](#data-structure-and-organization)
-- 📂 [File Structure and Organization](#file-structure-and-organization)
-- 🪄 [How to Render your Personalized Content](#how-to-render-your-personalized-content)
-- 🧑🏻‍🎨 [How to Render your Personalized Styles / Themes](#how-to-render-your-personalized-styles--themes)
+- 🚀 [Features](#🚀-features)
+- 📦 [Prerequisites](#📦-prerequisites)
+- 🧑🏻‍💻 [Getting Started](#🧑🏻‍💻-getting-started)
+- 📄 [Documentation](#📄-documentation)
+  + 🔍 [Project Layout and Content](#🔍-project-layout-and-content)
+    - 🧱 [Data Structure](#🧱-data-structure)
+    - 📂 [File Structure](#📂-file-structure)
+  + 📝 [Personalizing your Custom Content](#📝-personalizing-your-custom-content)
+    - 🪄 [How to Render your Personalized Content](#🪄-how-to-render-your-personalized-content)
+    - 🎨 [How to Render your Personalized Styles / Themes](#🎨-how-to-render-your-personalized-styles--themes)
+- 🪪 [License](#🪪-license)
 
 
-## 🎨 Features
+
+## 🚀 Features
 - Clean and modern design
 - Consistent layout and styles
 - Easy to navigate and understand
@@ -52,8 +58,18 @@ Welcome to my portfolio template!
 - Instructions for personalizing content
 - Instructions for personalizing styles / themes
 
-## 🧑🏻‍💻 Getting Started
+## **📦 Prerequisites:**
+  - **Node.js:**
+   You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
+    <p>
+      <a href="https://nodejs.org/en/download/">
+        <img src="https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js" alt="Node.js Download Badge" title="Click me to download Node.js"/>
+      </a>
+    </p>
+
+
+## 🧑🏻‍💻 Getting Started
 To get started with this portfolio template, you will need to clone this repository to your local machine. You can do this by following the instructions below:
 
 1. Click on the green "Code" button located at the top right of the repository:
@@ -61,10 +77,10 @@ To get started with this portfolio template, you will need to clone this reposit
       <img src="https://i.ibb.co/4J6pZJg/image.png" class="img-fluid" width="75%" height="100%" />
     </p>
 
-2. Copy the HTTPS URL:
+2. `Copy` the HTTPS URL:
 
     <p>
-      <img src="https://i.ibb.co/vBqjfpF/image.png" class="img-fluid" width="75%" height="100%" />
+      <img src="https://i.ibb.co/sP7cWdg/image.png" class="img-fluid" width="50%" height="100%" />
     </p>
 
 3. Open your terminal and navigate to the directory where you want to clone the repository:
@@ -72,17 +88,17 @@ To get started with this portfolio template, you will need to clone this reposit
     cd your-directory
     ```
 
-4. Clone the repository:
+4. Clone the repository by typing `git clone` immediately followed by `pasting` the HTTPS URL you copied in step 2:
     ```bash
     git clone https://github.com/AJVancattenburch/my_portfolio.git
     ```
 
-5. Change directories into the cloned repository:
+5. Change directories from the root folder to the `my_portfolio` folder by running the following command in your terminal:
     ```bash
     cd my_portfolio
     ```
 
-6. Install the necessary dependencies:
+6. Install the necessary dependencies by running the following command in your terminal now that you are in the `my_portfolio` folder:
     ```bash
     npm i
     ```
@@ -99,39 +115,120 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm run serve
     ```
+    - ###### **📝 NOTE:** `npm run serve` will start the development server on `http://localhost:8080/` by default. You can change the port number by modifying the `PORT` variable in the `.env` file located in the root directory of the project.
 
-## 🧱 Data Structure and Organization
+8. Open your browser and navigate to `http://localhost:8080/` to view the portfolio template on your local machine.
 
-The main data structure you will be working with is located in the `/src/constants` folder located here:
+9. **You are now ready to start customizing your portfolio! See the following [Data Structure and Organization](#🧱-data-structure-and-organization) section to get an idea of where your data is coming from and how you can change it by examinging how it gets rendered to your vue components.
 
-<p>
+<p align="top">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
+
+## 📄 Documentation
+
+- ### 🔍 Project Layout and Content
+
+  + #### 🧱 Data Structure and Organization
+
+    The main data structure you will be working with is located in the `/src/constants` folder located here:
+
+    <p>
+      <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
+    </p>
+
+    I have provided a brief visual reference for how the static data properties (seperated by color) is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
+    <img src="https://i.ibb.co/f2T9bn3/image.png" class="img-fluid" width="100%" height="100%" />
+
+    Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
+
+  + #### 📂 File Structure
+  
+      The file structure of this project is broken down into the following folders:
+  
+      - **`/src/assets`** - Contains all images, icons, and SVG files used in the project.
+      - **`/src/components`** - Contains all the Vue components that make up the portfolio page.
+      - **`/src/constants`** - Contains all the static data for each section of the portfolio page.
+      - **`/src/pages/HomePage.vie`** - Contains the main view file that renders the portfolio page.
+      - **`/src/App.vue`** - Contains the main Vue file that renders the entire application.
+      - **`/src/main.js`** - Contains the main JavaScript file that initializes the Vue application.
+
+      Your folder/file structure should look like this if you have cloned the repository correctly:
+
+      ```bash
+      my_portfolio
+      ├── src
+      │   ├── assets
+      │   │   ├── img
+      │   │   │   ├── ...folders broken down by section for images
+      │   │   └── scss
+      │   │       ├── ...scss files
+      │   ├── components
+      │   │   ├── about
+      │   │   │   ├── About.vue
+      │   │   │   └── AboutCard.vue
+      │   │   ├── contact
+      │   │   │   ├── Contact.vue
+      │   │   │   └── ContactCard.vue
+      │   │   ├── education
+      │   │   │   ├── Education.vue
+      │   │   │   └── EducationCard.vue
+      │   │   ├── experience
+      │   │   │   ├── Experience.vue
+      │   │   │   └── ExperienceCard.vue
+      │   │   ├── feedback
+      │   │   │   ├── Feedback.vue
+      │   │   │   └── FeedbackCard.vue
+      │   │   ├── projects
+      │   │   │   ├── Project.vue
+      │   │   │   └── ProjectCard.vue
+      │   │   ├── resumeModal
+      │   │   │   ├── ResumeCard.vue
+      │   │   │   └── ResumeModal.vue
+      │   │   ├── scalableVectorGraphics
+      │   │   │   ├── SVGGitHub.vue
+      │   │   │   ├── SVGHeroBackground.vue
+      │   │   │   └── SVGLinkedIn.vue
+      │   │   ├── technologies
+      │   │   │   ├── Technologies.vue
+      │   │   │   └── TechnologyCard.vue
+      │   │   └── wrappers
+      │   │       └── Loader.vue
+      │   ├── constants
+      │   │   ├── _index.js
+      │   │   ├── About.js
+      │   │   ├── Contact.js
+      │   │   ├── Education.js
+      │   │   ├── Experience.js
+      │   │   ├── Feedbacks.js
+      │   │   ├── Projects.js
+      │   │   └── Technologies.js
+      │   ├── pages
+      │   │   └── HomePage.vue
+      │   ├── App.vue
+      │   └── main.js
+      ```
+
+
+  ### 🪄 How to Render your Personalized Content
+
+  By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
+
   <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
-</p>
 
-I have provided a brief visual reference for how the static data properties (seperated by color) is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
-<img src="https://i.ibb.co/f2T9bn3/image.png" class="img-fluid" width="100%" height="100%" />
+  Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
+  ### 🧑🏻‍🎨 How to Render your Personalized Styles / Themes
 
-## 🪄 How to Render your Personalized Content
+  The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
-By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
+  <p>
+    <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
+  </p>
 
-<img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
+  Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 
-Each file in the `/src/constants` folder represents a different section of the portfolio page. 
-
-## 🧑🏻‍🎨 How to Render your Personalized Styles / Themes
-
-The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
-
-<p>
-  <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
-</p>
-
-Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
-
-As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
+  As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
 
   <!-- <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
   <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
@@ -153,51 +250,3 @@ The content under the CodeWorks®, LLC Organization and all of the individual re
 
 
 <img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
-
-
-
-
-
-
-
-
-
-
-
-
-├── assets
-│   ├── img
-│   │   ├── ...folders broken down by section f 
-│   └── scss
-│       ├── ...scss files
-├── components
-│   ├── about
-│   │   ├── About.vue
-│   │   └── AboutCard.vue
-│   ├── contact
-│   │   ├── Contact.vue
-│   │   └── ContactCard.vue
-│   ├── education
-│   │   ├── Education.vue
-│   │   └── EducationCard.vue
-│   ├── experience
-│   │   ├── Experience.vue
-│   │   └── ExperienceCard.vue
-│   ├── feedback
-│   │   ├── Feedback.vue
-│   │   └── FeedbackCard.vue
-│   ├── projects
-│   │   ├── Project.vue
-│   │   └── ProjectCard.vue
-│   ├── resumeModal
-│   │   ├── ResumeCard.vue
-│   │   └── ResumeModal.vue
-│   ├── scalableVectorGraphics
-│   │   ├── SVGGitHub.vue
-│   │   ├── SVGHeroBackground.vue
-│   │   └── SVGLinkedIn.vue
-│   ├── technologies
-│   │   ├── Technologies.vue
-│   │   └── TechnologyCard.vue
-│   └── wrappers
-│       └── Loader.vue
