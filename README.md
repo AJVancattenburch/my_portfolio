@@ -236,9 +236,9 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 🎫 License [🔝](#-table-of-contents)
 
-### Base Template: CodeWorks Vue Starter
+ - ### Base Template: CodeWorks Vue Starter
 
-This template is designed to help get students started building vue applications
+    This template is designed to help get students started building vue applications
 
 ## 📜 Legal Overview
 
