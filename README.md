@@ -50,7 +50,7 @@ Welcome to my portfolio template!
 
 
 
-## 🚀 Features 
+## 🚀 Features [🔝](#-table-of-contents)
   - Clean and modern design
   - Consistent layout and styles
   - Easy to navigate and understand
@@ -58,7 +58,7 @@ Welcome to my portfolio template!
   - Instructions for personalizing content
   - Instructions for personalizing styles / themes
 
-## 📦 Prerequisites
+## 📦 Prerequisites [🔝](#-table-of-contents)
 - **Node.js:**
 You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
@@ -69,7 +69,7 @@ You need to have Node installed on your machine to run this project. If you do n
   </p>
 
 
-## 👨‍💻 Getting Started
+## 👨‍💻 Getting Started [🔝](#-table-of-contents)
 To get started with this portfolio template, you will need to clone this repository to your local machine. You can do this by following the instructions below:
 
 1. Click on the green "Code" button located at the top right of the repository:
@@ -106,7 +106,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
     <p>
-      <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="55%" />
+      <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="50%" />
     </p>
 
     --OR--
@@ -125,7 +125,7 @@ To get started with this portfolio template, you will need to clone this reposit
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
 
-## 📄 Documentation
+## 📄 Documentation [🔝](#-table-of-contents)
 
 - ### 🔍 Project Layout and Content
 
@@ -142,7 +142,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
     Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
 
-  + #### 📂 File Structure
+  + #### 📂 File Structure [🔝](#-table-of-contents)
   
       The file structure of this project is broken down into the following folders:
   
@@ -209,7 +209,7 @@ To get started with this portfolio template, you will need to clone this reposit
         └── env.js <-- 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
-  ### 🧙‍♂️ How to Render your Personalized Content
+  ### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
 
   By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
 
@@ -217,7 +217,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
   Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-  ### 🎨 How to Render your Personalized Styles / Themes
+  ### 🎨 How to Render your Personalized Styles / Themes [🔝](#-table-of-contents)
 
   The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
