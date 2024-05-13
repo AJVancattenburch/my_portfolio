@@ -37,7 +37,7 @@ Welcome to my portfolio template!
 
 
 ## 📖 Table of Contents
-- [🚀 Features](#-features-)
+- [✨ Features](#-features-)
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
@@ -47,6 +47,7 @@ Welcome to my portfolio template!
   + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
+- [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview)
 - [🔏 Copyright](#-copyright)
@@ -55,7 +56,7 @@ Welcome to my portfolio template!
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
 
-## 🚀 Features [🔝](#-table-of-contents)
+## ✨ Features [🔝](#-table-of-contents)
 - Clean and modern design
 - Consistent layout and styles
 - Easy to navigate and understand
@@ -264,6 +265,8 @@ This section will provide a brief overview of the project layout and content, in
   <p align="top">
     <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
   </p>
+
+## 🚀 Launching your portfolio using Github Pages [🔝](#-table-of-contents)
 
 ## 🎫 License [🔝](#-table-of-contents)
 
