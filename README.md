@@ -46,6 +46,8 @@ Welcome to my portfolio template!
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
     * [🎨 How to Render your Personalized Styles / Themes](#-how-to-render-your-personalized-styles--themes-)
 - [🎫 License](#-license-)
+- [📜 Legal Overview](#-legal-overview-)
+- [©️ Copyright](#-copyright-)
 
 
 
@@ -128,7 +130,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 - ### 🔍 Project Layout and Content
 
-  + #### 🧱 Data Structure and Organization
+  + #### 🧱 Data Structure
 
     The main data structure you will be working with is located in the `/src/constants` folder located here:
 
@@ -141,7 +143,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
     Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
 
-  + #### 📂 File Structure [🔝](#-table-of-contents)
+  + #### 📂 File Structure
   
       The file structure of this project is broken down into the following folders:
   
@@ -157,16 +159,16 @@ To get started with this portfolio template, you will need to clone this reposit
       ```bash
         my_portfolio
         ├── src
-        │   ├── assets <-- 🖼️🎨 f
-        │   │   ├── img <-- 🖼️ Contains all images used in the project, broken down by type.
+        │   ├── assets ← 🖼️🎨 f
+        │   │   ├── img ← 🖼️ Contains all images used in the project, broken down by type.
         │   │   │   ├── ...📂 folders for different image types (e.g. icons, logos, project images, etc.)
         │   │   └── scss 
         │   │       ├── ...other scss files
-        │   │       ├── _root.scss <-- 🎨 Contains all main styles, and where you can change the color scheme of the entire portfolio.
-        │   ├── components <-- 🧩 Contains all Vue components or 'sections' that make up the portfolio page.
+        │   │       ├── _root.scss ← 🎨 Contains all main styles, and where you can change the color scheme of the entire portfolio.
+        │   ├── components ← 🧩 Contains all Vue components or 'sections' that make up the portfolio page.
         │   │   ├── about
-        │   │   │   ├── About.vue <-- 📄 Each section has a 'container to style'...
-        │   │   │   └── AboutCard.vue <-- 📄 ...and a 'card to render the content' for each section.
+        │   │   │   ├── About.vue ← 📄 Each section has a 'container to style'...
+        │   │   │   └── AboutCard.vue ← 📄 ...and a 'card to render the content' for each section.
         │   │   ├── contact
         │   │   │   ├── Contact.vue
         │   │   │   └── ContactCard.vue
@@ -192,9 +194,9 @@ To get started with this portfolio template, you will need to clone this reposit
         │   │   └── technologies
         │   │       ├── Technologies.vue
         │   │       └── TechnologyCard.vue
-        │   ├── constants <-- 📂 Contains all the static data for each section of the portfolio page.
-        │   │   ├── _index.js <-- 🔀 Exports all the static data from each file in the constants folder.
-        │   │   ├── About.js <-- 📝 Each sections editable static data is customized in each sections javascript file
+        │   ├── constants ← 📂 Contains all the static data for each section of the portfolio page.
+        │   │   ├── _index.js ← 🔀 Exports all the static data from each file in the constants folder.
+        │   │   ├── About.js ← 📝 Each sections editable static data is customized in each sections javascript file
         │   │   ├── Contact.js
         │   │   ├── Education.js
         │   │   ├── Experience.js
@@ -205,7 +207,7 @@ To get started with this portfolio template, you will need to clone this reposit
         │   │   └── HomePage.vue
         ├── App.vue
         ├── main.js
-        └── env.js <-- 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
+        └── env.js ← 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
   ### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
@@ -232,17 +234,23 @@ To get started with this portfolio template, you will need to clone this reposit
   <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
 </section> -->
 
-Base Template: CodeWorks Vue Starter
-=====================
+<p align="top">
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
+
+## 🎫 License [🔝](#-table-of-contents)
+
+### Base Template: CodeWorks Vue Starter
+
 This template is designed to help get students started building vue applications
 
-## Legal Overview
+## 📜 Legal Overview
 
 The content under the CodeWorks®, LLC Organization and all of the individual repos are solely intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
 
 ---
 
-## Copyright
+## ©️ Copyright
 
 © CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
 
