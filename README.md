@@ -50,7 +50,7 @@ Welcome to my portfolio template!
 
 
 
-## 🚀 Features
+## 🚀 Features 
   - Clean and modern design
   - Consistent layout and styles
   - Easy to navigate and understand
