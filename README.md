@@ -120,7 +120,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 8. Open your browser and navigate to `http://localhost:8080/` to view the portfolio template on your local machine.
 
-9. **You are now ready to start customizing your portfolio! See the following [Data Structure](#🧱-data-structure-) section to get an idea of where your data is coming from and how you can change it by examinging how it gets rendered to your vue components.
+9. **You are now ready to start customizing your portfolio! See the following [Data Structure](#-data-structure-) section to get an idea of where your data is coming from and how you can change it by examinging how it gets rendered to your vue components.
 
 <p align="top">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
