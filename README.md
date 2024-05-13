@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./src/assets/img/icons/logo.svg" class="img-fluid" width="25%" />
+  <img src="./src/assets/img/icons/logo.svg" alt="My Custom Logo" class="img-fluid" width="25%" />
 
 Welcome to my portfolio template!
 =====================
@@ -14,7 +14,7 @@ Welcome to my portfolio template!
 
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 
->**📝 NOTE:** I will be adding more features and functionality to make this even more user-friendly and customizable for others to use, so keep checking back for updates! 🚀
+  - ###### ${\color{F85571}📝 NOTE: \space \color{E7E7E7}I \space will \space be \space adding \space more \space features \space and \space functionality \space to \space make \space this \space even \space more \space user-friendly \space and \space customizable \space for \space others \space to \space use, \space so \space keep \space checking \space back \space for \space updates! 🚀 }$
 
 <p align="center">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
@@ -36,18 +36,17 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- 🚀 [Features](#🚀-features)
-- 📦 [Prerequisites](#📦-prerequisites)
-- 🧑🏻‍💻 [Getting Started](#🧑🏻‍💻-getting-started)
-- 📄 [Documentation](#📄-documentation)
-  + 🔍 [Project Layout and Content](#🔍-project-layout-and-content)
-    - 🧱 [Data Structure](#🧱-data-structure)
-    - 📂 [File Structure](#📂-file-structure)
-  + 📝 [Personalizing your Custom Content](#📝-personalizing-your-custom-content)
-    - 🪄 [How to Render your Personalized Content](#🪄-how-to-render-your-personalized-content)
-    - 🎨 [How to Render your Personalized Styles / Themes](#🎨-how-to-render-your-personalized-styles--themes)
-- 🪪 [License](#🪪-license)
-
+- [🚀 Features](#🚀-features)
+- [📦 Prerequisites](#📦-prerequisites)
+- [👨‍💻 Getting Started](#👨‍💻-getting-started)
+- [📄 Documentation](#📄-documentation)
+  + [🔍 Project Layout and Content](#🔍-project-layout-and-content)
+    - [🧱 Data Structure](#🧱-data-structure)
+    - [📂 File Structure](#📂-file-structure)
+  + [📝 Personalizing your Custom Content](#📝-personalizing-your-custom-content)
+    - [🧙‍♂️ How to Render your Personalized Content](#🧙‍♂️-how-to-render-your-personalized-content)
+    - [🎨 How to Render your Personalized Styles / Themes](#🎨-how-to-render-your-personalized-styles--themes)
+- [🎫 License](#🎫-license)
 
 
 ## 🚀 Features
@@ -69,7 +68,7 @@ Welcome to my portfolio template!
     </p>
 
 
-## 🧑🏻‍💻 Getting Started
+## 👨‍💻 Getting Started
 To get started with this portfolio template, you will need to clone this repository to your local machine. You can do this by following the instructions below:
 
 1. Click on the green "Code" button located at the top right of the repository:
@@ -153,12 +152,12 @@ To get started with this portfolio template, you will need to clone this reposit
       - **`/src/App.vue`** - Contains the main Vue file that renders the entire application.
       - **`/src/main.js`** - Contains the main JavaScript file that initializes the Vue application.
 
-      Your folder/file structure should look like this if you have cloned the repository correctly. I will also highlight the most important folders and files that you will be working with to customize your portfolio template:
+      Your folder/file structure should look like this if you have cloned the repository correctly. I will also notate the most important folders and files that you will be working with to customize your portfolio template:
 
       ```bash
         my_portfolio
         ├── src
-        │   ├── assets <-- 🖼️🎨 Contains all images types, and styles to be customized to 'change the theme' used in the project.
+        │   ├── assets <-- 🖼️🎨 f
         │   │   ├── img <-- 🖼️ Contains all images used in the project, broken down by type.
         │   │   │   ├── ...📂 folders for different image types (e.g. icons, logos, project images, etc.)
         │   │   └── scss 
@@ -194,8 +193,8 @@ To get started with this portfolio template, you will need to clone this reposit
         │   │       ├── Technologies.vue
         │   │       └── TechnologyCard.vue
         │   ├── constants <-- 📂 Contains all the static data for each section of the portfolio page.
-        │   │   ├── _index.js <-- ♻️ Exports all the static data from each file in the constants folder.
-        │   │   ├── About.js <-- 📄 Each sections editable static data is customized in each sections javascript file
+        │   │   ├── _index.js <-- 🔀 Exports all the static data from each file in the constants folder.
+        │   │   ├── About.js <-- 📝 Each sections editable static data is customized in each sections javascript file
         │   │   ├── Contact.js
         │   │   ├── Education.js
         │   │   ├── Experience.js
@@ -209,7 +208,7 @@ To get started with this portfolio template, you will need to clone this reposit
         └── env.js <-- 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
-  ### 🪄 How to Render your Personalized Content
+  ### 🧙‍♂️ How to Render your Personalized Content
 
   By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
 
@@ -217,7 +216,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
   Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-  ### 🧑🏻‍🎨 How to Render your Personalized Styles / Themes
+  ### 🎨 How to Render your Personalized Styles / Themes
 
   The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
