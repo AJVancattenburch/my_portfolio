@@ -36,31 +36,31 @@ Welcome to my portfolio template!
 </div>
 
 ## 📖 Table of Contents
-- 🚀 [Features](#🚀-features)
-- :package: [Prerequisites](#:package:-prerequisites)
-- 👨‍💻 [Getting Started](#👨‍💻-getting-started)
-- 📄 [Documentation](#📄-documentation)
-  + 🔍 [Project Layout and Content](#🔍-project-layout-and-content)
-    - 🧱 [Data Structure](#🧱-data-structure)
-    - 📂 [File Structure](#📂-file-structure)
-  + 📝 [Personalizing your Custom Content](#📝-personalizing-your-custom-content)
-    - 🧙‍♂️ [How to Render your Personalized Content](#🧙‍♂️-how-to-render-your-personalized-content)
-    - 🎨 [How to Render your Personalized Styles / Themes](#🎨-how-to-render-your-personalized-styles--themes)
-- 🎫 [License](#🎫-license)
+- [🚀 Features](#-features)
+- [🛠️ Prerequisites](#%EF%B8%8F-prerequisites)
+- [👨‍💻 Getting Started](#👨‍💻-getting-started)
+- [📄 Documentation](#📄-documentation)
+  + [🔍 Project Layout and Content](#🔍-project-layout-and-content)
+    - [🧱 Data Structure](#🧱-data-structure)
+    - [📂 File Structure](#📂-file-structure)
+  + [📝 Personalizing your Custom Content](#📝-personalizing-your-custom-content)
+    - [🧙‍♂️ How to Render your Personalized Content](#🧙‍♂️-how-to-render-your-personalized-content)
+    - [🎨 How to Render your Personalized Styles / Themes](#🎨-how-to-render-your-personalized-styles--themes)
+- [🎫 License](#🎫-license)
 
 
 
-## 🚀 Features
-- Clean and modern design
-- Consistent layout and styles
-- Easy to navigate and understand
-- User-friendly and easy to customize
-- Instructions for personalizing content
-- Instructions for personalizing styles / themes
+## 🚀Features
+  - Clean and modern design
+  - Consistent layout and styles
+  - Easy to navigate and understand
+  - User-friendly and easy to customize
+  - Instructions for personalizing content
+  - Instructions for personalizing styles / themes
 
-## **:package: Prerequisites:**
+  ## 🛠️ Prerequisites:
   - **Node.js:**
-   You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
+  You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
     <p>
       <a href="https://nodejs.org/en/download/">
