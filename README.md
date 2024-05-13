@@ -39,11 +39,11 @@ Welcome to my portfolio template!
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
-  - [🔍 Project Layout and Content](#-project-layout-and-content-)
-    - [🧱 Data Structure](#-data-structure-)
-    - [📂 File Structure](#-file-structure-)
-    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
-    - [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
+  - [Project Layout and Content](#project-layout-and-content)
+    - [Data Structure](#data-structure)
+    - [File Structure](#file-structure)
+  - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
+  - [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview-)
 - [©️ Copyright](#-copyright-)
@@ -127,9 +127,9 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
- - ### 🔍 Project Layout and Content
+ - ### Project Layout and Content
 
-    - #### 🧱 Data Structure
+    - #### Data Structure
 
       The main data structure you will be working with is located in the `/src/constants` folder located here:
 
@@ -142,7 +142,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
       Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
 
-    - #### 📂 File Structure
+    - #### File Structure
 
       The file structure of this project is broken down into the following folders:
 
