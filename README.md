@@ -211,25 +211,25 @@ To get started with this portfolio template, you will need to clone this reposit
 
 
 
-  - ### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
+    - #### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
 
-  By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
+    By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
 
-  <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
+    <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
 
-  Each file in the `/src/constants` folder represents a different section of the portfolio page. 
+    Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-  - ### 🎨 How to Render your Personalized Styles [🔝](#-table-of-contents)
+    - #### 🎨 How to Render your Personalized Styles [🔝](#-table-of-contents)
 
-  The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
+    The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
-  <p>
-    <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
-  </p>
+    <p>
+      <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
+    </p>
 
-  Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
+    Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 
-  As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
+    As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
 
   <!-- <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
   <hr style="background: linear-gradient(90.13deg, #00CEA8 1.9%, #bf61ff 97.5%);" />
