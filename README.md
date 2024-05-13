@@ -105,7 +105,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
     <p>
-      <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="50%" />
+      <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="25%" />
     </p>
 
     --OR--
