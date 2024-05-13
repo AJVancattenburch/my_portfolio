@@ -14,7 +14,7 @@ Welcome to my portfolio template!
 
 **So, let's break down the features of this portfolio template and how you can personalize it to fit your own personal brand.**
 
-###### ${\color{F85571}📝 NOTE: \space \color{E7E7E7}I \space will \space be \space adding \space more \space features \space and \space functionality \space to \space make \space this \space even \space more \space user-friendly \space and \space customizable \space for \space others \space to \space use, \space so \space keep \space checking \space back \space for \space updates! 🚀 }$
+###### $${\color{F85571}📝 NOTE: \space \color{E7E7E7}I \space will \space be \space adding \space more \space features \space and \space functionality \space to \space make \space this \space even \space more \space user-friendly \space and \space customizable \space for \space others \space to \space use, \space so \space keep \space checking \space back \space for \space updates! 🚀 }$$
 
 <p align="center">
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="92%" height="1" />
@@ -104,6 +104,7 @@ To get started with this portfolio template, you will need to clone this reposit
     - ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
+    
     <p>
       <img src="https://i.ibb.co/Jp4bzTs/image.png" class="img-fluid" width="25%" />
     </p>
