@@ -47,7 +47,7 @@ Welcome to my portfolio template!
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview)
-- [©️ Copyright](#-copyright)
+- [🔏 Copyright](#-copyright)
 
 
 ## 🚀 Features [🔝](#-table-of-contents)
@@ -250,7 +250,7 @@ The content under the CodeWorks®, LLC Organization and all of the individual re
 
 ---
 
-## ©️ Copyright
+## 🔏 Copyright
 
 © CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
 
