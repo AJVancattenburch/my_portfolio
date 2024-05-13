@@ -102,7 +102,7 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm i
     ```
-    + ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
+    ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
     
@@ -116,7 +116,7 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm run serve
     ```
-    + ###### **📝 NOTE:** `npm run serve` will start the development server on `http://localhost:8080/` by default. You can change the port number by modifying the `PORT` variable in the `.env` file located in the root directory of the project.
+    ###### **📝 NOTE:** `npm run serve` will start the development server on `http://localhost:8080/` by default. You can change the port number by modifying the `PORT` variable in the `env.js` file located in the root directory of the project.
 
 8. Open your browser and navigate to `http://localhost:8080/` to view the portfolio template on your local machine.
 
