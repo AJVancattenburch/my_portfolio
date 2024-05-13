@@ -209,8 +209,6 @@ To get started with this portfolio template, you will need to clone this reposit
         └── env.js ← 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
-
-
     - #### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
 
       By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
