@@ -155,69 +155,58 @@ To get started with this portfolio template, you will need to clone this reposit
 
       Your folder/file structure should look like this if you have cloned the repository correctly. I will also highlight the most important folders and files that you will be working with to customize your portfolio template:
 
-$\textcolor{red}{\textsf{Color didint work .}}$ 
-      ```diff
-      //Different color highlights:
-      //  +  =  Green
-      example: +├── src
-      //  -  =  Red
-      example: -├── src
-      //  ~  =  Blue
-      //  !  =  Yellow
-      // Pink:
-    my_portfolio
-    +├── src
-    +│   ├── assets <-- Contains all images types, and styles to be customized to change the theme used in the project.
-    │   │   ├── img <-- Contains all images used in the project, broken down by type.
-       │   │   │   ├── ...folders for different image types (e.g. icons, logos, project images, etc.)
-       │   │   └── scss <-- Contains all styles used in the project. This is where you can change the color scheme of the entire portfolio.
-       │   │       ├── ...other scss files
-       │   │       ├── _root.scss
-       │   ├── components
-       │   │   ├── about
-       │   │   │   ├── About.vue
-       │   │   │   └── AboutCard.vue
-       │   │   ├── contact
-       │   │   │   ├── Contact.vue
-       │   │   │   └── ContactCard.vue
-       │   │   ├── education
-       │   │   │   ├── Education.vue
-       │   │   │   └── EducationCard.vue
-       │   │   ├── experience
-       │   │   │   ├── Experience.vue
-       │   │   │   └── ExperienceCard.vue
-       │   │   ├── feedback
-       │   │   │   ├── Feedback.vue
-       │   │   │   └── FeedbackCard.vue
-       │   │   ├── projects
-       │   │   │   ├── Project.vue
-       │   │   │   └── ProjectCard.vue
-       │   │   ├── resumeModal
-       │   │   │   ├── ResumeCard.vue
-       │   │   │   └── ResumeModal.vue
-       │   │   ├── scalableVectorGraphics
-       │   │   │   ├── SVGGitHub.vue
-       │   │   │   ├── SVGHeroBackground.vue
-       │   │   │   └── SVGLinkedIn.vue
-       │   │   ├── technologies
-       │   │   │   ├── Technologies.vue
-       │   │   │   └── TechnologyCard.vue
-       │   │   └── wrappers
-       │   │       └── Loader.vue
-       │   ├── constants
-       │   │   ├── _index.js
-       │   │   ├── About.js
-       │   │   ├── Contact.js
-       │   │   ├── Education.js
-       │   │   ├── Experience.js
-       │   │   ├── Feedbacks.js
-       │   │   ├── Projects.js
-       │   │   └── Technologies.js
-       │   ├── pages
-       │   │   └── HomePage.vue
-       ├── App.vue
-       ├── main.js
-       └── .env
+      ```bash
+        my_portfolio
+        ├── src
+        │   ├── assets <-- 🖼️🎨 Contains all images types, and styles to be customized to 'change the theme' used in the project.
+        │   │   ├── img <-- 🖼️ Contains all images used in the project, broken down by type.
+        │   │   │   ├── ...📂 folders for different image types (e.g. icons, logos, project images, etc.)
+        │   │   └── scss 
+        │   │       ├── ...other scss files
+        │   │       ├── _root.scss <-- 🎨 Contains all main styles, and where you can change the color scheme of the entire portfolio.
+        │   ├── components <-- 🧩 Contains all Vue components or 'sections' that make up the portfolio page.
+        │   │   ├── about
+        │   │   │   ├── About.vue <-- 📄 Each section has a 'container to style'...
+        │   │   │   └── AboutCard.vue <-- 📄 ...and a 'card to render the content' for each section.
+        │   │   ├── contact
+        │   │   │   ├── Contact.vue
+        │   │   │   └── ContactCard.vue
+        │   │   ├── education
+        │   │   │   ├── Education.vue
+        │   │   │   └── EducationCard.vue
+        │   │   ├── experience
+        │   │   │   ├── Experience.vue
+        │   │   │   └── ExperienceCard.vue
+        │   │   ├── feedback
+        │   │   │   ├── Feedback.vue
+        │   │   │   └── FeedbackCard.vue
+        │   │   ├── projects
+        │   │   │   ├── Project.vue
+        │   │   │   └── ProjectCard.vue
+        │   │   ├── resumeModal
+        │   │   │   ├── ResumeCard.vue
+        │   │   │   └── ResumeModal.vue
+        │   │   ├── scalableVectorGraphics
+        │   │   │   ├── SVGGitHub.vue
+        │   │   │   ├── SVGHeroBackground.vue
+        │   │   │   └── SVGLinkedIn.vue
+        │   │   └── technologies
+        │   │       ├── Technologies.vue
+        │   │       └── TechnologyCard.vue
+        │   ├── constants <-- 📂 Contains all the static data for each section of the portfolio page.
+        │   │   ├── _index.js <-- ♻️ Exports all the static data from each file in the constants folder.
+        │   │   ├── About.js <-- 📄 Each sections editable static data is customized in each sections javascript file
+        │   │   ├── Contact.js
+        │   │   ├── Education.js
+        │   │   ├── Experience.js
+        │   │   ├── Feedbacks.js
+        │   │   ├── Projects.js
+        │   │   └── Technologies.js
+        │   ├── pages
+        │   │   └── HomePage.vue
+        ├── App.vue
+        ├── main.js
+        └── env.js <-- 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
   ### 🪄 How to Render your Personalized Content
