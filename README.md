@@ -36,12 +36,13 @@ Welcome to my portfolio template!
 
 ## 📖 Table of Contents
 - [🚀 Features](#-features-)
-- [✅ Prerequisites](#-prerequisites-)
+- [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
-  - [📦 Project Layout and Content](#-project-layout-and-content)
+  - [🔍 Project Layout and Content](#-project-layout-and-content)
     - [🧱 Data Structure](#-data-structure)
     - [📂 File Structure](#-file-structure)
+  - 
     - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
     - [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
 - [🎫 License](#-license-)
@@ -58,7 +59,7 @@ Welcome to my portfolio template!
   - Instructions for personalizing content
   - Instructions for personalizing styles / themes
 
-## ✅ Prerequisites [🔝](#-table-of-contents)
+## 📦 Prerequisites [🔝](#-table-of-contents)
 - **Node.js:** You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
   <p>
@@ -127,7 +128,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
-  - ### 📦 Project Layout and Content
+  - ### 🔍 Project Layout and Content
 
     - #### 🧱 Data Structure
 
