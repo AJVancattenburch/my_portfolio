@@ -39,12 +39,12 @@ Welcome to my portfolio template!
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
 - [📄 Documentation](#-documentation-)
-  - [🔍 Project Layout and Content](#-project-layout-and-content)
-    - [🧱 Data Structure](#-data-structure)
-    - [📂 File Structure](#-file-structure)
-  - [📝 Personalizing your Custom Content](#-personalizing-your-custom-content)
-    - [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
-    - [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
+  + [🔍 Project Layout and Content](#-project-layout-and-content)
+    * [🧱 Data Structure](#data-structure)
+    * [📂 File Structure](#-file-structure)
+  + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content)
+    * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content-)
+    * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles-)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview-)
 - [©️ Copyright](#-copyright-)
@@ -52,12 +52,12 @@ Welcome to my portfolio template!
 
 
 ## 🚀 Features [🔝](#-table-of-contents)
-  - Clean and modern design
-  - Consistent layout and styles
-  - Easy to navigate and understand
-  - User-friendly and easy to customize
-  - Instructions for personalizing content
-  - Instructions for personalizing styles / themes
+- Clean and modern design
+- Consistent layout and styles
+- Easy to navigate and understand
+- User-friendly and easy to customize
+- Instructions for personalizing content
+- Instructions for personalizing styles / themes
 
 ## 📦 Prerequisites [🔝](#-table-of-contents)
 - **Node.js:** You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
@@ -102,7 +102,7 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm i
     ```
-    - ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
+    + ###### **📝 NOTE:** `npm i` is simply shorthand for `npm install` -- you can run *either* command to install the necessary dependencies.
 
 7. Remember to spin up your client by navigating to the `Run and Debug` tab ( or press Ctrl+Shift+D ) in vsCode and clicking the Start Client button on the `▶️ Run and Debug` Dropdown:
     
@@ -116,7 +116,7 @@ To get started with this portfolio template, you will need to clone this reposit
     ```bash
     npm run serve
     ```
-    - ###### **📝 NOTE:** `npm run serve` will start the development server on `http://localhost:8080/` by default. You can change the port number by modifying the `PORT` variable in the `.env` file located in the root directory of the project.
+    + ###### **📝 NOTE:** `npm run serve` will start the development server on `http://localhost:8080/` by default. You can change the port number by modifying the `PORT` variable in the `.env` file located in the root directory of the project.
 
 8. Open your browser and navigate to `http://localhost:8080/` to view the portfolio template on your local machine.
 
@@ -128,6 +128,8 @@ To get started with this portfolio template, you will need to clone this reposit
 
 ## 📄 Documentation [🔝](#-table-of-contents)
 
+This section will provide a brief overview of the project layout and content, including the data structure and file structure of the portfolio template that you will be working with to customize your portfolio.
+  
   - ### 🔍 Project Layout and Content
 
     - #### 🧱 Data Structure
@@ -138,8 +140,8 @@ To get started with this portfolio template, you will need to clone this reposit
         <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
       </p>
 
-      I have provided a brief visual reference for how the static data properties (seperated by color) is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
-      <img src="https://i.ibb.co/f2T9bn3/image.png" class="img-fluid" width="100%" height="100%" />
+      I have provided a brief visual reference for how the static data properties (seperated by color) that is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
+      <img src="./src/assets/img/README_images/image 1.png" class="img-fluid" width="100%" height="100%" />
 
       Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
 
@@ -210,9 +212,9 @@ To get started with this portfolio template, you will need to clone this reposit
         └── env.js ← 📄 Contains the PORT variable to change the 'port number' of the development server, along with your 'emailjs template and user information'
       ```
 
-  - ### 📝 Personalizing your Custom Content
+  - ### 📝 Personalizing your Custom Content [🔝](#-table-of-contents)
 
-    - #### 🧙‍♂️ How to Render your Personalized Content [🔝](#-table-of-contents)
+    - #### 🧙‍♂️ How to Render your Personalized Content
 
       By simply changing the values in the above referenced files located in the `/src/constants` folder, you can easily customize this portfolio to fit your own personal brand.
 
@@ -220,7 +222,7 @@ To get started with this portfolio template, you will need to clone this reposit
 
       Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
-    - #### 🎨 How to Render your Personalized Styles [🔝](#-table-of-contents)
+    - #### 🎨 How to Render your Personalized Styles
 
       The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
 
