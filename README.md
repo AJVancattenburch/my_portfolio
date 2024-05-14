@@ -34,11 +34,12 @@ Welcome to my portfolio template!
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
 
-
 ## 📖 Table of Contents
 - [✨ Features](#-features-)
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
+  + [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository)
+  + [♻️ Cloning the Repository](#-cloning-the-repository)
 - [📄 Documentation](#-documentation-)
   + [🔍 Project Layout and Content](#-project-layout-and-content)
     * [🧱 Data Structure](#-data-structure)
@@ -78,7 +79,31 @@ Welcome to my portfolio template!
 
 
 ## 👨‍💻 Getting Started [🔝](#-table-of-contents)
-To get started with this portfolio template, you will need to clone this repository to your local machine. You can do this by following the instructions below:
+To get started with this portfolio template, you will can choose to either;
+  - [♻️ Cloning the Repository](#-cloning-the-repository) directly to your local machine, or
+  - [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository) to your Github account and then cloning it to your local machine (allows you to make local changes and push them to your forked repository).
+
+🤝 Contributions are welcome! If you would like to contribute to this project, you can fork the repository and `make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
+
+### [![Fork Icon](./src/assets/img/README_images/fork-icon.png)](#forking-the-repository) Forking the Repository
+
+1. Click on the `⑂ Fork | ▾` button located at the top right of the repository:
+
+    <p>
+      <img src="./src/assets/img/README_images/fork-repo-button.png" class="img-fluid" width="75%" />
+    </p>
+
+2. The name of the repository will default to `my_portfolio`, but you can change it to whatever you like.
+
+    <p>
+      <img src="./src/assets/img/README_images/create-fork-page.png" class="img-fluid" width="75%" />
+    </p>
+
+    Once you have named your repository, click the `Create Fork` button on the bottom right to fork the repository to your Github account.
+
+3. You now have your forked repository! You can now continue to clone the repository to your local machine by continuing to the next step.
+
+### ♻️ Cloning the Repository
 
 1. Click on the green `<> Code ▾` button located at the top right of the repository:
 
@@ -267,10 +292,17 @@ As this project nears completion, I will be adding more detailed instructions on
 
 ## 🚀 Launching your portfolio using Github Pages [🔝](#-table-of-contents)
 
-To launch your portfolio using Github Pages, you will need to follow the instructions below. Alternatively, I will attach a link to a great 4 minute video tutorial that will walk you through the process of deploying your portfolio to the web using Github Pages with your vite application, as well as attaching a link for the official documentation on how to deploy your portfolio to the web using Github Pages:
+This method will show you how to `deploy your portfolio by removing your repository name from the URL.`
 
-- ▶ [YouTube Video Tutorial](https://youtu.be/yo2bMGnIKE8?si=DwWkywRjz7keTnPJ)
-- 📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+This is preferred for portfolio pages because it will make your portfolio URL look cleaner and more professional.
+
+
+To launch your portfolio using Github Pages, you will need to follow the instructions below.
+
+- Alternatively, I will attach a link to a great 4 minute video tutorial that will walk you through the process of deploying your portfolio to the web using Github Pages that also has instructions on how to drop your repo name from the endpoint on your URL, as well as attaching a link for the official documentation on how to deploy your portfolio to the web using Github Pages:
+
+  - 🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+  - 📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 ### 📝 Instructions:
 
@@ -278,7 +310,11 @@ To launch your portfolio using Github Pages, you will need to follow the instruc
 
     - Create a `new repository` for your portfolio. You can do this by clicking on the `New` button located on the top right of your repository page (or any of the other methods you prefer to create a new repository on Github).
 
-    - Name your repository `your-username.github.io` with that EXACT format! This is important because Github Pages will automatically deploy your portfolio to the web using this naming convention.
+    - Name your repository `your-github-username.github.io` with that ***exact*** format! This is important because Github Pages will automatically deploy your portfolio to the web using *this* naming convention as your URL. Refer to the image below for an example of how to name your repository that will be your portfolio URL:
+
+      <p>
+        <img src="./src/assets/img/README_images/new-repo.png" class="img-fluid" width="75%" height="100%" />
+      </p>
 
     - Click the `Create repository` button to create your new repository.
 
