@@ -38,7 +38,7 @@ Welcome to my portfolio template!
 - [✨ Features](#-features-)
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
-  + [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository)
+  + [📜 Create Your Repository Template](#-create-your-repository-template)
   + [♻️ Cloning the Repository](#%EF%B8%8F-cloning-the-repository)
 - [📄 Documentation](#-documentation-)
   + [🔍 Project Layout and Content](#-project-layout-and-content)
@@ -102,28 +102,26 @@ To get started with this portfolio template, you will can choose to either;
 
 🤝 Contributions are welcome! If you would like to contribute to this project, you can fork the repository and `make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
 
-### [![Fork Icon](./src/assets/img/README_images/fork-icon.png)](#forking-the-repository) Forking the Repository
+### 📜 Create Your Repository Template
 
-1. Click on the `⑂ Fork | ▾` button located at the top right of the repository:
-
-    <p>
-      <img src="./src/assets/img/README_images/fork-repo-button.png" class="img-fluid" width="75%" />
-    </p>
-
-2. The name of the repository will default to `my_portfolio`, but you can change it to whatever you like.
+1. Click on the `Use this template ▾` dropdown located at the top right of the repository and select `Create a new repository`:
 
     <p>
-      <img src="./src/assets/img/README_images/create-fork-page.png" class="img-fluid" width="75%" />
+      <img src="./src/assets/img/README_images/create-template-repo.png" class="img-fluid" width="75%" height="100%" />
     </p>
 
-    Once you have named your repository, click the `Create Fork` button on the bottom right to fork the repository to your Github account.
+2. Give your template repository a name and description, and click the `Create repository` button:
 
-3. You now have your forked repository! You can now continue to clone the repository to your local machine by continuing to the next step.
+    <p>
+      <img src="./src/assets/img/README_images/create-template-page.png" class="img-fluid" width="75%" height="100%" />
+    </p>
+
+3. Once you have created your repository, you can clone it to your local machine by following the instructions in the [♻️ Cloning the Repository](#%EF%B8%8F-cloning-the-repository) section below.
 
 
 ### ♻️ Cloning the Repository
 
-1. Click on the green `<> Code ▾` button located at the top right of the repository:
+1. Click on the green `< > Code ▾` button located at the top right of the repository:
 
     <p>
       <img src="https://i.ibb.co/4J6pZJg/image.png" class="img-fluid" width="75%" height="100%" />
