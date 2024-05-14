@@ -39,7 +39,7 @@ Welcome to my portfolio template!
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
   + [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository)
-  + [♻️ Cloning the Repository](#-cloning-the-repository-)
+  + [♻️ Cloning the Repository](#-cloning-the-repository)
 - [📄 Documentation](#-documentation-)
   + [🔍 Project Layout and Content](#-project-layout-and-content)
     * [🧱 Data Structure](#-data-structure)
@@ -102,6 +102,7 @@ To get started with this portfolio template, you will can choose to either;
     Once you have named your repository, click the `Create Fork` button on the bottom right to fork the repository to your Github account.
 
 3. You now have your forked repository! You can now continue to clone the repository to your local machine by continuing to the next step.
+
 
 ### ♻️ Cloning the Repository
 
