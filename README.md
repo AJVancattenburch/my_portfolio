@@ -87,7 +87,7 @@ Welcome to my portfolio template!
 
   This can be a very useful tool if you want create a separate branch within your `github.io` repository from your portfolio template repository. Follow the instructions in the link below if you would like to obtain `git subtree`.
   
-  [![Download Git Subtree](https://img.shields.io/badge/CLICKING_HERE-Git%20Subtree-f34f29?style=for-the-badge&logo=git)](https://codeengineered.com/blog/how-to-install-git-subtree/)
+  [![Download Git Subtree](https://img.shields.io/badge/Click_Here-Git%20Subtree-f34f29?style=for-the-badge&logo=git)](https://codeengineered.com/blog/how-to-install-git-subtree/)
   
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
