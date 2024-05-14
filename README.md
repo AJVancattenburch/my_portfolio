@@ -69,10 +69,26 @@ Welcome to my portfolio template!
 </p>
 
 ## 📦 Prerequisites [🔝](#-table-of-contents)
+
+
+
+```diff
+- Required Prerequisites:
+```
 - **Node.js:** You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
   [![Download Node.js](https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js)](https://nodejs.org/en/download/)
 
+```diff
+! Optional Prerequisites:
+```
+
+- **subtree:** If you don't have already `git subtree`, it allows you to share commits and content between repositories rather than pointers to install other repositories.
+
+  This can be a very useful tool if you want create a separate branch within your `github.io` repository from your portfolio template repository. Follow the instructions in the link below if you would like to obtain `git subtree`.
+  
+  [![Download Git Subtree](https://img.shields.io/badge/CLICKING_HERE-Git%20Subtree-f34f29?style=for-the-badge&logo=git)](https://codeengineered.com/blog/how-to-install-git-subtree/)
+  
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
@@ -298,11 +314,10 @@ This method will show you how to `deploy your portfolio by removing your reposit
 This is preferred for portfolio pages because it will make your portfolio URL look cleaner and more professional.
 
 
-To launch your portfolio using Github Pages, you will need to follow the instructions below.
+To launch your portfolio using Github Pages, simply follow the instructions below:
 
-- Alternatively, I will attach a link to a great 4 minute video tutorial that will walk you through the process of deploying your portfolio to the web using Github Pages that also has instructions on how to drop your repo name from the endpoint on your URL, as well as attaching a link for the official documentation on how to deploy your portfolio to the web using Github Pages:
-
-  - 🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+- Alternatively, I will attach a , as well as attaching a link for the official documentation on how to deploy your portfolio to the web using Github Pages:
+  
   - 📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 ### 📝 Instructions:
@@ -319,9 +334,9 @@ To launch your portfolio using Github Pages, you will need to follow the instruc
 
     - Click the `Create repository` button to create your new repository.
 
-2. **Push your portfolio to Github:**
+2. **Push your portfolio to your new repository:**
 
-    - Once you have created your new repository, you will need to push your portfolio to Github. You can do this by following the instructions below:
+    - Once you have created your new repository, you will need to push your portfolio to your
 
     - First, you will need to build your portfolio by running the following command in your terminal:
         ```bash
@@ -332,11 +347,52 @@ To launch your portfolio using Github Pages, you will need to follow the instruc
         git add .
         git commit -m "added docs"
         ```
-    - Finally, you will need to push your portfolio to Github using the following command:
+    - ⚠️ **Important:** If you intend to use the `subtree` method to deploy your portfolio, you will need to push your changes to your repository using the following command:
+        ```bash
+        git subtree push --prefix docs origin gh-pages
+        ```
+    - Otherwise, you can push your changes to your repository using the following command:
         ```bash
         git push origin main
         ```
+    - Once you have pushed your changes to your repository, you can navigate to your repository on Github to see your changes.
+    
 3. **Deploy your portfolio to Github Pages:**
+
+    - Navigate to the `Settings` tab of your repository on Github.
+
+    - Scroll down to the `Pages` section of the settings page.
+
+      <p>
+        <img src="./src/assets/img/README_images/settings-pages-menu.png" class="img-fluid" width="50%" />
+      </p>
+
+    - Under the `Source` dropdown menu, select the `main` branch (or `gh-pages` branch if you are using the `subtree` method).
+
+      <p>
+        <img src="./src/assets/img/README_images/site-branch-selection.png" class="img-fluid" width="50%" />
+      </p>
+
+    - Click the `Save` button to save your changes.
+
+    - Once you have saved your changes, you will see a message that says `Your site is ready to be published at https://your-github-username.github.io/your-repository-name/`.
+
+    - It may take a few minutes for your portfolio to be deployed to Github Pages, so be patient if you do not see your portfolio immediately, but you should see your portfolio live on the web shortly.
+
+    - **Congratulations!** You have successfully deployed your portfolio to Github Pages! 🎉
+
+    **Still having trouble deploying your portfolio?** That's okay! Are you more of a visual learner? There is a great 7 minute video tutorial here that also explains how to deploy your portfolio to Github Pages just like the instructions above:
+    
+    🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+    
+    **Or, if you prefer to read the official documentation**, you can find it here:
+
+    📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+
+<p>
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+</p>
 
 ## 🎫 License [🔝](#-table-of-contents)
 
@@ -355,3 +411,4 @@ The content under the CodeWorks®, LLC Organization and all of the individual re
 © CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
 
 <img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./src/assets/img/icons/logo.svg" alt="My Custom Logo" class="img-fluid" width="3.75%" />
