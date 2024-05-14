@@ -200,7 +200,7 @@ The main data structure you will be working with is located in the `/src/constan
 </p>
 
 I have provided a brief visual reference for how the static data properties (seperated by color) that is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
-      <img src="./src/assets/img/README_images/image 1.png" class="img-fluid" width="100%" height="100%" />
+      <img src="./src/assets/img/README_images/data-render-example.png" class="img-fluid" width="100%" height="100%" />
 
 Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
 
