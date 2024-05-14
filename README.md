@@ -47,7 +47,7 @@ Welcome to my portfolio template!
   + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
-- [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages)
+- [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview)
 - [🔏 Copyright](#-copyright)
