@@ -39,7 +39,7 @@ Welcome to my portfolio template!
 - [📦 Prerequisites](#-prerequisites-)
 - [👨‍💻 Getting Started](#-getting-started-)
   + [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository)
-  + [♻️ Cloning the Repository](#-cloning-the-repository)
+  + [♻️ Cloning the Repository](#%EF%B8%8F-cloning-the-repository)
 - [📄 Documentation](#-documentation-)
   + [🔍 Project Layout and Content](#-project-layout-and-content)
     * [🧱 Data Structure](#-data-structure)
