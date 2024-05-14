@@ -230,7 +230,7 @@ Your folder/file structure should look like this if you have cloned the reposito
   │   │   │   ├── ...📂 folders for different image types (e.g. icons, logos, project images, etc.)
   │   │   └── scss 
   │   │       ├── ...other scss files
-  │   │       ├── _root.scss ← 🎨 Contains all main styles, and where you can change the color scheme of the entire portfolio.
+  │   │       ├── _styles.scss ← 🎨 Contains all main styles, and where you can change the color scheme of the entire portfolio.
   │   ├── components ← 🧩 Contains all Vue components or 'sections' that make up the portfolio page.
   │   │   ├── about
   │   │   │   ├── About.vue ← 📄 Each section has a 'container to style'...
