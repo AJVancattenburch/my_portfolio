@@ -48,6 +48,7 @@ Welcome to my portfolio template!
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
 - [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
+- [🤝 Contributions](#-contributions)
 - [🎫 License](#-license-)
 - [📜 Legal Overview](#-legal-overview)
 - [🔏 Copyright](#-copyright)
@@ -309,16 +310,13 @@ As this project nears completion, I will be adding more detailed instructions on
 
 ## 🚀 Launching your portfolio using Github Pages [🔝](#-table-of-contents)
 
-This method will show you how to `deploy your portfolio by removing your repository name from the URL.`
+The following instructions will show you how to `deploy your portfolio by removing your repository name from the URL` in an easy step-by-step guide.
 
 This is preferred for portfolio pages because it will make your portfolio URL look cleaner and more professional.
 
 
 To launch your portfolio using Github Pages, simply follow the instructions below:
 
-- Alternatively, I will attach a , as well as attaching a link for the official documentation on how to deploy your portfolio to the web using Github Pages:
-  
-  - 📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 ### 📝 Instructions:
 
@@ -347,7 +345,7 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
         git add .
         git commit -m "added docs"
         ```
-    - ⚠️ **Important:** If you intend to use the `subtree` method to deploy your portfolio, you will need to push your changes to your repository using the following command:
+    - ⚠️ **Important:** If you intend to use the method that uses `git subtree` to deploy your portfolio, you will need to push your changes to your repository using the following command:
         ```bash
         git subtree push --prefix docs origin gh-pages
         ```
@@ -381,9 +379,14 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 
     - **Congratulations!** You have successfully deployed your portfolio to Github Pages! 🎉
 
-    **Still having trouble deploying your portfolio?** That's okay! Are you more of a visual learner? There is a great 7 minute video tutorial here that also explains how to deploy your portfolio to Github Pages just like the instructions above:
+    **Still having trouble deploying your portfolio?** That's okay! Are you more of a visual learner? There is a great 7 minute video tutorial here that also explains how to deploy your portfolio to Github Pages just like the instructions above, along with another 3 minute video if you're interested in integrating `git subtree` like we did in the instructions above. Check them both out here:
     
     🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+
+    <a href="https://youtu.be/yo2bMGnIKE8?si=SYJGB59MaAVgxQLM">
+      &nbsp;<img src="https://i.pinimg.com/originals/77/08/e4/7708e4cc027c3e02c6f8947c800b41ca.png" class="img-fluid" width="3%" />
+      &nbsp;Using git subtree Video Tutorial
+    </a>
     
     **Or, if you prefer to read the official documentation**, you can find it here:
 
@@ -393,6 +396,10 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
+
+## 🤝 Contributions [🔝](#-table-of-contents)
+
+Contributions are welcome! If you would like to contribute to this project, you can `fork the repository and make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
 
 ## 🎫 License [🔝](#-table-of-contents)
 
