@@ -48,8 +48,8 @@ Welcome to my portfolio template!
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
 - [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
-- [🤝 Contributions](#-contributions)
-- [🎫 License](#-license-)
+- [🤝 Contributions](#-contributions-)
+- [🎫 License](#-license)
 - [📜 Legal Overview](#-legal-overview)
 - [🔏 Copyright](#-copyright)
 
@@ -401,7 +401,7 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 
 Contributions are welcome! If you would like to contribute to this project, you can `fork the repository and make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
 
-## 🎫 License [🔝](#-table-of-contents)
+## 🎫 License
 
 ### Base Template: CodeWorks Vue Starter
 
