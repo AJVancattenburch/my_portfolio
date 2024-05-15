@@ -53,6 +53,7 @@ Welcome to my portfolio template!
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
     * [👨‍💼 How to Display your Resume as a PDF](#-how-to-display-your-resume-as-a-pdf)
+    * [🔄 How to Change all :root CSS Variable Names and Class Names throughout your Portfolio:](#-how-to-change-all-:root-css-variable-names-and-class-names-throughout-your-portfolio)
 - [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
 - [🤝 Contributions](#-contributions-)
 - [🎫 License](#-license)
@@ -307,7 +308,7 @@ The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily
 </p>
 
 
-#### 🔄 How to Change all :root CSS Variable Names and Class Names throughout your Portfolio:
+#### 🔄 How to Change all :root CSS Variable Names and Class Names throughout your Portfolio
 
 Once you are satisfied with your color palette, you are probably going to want to reflect the names of those CSS variables and classes. You can do this by following the step-by-step guide below:
 
