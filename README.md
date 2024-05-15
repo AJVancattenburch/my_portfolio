@@ -34,6 +34,7 @@ Welcome to my portfolio template!
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
 
+
 ## 📖 Table of Contents
 - [✨ Features](#-features-)
 - [📦 Prerequisites](#-prerequisites-)
@@ -47,6 +48,7 @@ Welcome to my portfolio template!
   + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
+    * [🧑🏻‍💼 How to Display your Resume as a PDF](#-how-to-display-your-resume-as-a-pdf)
 - [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
 - [🤝 Contributions](#-contributions-)
 - [🎫 License](#-license)
@@ -71,14 +73,16 @@ Welcome to my portfolio template!
 
 ## 📦 Prerequisites [🔝](#-table-of-contents)
 
-
-
 ```diff
 - Required Prerequisites:
 ```
 - **Node.js:** You need to have Node installed on your machine to run this project. If you do not have Node installed, you can download it from their website by clicking the link below:
 
   [![Download Node.js](https://img.shields.io/badge/Download-Node.js-026e00?style=for-the-badge&logo=node.js)](https://nodejs.org/en/download/)
+
+- **LinkedIn Account:** The resume that gets rendered to your portfolio will be a reflection on the resume you have uploaded to your LinkedIn profile page.
+
+  >🛑 In order to render your most current resume per the instructions of this template, **it needs to be attached in *`PDF Format`* within the *`Featured section`* of your LinkedIn Profile!** This is extremely important!
 
 ```diff
 ! Optional Prerequisites:
@@ -299,9 +303,47 @@ The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily
 
 Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 
-As this project nears completion, I will be adding more detailed instructions on how to use this template for your own portfolio, so stay tuned for more updates!
 
 
+#### 🧑🏻‍💼 How to Display your Resume as a PDF
+
+This method of displaying your resume as a PDF is a great way to easily create a printable version of your resume that can be downloaded by those viewing your portfolio.
+
+  ##### *If you already have your resume uploaded to your `Featured` section on LinkedIn and in `PDF Format`, you can skip this step and continue on to step 2.*
+
+1. **Upload your resume to your LinkedIn profile:**
+
+    - Assuming you either have your resume in PDF or docx format (if not, ***`ATS scanners prefer docx or PDF format`***) you can easily convert it with Microsoft Word, Google Docs, or any other word processing software by simply saving it as a PDF file from the `File` dropdown menu.
+
+    - Navigate to your LinkedIn profile and scroll to the `Featured` section of your profile.
+
+    - Click on the `+` dropdown button and select the `🖼️ Add media` option from the dropdown menu.
+
+    - Upload your resume *in your saved PDF format* to your LinkedIn profile.
+
+2. **Update the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component:**
+
+    - Go to your LinkedIn profile page and scroll to the `Featured` section of your profile.
+
+    - Click on the image of your resume to open the LinkedIn resume modal from your profile.
+
+    - Once open, press `Ctrl + Shift + I` to open the developer tools in your browser, then open the `Network` tab.
+
+    - You should see a request for a PDF file in the `Network` tab. That will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for:
+
+      <p>
+        <img src="./src/assets/img/README_images/transcribed-document-url.png" class="img-fluid" width="75%" />
+      </p>
+
+    - The property we are looking for with the values you want to `copy` is the `transcribedDocumentUrl` property. Right click the string value and select `Copy string contents` option.
+
+    - Replace the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component with the copied string value from the `transcribedDocumentUrl` property in the `Network` tab where you see the `highlighted code below from your ResumeCard.vue component`:
+
+    
+
+    ###### **📝 NOTE:** *If you would like to display your resume as a PDF from a different source, you can simply change the `resumeURL` variable to the URL of your resume from that source.*
+
+<li class="carousel-slide carousel-slide-active" data-ssplayer-slide-index="0" style="width: 442px; height: 572px;">
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
@@ -394,6 +436,14 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
+
+
+<p>
+  <img src="./src/assets/img/README_images/resume-data-src.png" class="img-fluid" width="100%" />
+</p>
+
+
+
 
 ## 🤝 Contributions [🔝](#-table-of-contents)
 
