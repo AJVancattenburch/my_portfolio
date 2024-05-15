@@ -52,7 +52,7 @@ Welcome to my portfolio template!
   + [📝 Personalizing your Custom Content](#-personalizing-your-custom-content-)
     * [🧙‍♂️ How to Render your Personalized Content](#%EF%B8%8F-how-to-render-your-personalized-content)
     * [🎨 How to Render your Personalized Styles](#-how-to-render-your-personalized-styles)
-    * [🧑🏻‍💼 How to Display your Resume as a PDF](#-how-to-display-your-resume-as-a-pdf)
+    * [👨‍💼 How to Display your Resume as a PDF](#-how-to-display-your-resume-as-a-pdf)
 - [🚀 Launching your portfolio using Github Pages](#-launching-your-portfolio-using-github-pages-)
 - [🤝 Contributions](#-contributions-)
 - [🎫 License](#-license)
@@ -309,7 +309,7 @@ Read the relevant comments to see what each CSS variable will style on the page.
 
 
 
-#### 🧑🏻‍💼 How to Display your Resume as a PDF
+#### 👨‍💼 How to Display your Resume as a PDF
 
 This method of displaying your resume as a PDF is a great way to easily create a printable version of your resume that can be downloaded by those viewing your portfolio.
 
@@ -333,7 +333,7 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
     - Once open, press `Ctrl + Shift + I` to open the developer tools in your browser, then open the `Network` tab.
 
-    - You should see a request for a PDF file in the `Network` tab. That will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for:
+    - You should see a request for a PDF file in the `Network` tab. That will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for, highlighted by the pink containers:
 
       <p>
         <img src="./src/assets/img/README_images/transcribed-document-url.png" class="img-fluid" width="75%" />
