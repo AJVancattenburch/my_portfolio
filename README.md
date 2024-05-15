@@ -318,20 +318,12 @@ Once you are satisfied with your color palette, you are probably going to want t
   &nbsp;
 
   3. Search for the variable / class name that you would like to change in the `Search` input field, then type the *new* name you want to change it to in the `Replace` input field and click the `Replace All` button to the left of the `Replace` input field:
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    &nbsp;
 
-      <img src="./src/assets/img/README_images/modify-all-matching-text.png" class="img-fluid" />
-    &nbsp;
-    &nbsp;
-    &nbsp;
+        &nbsp;
 
-Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
+        <img src="./src/assets/img/README_images/modify-all-matching-text.png" class="img-fluid" width="50%" />
 
+      #### *Read the relevant comments throughout the project's codebase to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!*
 
 
 #### 👨‍💼 How to Display your Resume as a PDF
