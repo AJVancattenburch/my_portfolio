@@ -356,7 +356,9 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
     - If you still aren't seeing your resume displayed in the `ResumeCard.vue` component, simply refreshing the page should do the trick!
 
-    - **Great job!** You have now successfully displayed your resume as a PDF in your portfolio and can continue on to launching it live through GitHub pages! 🎉
+    - **Great job!** You have now successfully displayed your resume as a PDF in your portfolio! Just remember that whenever you update your resume on LinkedIn to repeat the above step so your resume stays up to date on your profile website as well as on LinkedIn. 
+    
+      You're almost done! You can continue on to **launching your portfolio live through GitHub pages**! 🎉
 
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
