@@ -4,7 +4,7 @@
 Welcome to my portfolio template!
 =================================
   <p>
-    <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/hero-preview.png" class="img-fluid" width="48%" height="100%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/contact-preview.png" class="img-fluid" width="48%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" />
+    <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/hero-preview.png" class="img-fluid" width="46.5%" height="100%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/contact-preview.png" class="img-fluid" width="46.5%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" />
   </p>
 </div>
 
@@ -343,7 +343,10 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
     - Replace the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component with the copied string value from the `transcribedDocumentUrl` property in the `Network` tab where you see the `highlighted code below from your ResumeCard.vue component`:
 
-    
+    <p>
+      <img src="./src/assets/img/README_images/resume-card-copied-url.png" class="img-fluid" width="100%" />
+    </p>
+
 
     ###### **📝 NOTE:** *If you would like to display your resume as a PDF from a different source, you can simply change the `resumeURL` variable to the URL of your resume from that source.*
 
