@@ -305,6 +305,8 @@ The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily
   <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
 </p>
 
+##### How to Change all `:root` CSS Variable Names throughout your Portfolio:
+
 Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 
 

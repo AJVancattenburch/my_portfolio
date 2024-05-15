@@ -126,7 +126,6 @@ const isMobile = computed(() => window.innerWidth < 768);
     max-width: webkit-fill-available;
     padding: 0;
     margin: 0;
-    background: var(--black-purple-gradient);
     z-index: 3;
     &::before {
       content: '';
@@ -135,7 +134,7 @@ const isMobile = computed(() => window.innerWidth < 768);
       right: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent 0%, #14101f 70%, #0f0d16 90%);
+      background: var(--vertical-nav-gradient);
       box-shadow: 0 5px 3px 5px #0f0d16;
       z-index: 3;
 

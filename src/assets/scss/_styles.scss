@@ -3,10 +3,12 @@ These `:root` selectors can all be accessed by using var(--variable-name) in you
 
 :root {
   /* Fonts */
-  --text-primary: #E7E7E7;
-  --text-secondary: #AAA6C3;
+  --text-primary: #E7E7E7; /* EDITABLE - Change color hex value top change primary text color on the entire page */
+  --text-secondary: #AAA6C3; /* EDITABLE - Change color hex value top change secondary text color on the entire page */
 
   /* Standard Colors */
+  /* EDITABLE - The 'Standard Colors' are your main color palette. I recommend keeping the variable names and just changing the values until you find a palette you like.
+  /* TIP - Refer to the 'How to Render your Personalized Styles > How to Change all Variable Names throughout your Portfolio' in the README.md file if you aren't sure how to change all variable names throughout your Portfolio template. */
   --purple: #804dee;
   --blue: #56ccf2;
   --green: #00cea8;
@@ -14,6 +16,7 @@ These `:root` selectors can all be accessed by using var(--variable-name) in you
   --pink: #ec008c;
   
   /* Shadows */
+  /* EDITABLE - The 'Shadows' are your shadow color palette. I recommend keeping them the same colors as your 'Standard Colors', then adding 'a5' to the end of your color to add some glassmorphism. */
   --shadow-purple: #804deea5;
   --shadow-blue: #56ccf2a5;
   --shadow-green: #00cea8a5;
@@ -21,19 +24,29 @@ These `:root` selectors can all be accessed by using var(--variable-name) in you
   --shadow-pink: #ec008ca5;
   
   /* Dark Colors */
+  /* EDITABLE - The 'Dark Colors' are your dark color palette. I recommend opening your color picker and simply selecting a darker shade for each 'Standard Color'. */
   --dark-purple: #3e3164;
   --dark-green: #00664d;
   --dark-red: #63212b;
   --dark-pink: #7d003c;
 
   /* Gradients */
+  /* EDITABLE | Gradient Variables
+  --black-transparent-gradient: This is the gradient that darkens the background of the entire page. Changing this value will change that overlay background gradient color.
+
+  --black-purple-radial-gradient: This is the main background for the entire page. Changing this value will change the main background color.
+
+  --vertical-nav-gradient: This is the gradient that sets the background gradient for the vertical navbar. Changing this value will change that overlay background gradient color.
+  */
   --black-gradient: linear-gradient(to right, #232323, #000000);
   --purple-gradient: linear-gradient(-90deg, var(--dark-purple) 0%, #231d2e99 100%);
   --black-transparent-gradient: linear-gradient(to right, #000000 0%, #110e19);
   --black-purple-radial-gradient: radial-gradient(circle at center, #181326 0%, #0e0c13);
   --black-purple-radial-gradient-alt: radial-gradient(circle at center, #0e0c13 0%, #181326);
+  --vertical-nav-gradient: linear-gradient(90deg, transparent 0%, #14101f 70%, #0f0d16 90%);
 
   /* Borders */
+  /* EDITABLE - This is the shaded border that decorates the left-hand side of the vertical navbar buttons on larger screens. Changing this value will change that left-hand button shade color. */
   --border-inactive: 3px ridge #33333367;
 }
 
