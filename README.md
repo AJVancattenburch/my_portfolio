@@ -3,10 +3,14 @@
 
 Welcome to my portfolio template!
 =================================
+  <p>
+    <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/hero-preview.png" class="img-fluid" width="48%" height="100%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" /> <img align="center" src="./src/assets/img/README_images/contact-preview.png" class="img-fluid" width="48%" /> <img align="center" src="./src/assets/img/README_images/green-pink-gradient-fade.svg" class="img-fluid" width="1" height="100%" />
+  </p>
 </div>
 
+
 <p>
-  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
+  <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width=100% height="1" />
 </p>
 
 **This is my personal portfolio in which I have made into an easy to personalize vue template for the public to use free of charge. It comes with a clean and modern design, consistent layout and styles, and instructions that are easy to navigate and understand. Even if you are new to web development, I designed this template to be user-friendly and easy to customize, no matter what stage you are at in your career.**
