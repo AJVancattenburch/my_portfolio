@@ -10,7 +10,7 @@
     },
     "TODO": {
       "iconColor": "blue",
-      "highlightColor": "#3ea8ff",
+      "highlightColor": "#3EA8FF",
       "scope": "workspace"
     },
     "FIXME": {
@@ -35,13 +35,13 @@
     },
     "SECTION": {
       "iconColor": "blurple",
-      "highlightColor": "#896afc",
+      "highlightColor": "#896AFC",
       "scope": "workspace",
       "behavior": "region"
     },
     "LINK": {
-      "iconColor": "#2ecc71",
-      "highlightColor": "#2ecc71",
+      "iconColor": "#2ECC71",
+      "highlightColor": "#2ECC71",
       "scope": "workspace",
       "behavior": "link"
     },
@@ -57,6 +57,44 @@
       "highlightColor": "#EC008C",
       "scope": "workspace"
     },
+    "KEY": {
+      "iconColor": "#FAF9D0",
+      "highlightColor": "#FAF9D0",
+      "scope": "workspace"
+    },
+    "IMPORTANT": {
+      "iconColor": "#FF0000",
+      "highlightColor": "#FFFF00",
+      "scope": "workspace"
+    },
+  },
+  "editor.tokenColorCustomizations": {
+    
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#FFF"
+          }
+        },
+        {
+          "scope": "comment.block",
+          "settings": {
+            "foreground": "#81D4A2"
+          }
+        }
+      ]
     }
   }
 }

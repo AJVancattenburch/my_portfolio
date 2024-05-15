@@ -297,6 +297,7 @@ By simply changing the values in the above referenced files located in the `/src
 
 Each file in the `/src/constants` folder represents a different section of the portfolio page. 
 
+
 #### 🎨 How to Render your Personalized Styles
 
 The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily change the color scheme of the entire portfolio with just a few lines of code. Visual reference of file location for themes and styles provided below:
@@ -305,7 +306,29 @@ The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily
   <img src="./src/assets/img/README_images/styles-and-themes-file-location.png" class="img-fluid" width="300" height="375" />
 </p>
 
-##### How to Change all `:root` CSS Variable Names throughout your Portfolio:
+
+#### 🔄 How to Change all :root CSS Variable Names and Class Names throughout your Portfolio:
+
+Once you are satisfied with your color palette, you are probably going to want to reflect the names of those CSS variables and classes. You can do this by following the step-by-step guide below:
+
+  1. In your vsCode workspace, click the `🔎 Search` tab ( or press `Ctrl+Shift+F` ) in the vsCode left-hand navigation pane.
+  2. Be sure to select the little `Match Case` button on the right-hand side of the search input field the option!!! This will ensure you aren't selecting any text that isn't ***precisely*** what you are looking for!!! Reference the image below to ensure you are executing this step correctly:  
+  &nbsp;
+  <img src="./src/assets/img/README_images/search-text-project-root.png" class="img-fluid" />
+  &nbsp;
+
+  3. Search for the variable / class name that you would like to change in the `Search` input field, then type the *new* name you want to change it to in the `Replace` input field and click the `Replace All` button to the left of the `Replace` input field:
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+
+      <img src="./src/assets/img/README_images/modify-all-matching-text.png" class="img-fluid" />
+    &nbsp;
+    &nbsp;
+    &nbsp;
 
 Read the relevant comments to see what each CSS variable will style on the page. I will be adding these necessary comments above specific variable names so that you can change the page background, font color, and gradient color themes on the fly!
 

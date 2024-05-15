@@ -57,6 +57,20 @@ Example:
 <div class="purple-text-gradient">Hello World</div>
 Necessary fallbacks are included for older browsers that do not support the linear-gradient property like IE Explorer */
 
+/* IMPORTANT - If you change the color palette, you will need to update the gradient classes below to match your new color palette. If you change the variable names and their color hex values, you will need to update the gradient classes below to match your new variable names and their color hex values.
+Example:
+.purple-text-gradient {
+  background: var(--purple);
+  background: -webkit-linear-gradient(to top, var(--purple), #ee00ff);
+  background: linear-gradient(to top, var(--purple), #ee00ff);
+}
+Becomes:
+.new-color-text-gradient {
+  background: var(--new-color);
+  background: -webkit-linear-gradient(to top, var(--new-color), #new-matching-gradient-hex-color);
+  background: linear-gradient(to top, var(--new-color), #new-matching-gradient-hex-color);
+} */
+
 .text-primary {
   color: #E7E7E7 !important;
 }
