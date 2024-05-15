@@ -343,14 +343,21 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
     - Replace the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component with the copied string value from the `transcribedDocumentUrl` property in the `Network` tab where you see the `highlighted code below from your ResumeCard.vue component`:
 
-    <p>
-      <img src="./src/assets/img/README_images/resume-card-copied-url.png" class="img-fluid" width="100%" />
-    </p>
+      <p>
+        <img src="./src/assets/img/README_images/resume-card-copied-url.png" class="img-fluid" width="100%" />
+      </p>
 
+      ###### **📝 NOTE:** *If you would like to display your resume from a different source, you can do so by changing the `<iframe src="">` and `<object data="">` element attribute string values to whatever you like.*
 
-    ###### **📝 NOTE:** *If you would like to display your resume as a PDF from a different source, you can simply change the `resumeURL` variable to the URL of your resume from that source.*
+      - If you noticed by looking at the image above that we did not remove `#thumbnails=0&zoom=100,left,top&view=fit` from the end of the string, this is because it is necessary to keep the string in order to display the PDF in the correct format. If you remove this string, the layout of the PDF will be distorted and not display correctly. 
 
-<li class="carousel-slide carousel-slide-active" data-ssplayer-slide-index="0" style="width: 442px; height: 572px;">
+        >##### If you would like to learn more about how you can customize the PDF viewer, I have provided a link to a cheat sheet below from Adobe that will help you understand how to modify *`PDF Open Parameters`* to customize the viewer to your liking:
+        >[![Adobe PDF Parameter Cheat Sheet](https://img.shields.io/badge/PDF_Parameters-Click_Here-ff0000?style=for-the-badge&logo=adobe&logoColor=ff0000)](https://pdfobject.com/pdf/pdf_open_parameters_acro8.pdf)
+
+    - If you still aren't seeing your resume displayed in the `ResumeCard.vue` component, simply refreshing the page should do the trick!
+
+    - **Great job!** You have now successfully displayed your resume as a PDF in your portfolio and can continue on to launching it live through GitHub pages! 🎉
+
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
 </p>
