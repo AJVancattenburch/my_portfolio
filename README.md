@@ -336,7 +336,7 @@ This method of displaying your resume as a PDF is a great way to easily create a
     - You should see a request for a PDF file in the `Network` tab. That will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for, highlighted by the pink containers:
 
       <p>
-        <img src="./src/assets/img/README_images/transcribed-document-url.png" class="img-fluid" width="75%" />
+        <img src="./src/assets/img/README_images/transcribed-document-url.png" class="img-fluid" height="100%" />
       </p>
 
     - The property we are looking for with the values you want to `copy` is the `transcribedDocumentUrl` property. Right click the string value and select `Copy string contents` option.
