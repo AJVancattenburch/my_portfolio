@@ -105,9 +105,7 @@ Welcome to my portfolio template!
 
 
 ## 👨‍💻 Getting Started [🔝](#-table-of-contents)
-To get started with this portfolio template, you will can choose to either;
-  - [♻️ Cloning the Repository](#-cloning-the-repository) directly to your local machine, or
-  - [![Fork Icon](./src/assets/img/README_images/fork-icon.png) Forking the Repository](#-forking-the-repository) to your Github account and then cloning it to your local machine (allows you to make local changes and push them to your forked repository).
+To get started with this portfolio template, you can **follow the instructions below** to create your own repository template and clone it to your local machine. You can then customize the template to fit your own personal brand and launch your portfolio live using Github Pages.
 
 🤝 Contributions are welcome! If you would like to contribute to this project, you can fork the repository and `make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
 
