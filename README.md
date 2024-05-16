@@ -206,10 +206,10 @@ The main data structure you will be working with is located in the `/src/constan
   <img src="./src/assets/img/README_images/constants-folder-files-location.png" class="img-fluid" width="300" height="375" />
 </p>
 
-I have provided a brief visual reference for how the static data properties (seperated by color) that is rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
+I have provided a brief visual reference for how the static data properties (seperated by color) that are rendered from the `/src/constants` folder to the components in the `/src/components` folder. Consider this example from the `Feedbacks.js` file located in the constants folder to the `Feedback.vue` component located in the components folder:
       <img src="./src/assets/img/README_images/data-render-example.png" class="img-fluid" width="100%" height="100%" />
 
-Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content on the page.
+Each file in the `/src/constants` folder holds the static data for each section, brought into your components as a javascript object. This data is then iterated over with a `v-for` loop to render the content to the page.
 
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
@@ -222,7 +222,7 @@ The file structure of this project is broken down into the following folders:
 - **`/src/assets`** - Contains all images, icons, and SVG files used in the project.
 - **`/src/components`** - Contains all the Vue components that make up the portfolio page.
 - **`/src/constants`** - Contains all the static data for each section of the portfolio page.
-- **`/src/pages/HomePage.vie`** - Contains the main view file that renders the portfolio page.
+- **`/src/pages/HomePage.vue`** - Contains the main view file that renders the portfolio page.
 - **`/src/App.vue`** - Contains the main Vue file that renders the entire application.
 - **`/src/main.js`** - Contains the main JavaScript file that initializes the Vue application.
 
@@ -311,7 +311,7 @@ The `_root.scss` file in the `/src/assets/scss` folder that allows you to easily
 Once you are satisfied with your color palette, you are probably going to want to reflect the names of those CSS variables and classes. You can do this by following the step-by-step guide below:
 
   1. In your vsCode workspace, click the `🔎 Search` tab ( or press `Ctrl+Shift+F` ) in the vsCode left-hand navigation pane.
-  2. Be sure to select the little `Match Case` button on the right-hand side of the search input field the option!!! This will ensure you aren't selecting any text that isn't ***precisely*** what you are looking for!!! Reference the image below to ensure you are executing this step correctly:  
+  2. Be sure to select the little `Match Case` button on the right-hand side of the search input field!!! This will ensure you aren't selecting any text that isn't ***precisely*** what you are looking for!!! Reference the image below to ensure you are executing this step correctly:  
   &nbsp;
   <img src="./src/assets/img/README_images/search-text-project-root.png" class="img-fluid" />
   &nbsp;
