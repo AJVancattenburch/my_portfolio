@@ -25,7 +25,7 @@
     text-shadow: 0 0 5px #000;
     background: linear-gradient(180deg, #323639 40%, #525659);
     box-shadow: 0 0 10px 5px #00000080 inset;
-  }git commit -m "resume modal fix. updated documentation and comment guides in my_portfolio folder"
+  }
   &-body {
     display: flex;
     justify-content: center;
