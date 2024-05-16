@@ -327,9 +327,9 @@ Once you are satisfied with your color palette, you are probably going to want t
 
 #### 👨‍💼 How to Display your Resume as a PDF
 
-This method of displaying your resume as a PDF is a great way to easily create a printable version of your resume that can be downloaded by those viewing your portfolio.
+This method of displaying your resume as a PDF is a great way to easily create a printable version of your resume that can be downloaded and/or printed by those viewing your portfolio.
 
-  ##### *If you already have your resume uploaded to your `Featured` section on LinkedIn and in `PDF Format`, you can skip this step and continue on to step 2.*
+  - ##### If you already have your resume uploaded to your `Featured` section on LinkedIn, *and* that resume is also in `PDF Format`, you can skip this step and continue on to step 2.
 
 1. **Upload your resume to your LinkedIn profile:**
 
@@ -349,15 +349,21 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
     - Once open, press `Ctrl + Shift + I` to open the developer tools in your browser, then open the `Network` tab.
 
-    - You should see a request for a PDF file in the `Network` tab. That will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for, highlighted by the pink containers:
+    - You should see a request for a PDF file in the `Network` tab. It will typically be a string of numbers and letters followed by `?e=`. Reference the image below for an example of what you should be looking for, highlighted by the pink containers:
 
       <p>
         <img src="./src/assets/img/README_images/transcribed-document-url.png" class="img-fluid" height="100%" />
       </p>
 
-    - The property we are looking for with the values you want to `copy` is the `transcribedDocumentUrl` property. Right click the string value and select `Copy string contents` option.
+    - Click on the request in the `Network` tab.
 
-    - Replace the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component with the copied string value from the `transcribedDocumentUrl` property in the `Network` tab where you see the `highlighted code below from your ResumeCard.vue component`:
+    - Among the tab options within the `Network` tab dashboard, click the `Preview` tab.
+    
+    - Of the list of properties you see, locate the `transcribedDocumentUrl` property.
+
+    - Right click the string value of `transcribedDocumentUrl` to display a menu of options and select the `Copy string contents` option (or, alternatively, highlight the string value and press `Ctrl + C` to copy to your clipboard).
+
+    - Replace the `<iframe src="">` and `<object data="">` element attribute string values in the `ResumeCard.vue` component and `paste` the string value from the `transcribedDocumentUrl` property `(Ctrl + V)` where you see the highlighted code below from your `ResumeCard.vue component`:
 
       <p>
         <img src="./src/assets/img/README_images/resume-card-copied-url.png" class="img-fluid" width="100%" />
@@ -365,16 +371,20 @@ This method of displaying your resume as a PDF is a great way to easily create a
 
       ###### **📝 NOTE:** *If you would like to display your resume from a different source, you can do so by changing the `<iframe src="">` and `<object data="">` element attribute string values to whatever you like.*
 
-      - If you noticed by looking at the image above that we did not remove `#thumbnails=0&zoom=100,left,top&view=fit` from the end of the string, this is because it is necessary to keep the string in order to display the PDF in the correct format. If you remove this string, the layout of the PDF will be distorted and not display correctly. 
+      - If you noticed by looking at the image above that we did not remove `#thumbnails=0&zoom=100,left,top&view=fit` from the end of the string.
+      
+        This is because it is necessary to keep that part of the string in tact for the PDF to display in the correct format. If you remove this string, the layout of the PDF will be distorted and not display correctly. 
 
         >##### If you would like to learn more about how you can customize the PDF viewer, I have provided a link to a cheat sheet below from Adobe that will help you understand how to modify *`PDF Open Parameters`* to customize the viewer to your liking:
         >[![Adobe PDF Parameter Cheat Sheet](https://img.shields.io/badge/PDF_Parameters-Click_Here-ff0000?style=for-the-badge&logo=adobe&logoColor=ff0000)](https://pdfobject.com/pdf/pdf_open_parameters_acro8.pdf)
 
-    - If you still aren't seeing your resume displayed in the `ResumeCard.vue` component, simply refreshing the page should do the trick!
+    - If your resume is not displaying in the `ResumeCard.vue` component, simply refreshing the page should do the trick!
 
-    - **Great job!** You have now successfully displayed your resume as a PDF in your portfolio! Just remember that whenever you update your resume on LinkedIn to repeat the above step so your resume stays up to date on your profile website as well as on LinkedIn. 
+    - **Great job!** You have now successfully displayed your resume as a PDF in your portfolio!
     
-      You're almost done! You can continue on to **launching your portfolio live through GitHub pages**! 🎉
+      Just remember that whenever you update your resume on LinkedIn, you need to repeat the above step so your resume stays up to date on your portfolio website as well as on LinkedIn. 
+    
+      You are almost done! You can continue on to **launching your portfolio live through GitHub pages**! 🎉
 
 <p>
   <img src="./src/assets/img/README_images/green-pink-gradient.svg" class="img-fluid" width="100%" height="1" />
@@ -385,7 +395,6 @@ This method of displaying your resume as a PDF is a great way to easily create a
 The following instructions will show you how to `deploy your portfolio by removing your repository name from the URL` in an easy step-by-step guide.
 
 This is preferred for portfolio pages because it will make your portfolio URL look cleaner and more professional.
-
 
 To launch your portfolio using Github Pages, simply follow the instructions below:
 
@@ -451,18 +460,23 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 
     - **Congratulations!** You have successfully deployed your portfolio to Github Pages! 🎉
 
-    **Still having trouble deploying your portfolio?** That's okay! Are you more of a visual learner? There is a great 7 minute video tutorial here that also explains how to deploy your portfolio to Github Pages just like the instructions above, along with another 3 minute video if you're interested in integrating `git subtree` like we did in the instructions above. Check them both out here:
-    
-    🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+### *Still having trouble deploying your portfolio?*
 
-    <a href="https://youtu.be/yo2bMGnIKE8?si=SYJGB59MaAVgxQLM">
-      &nbsp;<img src="https://i.pinimg.com/originals/77/08/e4/7708e4cc027c3e02c6f8947c800b41ca.png" class="img-fluid" width="3%" />
-      &nbsp;Using git subtree Video Tutorial
-    </a>
-    
-    **Or, if you prefer to read the official documentation**, you can find it here:
+That's okay! Are you more of a visual learner? There is a great 7 minute video tutorial here that also explains how to deploy your portfolio to Github Pages just like the instructions above, along with another 3 minute video if you're interested in integrating `git subtree` like we did in the instructions above. Check them both out here:
 
-    📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+🎥 [YouTube Video Tutorial](https://www.youtube.com/watch?v=OltY8JIaP-4&t=231s)
+
+<p>
+  <a href="https://youtu.be/yo2bMGnIKE8?si=SYJGB59MaAVgxQLM">
+    <img src="https://i.pinimg.com/originals/77/08/e4/7708e4cc027c3e02c6f8947c800b41ca.png" class="img-fluid" width="3%" />
+    &nbsp;Using git subtree Video Tutorial
+  </a>
+</p>
+
+
+**Or, if you prefer to read the official documentation**, you can find it here:
+
+📖 [Github Pages Official Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 
 <p>
@@ -479,7 +493,9 @@ To launch your portfolio using Github Pages, simply follow the instructions belo
 
 ## 🤝 Contributions [🔝](#-table-of-contents)
 
-Contributions are welcome! If you would like to contribute to this project, you can `fork the repository and make a pull request` with your changes. We will review your changes and merge them into the main branch if they are approved.
+Contributions are welcome! If you would like to contribute to this project, you can `fork the repository and make a pull request` with your changes and they will be promptly reviewed. 
+
+If your changes are approved, they will be merged into the main branch of the repository and published for others to utilize.
 
 ## 🎫 License
 
