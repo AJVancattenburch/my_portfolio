@@ -20,7 +20,7 @@ Welcome to my portfolio template!
 
 
 <div align="center">
-  <a href="https://github.com/appsmithorg/appsmith/releases">
+  <a href="https://github.com/ajvancattenburch/my_portfolio/releases">
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/ajvancattenburch/my_portfolio?color=EC008C&style=for-the-badge">
   </a>
   <a href="https://www.linkedin.com/in/anthonyvancattenburch/">
