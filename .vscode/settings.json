@@ -96,5 +96,24 @@
         }
       ]
     }
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "/.DS_Store": true,
+    "/.git": true,
+    "/.hg": true,
+    "/.svn": true,
+    "/*.meta": true,
+    "/node_modules": true,
+    "**/dist": true,
+    "**/.retool_types/**": true,
+    "**/*tsconfig.json": true,
+    ".cache": true,
+    "retool.config.json": true
   }
 }

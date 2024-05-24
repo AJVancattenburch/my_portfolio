@@ -7,8 +7,8 @@ const isMobile = computed(() => window.innerWidth < 768);
 <template>
   <div class="modal-body">
     <div class="col-12 my-resume-pdf-container" style="height: 100%; width: 100%">
-      <object v-if="!isMobile" type="application/pdf" data="https://media.licdn.com/dms/document/media/D4E2DAQHGZTWKOSezJw/profile-treasury-document-pdf-analyzed/0/1715800125797?e=1716422400&v=beta&t=4E1kMSt-yDxS65odnkexltQiYvWA09WAgTnqDSQZR34#thumbnails=0&zoom=100,left,top&view=fit" width="100%" height="100%" class="desktop-pdf" />
-      <iframe v-else name="resume-frame" type="application/pdf" src="https://media.licdn.com/dms/document/media/D4E2DAQHGZTWKOSezJw/profile-treasury-document-pdf-analyzed/0/1715800125797?e=1716422400&v=beta&t=4E1kMSt-yDxS65odnkexltQiYvWA09WAgTnqDSQZR34#thumbnails=0&zoom=100,left,top&view=fit" width="100%" height="75%" class="mobile-pdf" style="frame"></iframe>
+      <object v-if="!isMobile" type="application/pdf" data="https://media.licdn.com/dms/image/D4E2DAQHGZTWKOSezJw/profile-treasury-document-images_800/1/1715800125228?e=1717632000&v=beta&t=d7ocOgGRoBFJ7jJA8KrcCBSW-lqmwUUpk7jK_Fkswis#thumbnails=0&zoom=100,left,top&view=fit" width="100%" height="100%" class="desktop-pdf" />
+      <iframe v-else name="resume-frame" type="application/pdf" src="https://media.licdn.com/dms/image/D4E2DAQHGZTWKOSezJw/profile-treasury-document-images_800/1/1715800125228?e=1717632000&v=beta&t=d7ocOgGRoBFJ7jJA8KrcCBSW-lqmwUUpk7jK_Fkswis#thumbnails=0&zoom=100,left,top&view=fit" width="100%" height="75%" class="mobile-pdf" style="frame"></iframe>
     </div>
   </div>
 </template>
